@@ -20,7 +20,7 @@ export default function NavBar() {
 
   return (
     <header className="sticky top-0 z-[2000] bg-[#5200f5] text-white transition-colors duration-300">
-      <div className="container mx-auto px-6 lg:px-12 py-2 lg:py-6 flex justify-between items-center">
+      <div className="container mx-auto px-6 lg:px-12 py-3 lg:py-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3">
           <Image
             width={200}
@@ -30,7 +30,7 @@ export default function NavBar() {
             alt="logo"
           />
           <p className="text-base font-[lato] lg:text-2xl font-bold truncate">
-            Pacific Safety Solution
+            Pacific Safety Solution Limited
           </p>
         </Link>
 
