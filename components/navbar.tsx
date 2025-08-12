@@ -93,7 +93,7 @@ export default function NavBar() {
 
       {/* Side Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 font-[lato] h-full w-[70%] bg-gray-100 text-neutral-900 z-[3000] transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 font-[lato] h-full w-[65%] bg-gray-100 text-neutral-900 z-[3000] transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
