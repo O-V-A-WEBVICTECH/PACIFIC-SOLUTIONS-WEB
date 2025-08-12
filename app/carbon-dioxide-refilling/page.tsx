@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-white">
       <div className="relative">
         <div className="absolute top-[18vh] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-7xl">Liferaft Service & Recertification</h1>
+          <h1 className="text-7xl">Carbon Dioxide Refilling</h1>
         </div>
         <Image
           width={1000}
@@ -18,23 +18,16 @@ export default function Page() {
       </div>
       <main className="mx-auto  min-h-screen w-[80%]">
         <p className="text-base text-neutral-950 text-justify leading-loose mt-10">
-          At Marine Safety Equipment Service and Sales Company Limited we
-          operate a Liferaft service station which is certified and fully
-          compliant with IMO Resolution A.761(18) as amended by RESOLUTION
-          MSC.55(66), and all manufactures whom we represent. Our Technicians
-          are factory trained internationally by the manufactures we represent
-          frequently, and work in a controlled facility which is clean, well lit
-          , fully enclosed and large enough to service several Liferafts at once
-          , we are also able to maintain sufficient control of temperature and
-          humidity to carry out effective service and repairs. A full inventory
-          of spare parts is always in stock to support our facility and our own
-          in-house cylinder shop is capable of hydro-testing Liferaft cylinders
-          and refilling of Carbon Dioxide and Nitrogen, which significantly
-          reduces the time and cost of Liferaft overhauls. Performing 10%
-          overload tests on Davit Launch Liferafts are not a problem with our
-          Davit Launch testing system capable of testing up to 37 Person DL –
-          type Liferafts in accordance with SOLAS and guidelines as specified by
-          the manufacturer.
+          We operate a highly efficient carbon dioxide filling facility using a
+          4.5 ton refrigerated bulk storage tank and High Torque Pumping unit
+          which can transfer about 10 lbs of Liquid Co2 per minute. A high
+          accuracy calibrated weighing scale is also used to ensure the correct
+          amount of Co2 has been filled. Our equipment and refilling method does
+          not require freezing of cylinders prior to filling so work can
+          commence almost immediately on receipt of cylinders. We also carry
+          many adapters to allow us to fill various cylinders but we always
+          advise customers to supply adapters if available as we may not carry
+          for certain valve or head types.
         </p>
       </main>
     </div>
