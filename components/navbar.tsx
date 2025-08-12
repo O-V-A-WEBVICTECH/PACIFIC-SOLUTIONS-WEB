@@ -175,7 +175,7 @@ export default function NavBar() {
             <nav className="flex text-base pl-6 flex-col">
               <Link
                 className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
+                href="/Cylinder-Hydrotesting-and-Requalification"
               >
                 Cylinder Hydrotesting & Requalification
               </Link>
@@ -187,13 +187,13 @@ export default function NavBar() {
               </Link>
               <Link
                 className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
+                href="/inflatable-liferaft-rental"
               >
                 Inflatable Liferaft Rental
               </Link>
               <Link
                 className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
+                href="/liferaft-service-and-recertification"
               >
                 Liferaft Service & Recertification
               </Link>
