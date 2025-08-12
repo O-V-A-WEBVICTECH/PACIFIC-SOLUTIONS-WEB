@@ -18,7 +18,7 @@ export default function Page() {
           className="brightness-50 w-full h-[220px] lg:h-[400px] object-cover"
         />
       </div>
-      <main className="mx-auto text-base text-justify font-[lato]  min-h-screen px-2 lg:px-0 lg:w-[80%]">
+      <main className="mx-auto text-base text-justify font-[lato]  px-2 lg:px-0 lg:w-[80%]">
         <h3 className="font-bold mb-3">
           We operate a DOT Approved testing and re-qualification facility for
           hydrotesting both low and high pressure cylinders.
@@ -51,9 +51,9 @@ export default function Page() {
           the risk of internal corrosion and is a requirement for operating an
           approved facility.
         </p>
-        <div>
-          <h3>Eddy Current Testing</h3>
-          <p>
+        <div className="my-3">
+          <h3 className="font-bold text-xl">Eddy Current Testing</h3>
+          <p className="leading-relaxed">
             In keeping with the requirements of DOT, we currently use an
             Eddy-Current Non-Destructive Testing System on all 6351-T6 alloy
             cylinders used for SCUBA, Breathing Air and Oxygen service. This
