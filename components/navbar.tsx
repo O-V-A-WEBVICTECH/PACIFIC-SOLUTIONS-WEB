@@ -2,8 +2,32 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X, Info, Briefcase, Star, Phone } from "lucide-react";
+import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
+
+interface NavLinks {
+  title: string;
+  url: string;
+}
+
+const navLinks: NavLinks[] = [
+  {
+    title: "About",
+    url: "#about",
+  },
+  {
+    title: "Products",
+    url: "#products",
+  },
+  {
+    title: "Services",
+    url: "#services",
+  },
+  {
+    title: "Contact",
+    url: "#contact",
+  },
+];
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,18 +60,15 @@ export default function NavBar() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-          <Link href="#about" className="hover:text-gray-300 transition">
-            About
-          </Link>
-          <Link href="#services" className="hover:text-gray-300 transition">
-            Products
-          </Link>
-          <Link href="#testimonials" className="hover:text-gray-300 transition">
-            Testimonials
-          </Link>
-          <Link href="#contact" className="hover:text-gray-300 transition">
-            Contact
-          </Link>
+          {navLinks.map((item, index) => (
+            <Link
+              href={item.url}
+              key={index}
+              className="hover:text-gray-300 transition"
+            >
+              {item.title}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Hamburger */}
@@ -62,46 +83,49 @@ export default function NavBar() {
 
       {/* Side Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#5200f5] text-white z-[3000] transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 font-[lato] h-full w-[70%] bg-gray-100 text-neutral-900 z-[3000] transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center px-6 py-6">
-          <p className="text-lg font-bold">Menu</p>
+          <p className="text-lg uppercase  font-bold">Menu</p>
           <button onClick={toggleMenu} aria-label="Close menu">
             <X className="w-6 h-6" />
           </button>
         </div>
 
-        <nav className="flex flex-col space-y-6 px-6 text-lg font-medium">
+        <nav className="text-base font-medium  font-[lato] flex flex-col">
           <Link
+            className="py-5 pl-6 uppercase flex items-center justify-between border-b-[1px]  border-neutral-300"
             href="#about"
-            onClick={toggleMenu}
-            className="flex items-center gap-3 hover:text-gray-300 transition"
           >
-            <Info className="w-5 h-5" /> About
+            About
+            <ChevronRight
+              size={24}
+              className="mx-4 border-l-[1px] border-gray-300"
+            />
           </Link>
           <Link
+            className="py-5 pl-6 uppercase   border-b-[1px]  border-neutral-300"
             href="#products"
-            onClick={toggleMenu}
-            className="flex items-center gap-3 hover:text-gray-300 transition"
           >
-            <Briefcase className="w-5 h-5" /> Products
+            Products
           </Link>
           <Link
-            href="#testimonials"
-            onClick={toggleMenu}
-            className="flex items-center gap-3 hover:text-gray-300 transition"
+            className="py-5 flex items-center flex-row justify-between pl-6 uppercase  border-b-[1px]  border-neutral-300"
+            href="#services"
           >
-            <Star className="w-5 h-5" /> Testimonials
+            Services
+            <ChevronRight
+              size={24}
+              className="mx-4 border-l-[1px] border-gray-300"
+            />
           </Link>
-
           <Link
+            className="py-5 pl-6 uppercase  border-b-[1px]  border-neutral-300"
             href="#contact"
-            onClick={toggleMenu}
-            className="flex items-center gap-3 hover:text-gray-300 transition"
           >
-            <Phone className="w-5 h-5" /> Contact
+            Contact
           </Link>
         </nav>
       </div>
