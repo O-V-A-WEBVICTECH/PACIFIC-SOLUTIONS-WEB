@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
+import { Compass } from "lucide-react";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -89,19 +90,21 @@ export default function Home() {
           </div>
 
           <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-20 lg:pt-32 pb-20 lg:pb-48 flex  h-full">
-            <div className="flex flex-col gap-4 w-full max-w-2xl items-start">
+            <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
-                Reliable Protection, Exceptional Quality
+                YOUR TRUSTED PARTNER IN MARINE SAFETY & LIFE RAFT SERVICES
               </h1>
-              <p className="text-base text-white">
+              <p className="text-base text-white lg:w-[70%]">
                 Ensure your safety with our top-grade safety equipment and
                 premier fiberglass solutions crafted for durability and
                 excellence.
               </p>
-              <div className="flex flex-col md:flex-row gap-4 mt-4">
-                <button className="bg-white text-black text-sm px-6  py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition">
-                  <Link href="#products">Explore Our Services</Link>
-                </button>
+              <div className="flex flex-row items-center  gap-4 mt-2">
+                <Link href="/products">
+                  <button className="bg-white uppercase text-black text-sm px-6  py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition">
+                    Explore Our Products
+                  </button>
+                </Link>
               </div>
               <div className="flex items-center gap-2 mt-12">
                 {slides.map((_, index) => (
@@ -120,60 +123,33 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="#about" className="py-16 bg-white text-[#121212]">
-        <div className="container mx-auto px-6 lg:px-0 flex flex-col lg:flex-row  gap-10">
+      <section id="#about" className="py-16 mb-16 bg-white text-[#121212]">
+        <div className="container mx-auto px-6 lg:px-0 flex items-center flex-col lg:flex-row  gap-10">
           {/* Text content */}
           <div className="flex-1 ">
-            <h1 className="text-4xl font-bold leading-9.5 mb-2">
+            <h1 className="text-5xl md:text-6xl font-bold font-[lato]  mb-2">
               Your Trusted Partner in Safety Solutions
             </h1>
 
-            <div className="space-y-4 text-[16px] font-[lato]">
-              <p>
-                <strong>PACIFIC SAFETY SOLUTION LIMITED</strong> is a duly
-                registered, Limited Liability Company with CAC in the federal
-                republic of Nigeria with registration number
-                <strong>RC1928296</strong>.
+            <div className="text-justify text-base font-[lato]">
+              <p className="text-base">
+                At Pacific Safety Solution, based in the vibrant city of Lagos,
+                Nigeria, we specialize in providing top-tier safety equipment
+                and fiberglass services. Our dedication to quality and
+                innovation ensures that each product meets stringent safety
+                standards and client needs. We are committed to safeguarding
+                your work environment with reliable solutions that offer peace
+                of mind. Trust us to deliver excellence, as we continue our
+                mission to enhance workplace safety across diverse industries.
               </p>
-
-              <p>
-                The company’s service station is situated in Lagos Nigeria and
-                the company renders services to vessels trading within other
-                African countries.
-              </p>
-
-              <p>
-                Our major customers include oil/gas companies with offshore
-                installations, vessel owners/managers, ship agencies, and other
-                foreign registered commercial vessels through their local
-                agents, as well as foreign and locally registered yachts.
-              </p>
-
-              <p>
-                The company was founded in 2022 primarily as an LSA/FFA Service
-                provider and later grew into supplies of other marine and ship
-                maintenance parts such as:
-              </p>
-
-              <p>
-                Life Jackets and Work Vests, Immersion Suits, Emergency Food
-                Rations and Water Marine Distress Signals (Pyrotechnics) Safety
-                Lights New Inflatable Life rafts MOB, HRU & Line thrower
-                Navigational aids Engines etc
-              </p>
-
-              <p>
-                We also offer a Liferaft rental service for operators who find
-                it beneficial to rent liferafts for either short or extended
-                periods.
-              </p>
-
-              <p>
-                Our Service Engineers receive refresher training courses at the
-                respective factories frequently, and our service facility is
-                fully equipped and approved in accordance with international
-                standards.
-              </p>
+            </div>
+            <div className="mt-4">
+              <Link href="#">
+                <button className="text-base text-white flex items-center flex-row gap-1 uppercase font-medium font-[lato] w-fit px-6 py-2 bg-orange-600">
+                  <Compass size={17} />
+                  our Company profile
+                </button>
+              </Link>
             </div>
           </div>
 

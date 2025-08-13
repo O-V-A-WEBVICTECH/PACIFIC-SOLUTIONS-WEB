@@ -8,12 +8,18 @@ import Image from "next/image";
 interface NavLinks {
   title: string;
   url: string;
+  subItems?: NavLinks[];
 }
 
 const navLinks: NavLinks[] = [
   {
     title: "About",
     url: "#about",
+    subItems: [
+      { title: "Company Profile", url: "#contact" },
+      { title: "Vision and Mission Statement", url: "#contact" },
+      { title: "Core Values", url: "#contact" },
+    ],
   },
   {
     title: "Products",
@@ -21,7 +27,22 @@ const navLinks: NavLinks[] = [
   },
   {
     title: "Services",
-    url: "/services",
+    url: "#",
+    subItems: [
+      {
+        title: "Cylinder Hydrotesting & Requalification",
+        url: "/cylinder-hydrotesting-and-requalification",
+      },
+      { title: "Carbon Dioxide Refilling", url: "/carbon-dioxide-refilling" },
+      {
+        title: "Inflatable Liferaft Rental",
+        url: "/inflatable-liferaft-rental",
+      },
+      {
+        title: "Liferaft Service & Recertification",
+        url: "/liferaft-service-and-recertification",
+      },
+    ],
   },
   {
     title: "Contact",
@@ -69,13 +90,24 @@ export default function NavBar() {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((item, index) => (
-            <Link
-              href={item.url}
-              key={index}
-              className="hover:text-gray-300 transition"
-            >
-              {item.title}
-            </Link>
+            <div key={index} className="relative group">
+              <Link href={item.url} className="hover:text-gray-300 transition">
+                {item.title}
+              </Link>
+              {item.subItems && (
+                <div className="absolute left-0 top-full mt-2 min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
+                  {item.subItems.map((sub, subIdx) => (
+                    <Link
+                      key={subIdx}
+                      href={sub.url}
+                      className="block px-6 py-3 hover:bg-gray-100 border-b last:border-b-0 border-gray-200"
+                    >
+                      {sub.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
