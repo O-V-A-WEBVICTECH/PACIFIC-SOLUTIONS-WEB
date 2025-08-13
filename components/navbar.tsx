@@ -125,46 +125,31 @@ export default function NavBar() {
 
       {/* Side Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 ${
+        className={`fixed top-0 pt-10 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center px-6 py-6">
-          <p className="text-lg uppercase  font-bold">Menu</p>
-          <button onClick={toggleMenu} aria-label="Close menu">
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-
-        <nav className="text-sm font-medium  font-[lato] flex flex-col">
+        <nav className="text-xs font-medium  flex flex-col">
           <Link
-            className="py-2 pl-6 uppercase flex items-center justify-between border-b-[1px]  border-neutral-300"
+            className="py-2 pl-6 uppercase flex items-center justify-between  border-neutral-300"
             href="#about"
           >
             About
             {aboutOpen ? (
-              <ChevronDown
-                onClick={toggleAbout}
-                size={24}
-                className="mx-4 border-l-[1px] border-gray-300"
-              />
+              <ChevronDown onClick={toggleAbout} size={20} className="mx-4 " />
             ) : (
-              <ChevronRight
-                onClick={toggleAbout}
-                size={24}
-                className="mx-4 border-l-[1px] border-gray-300"
-              />
+              <ChevronRight onClick={toggleAbout} size={20} className="mx-4 " />
             )}
           </Link>
           {aboutOpen ? (
             <nav className="flex text-sm pl-6 flex-col">
-              <Link className="py-2 pl-6 capitalize" href="#contact">
+              <Link className="py-2 pl-2 capitalize" href="#contact">
                 company profile
               </Link>
-              <Link className="py-2 pl-6 capitalize" href="#contact">
+              <Link className="py-2 pl-2 capitalize" href="#contact">
                 Vision and Mission Statement
               </Link>
-              <Link className="py-2 pl-6 capitalize " href="#contact">
+              <Link className="py-2 pl-2 capitalize " href="#contact">
                 Core Values
               </Link>
             </nav>
@@ -173,20 +158,20 @@ export default function NavBar() {
             Products
           </Link>
           <Link
-            className="py-2 flex items-center flex-row justify-between pl-6 uppercase  border-b-[1px]  border-neutral-300"
+            className="py-2 flex items-center flex-row justify-between pl-6 uppercase  "
             href="#"
           >
             Services
             {serviceOpen ? (
               <ChevronDown
                 onClick={toggleService}
-                size={24}
-                className="mx-4 border-l-[1px] border-gray-300"
+                size={20}
+                className="mx-4 text-neutral-900 border-l-[1px] border-gray-300"
               />
             ) : (
               <ChevronRight
                 onClick={toggleService}
-                size={24}
+                size={20}
                 className="mx-4 border-l-[1px] border-gray-300"
               />
             )}
@@ -194,35 +179,32 @@ export default function NavBar() {
           {serviceOpen ? (
             <nav className="flex text-sm pl-6 flex-col">
               <Link
-                className="py-2 pl-6 capitalize  "
+                className="py-2 pl-2 capitalize  "
                 href="/Cylinder-Hydrotesting-and-Requalification"
               >
                 Cylinder Hydrotesting & Requalification
               </Link>
               <Link
-                className="py-2 pl-6 capitalize  "
+                className="py-2 pl-2 capitalize  "
                 href="/carbon-dioxide-refilling"
               >
                 Carbon Dioxide Refilling
               </Link>
               <Link
-                className="py-2 pl-6 capitalize  "
+                className="py-2 pl-2 capitalize  "
                 href="/inflatable-liferaft-rental"
               >
                 Inflatable Liferaft Rental
               </Link>
               <Link
-                className="py-2 pl-6 capitalize  "
+                className="py-2 pl-2 capitalize  "
                 href="/liferaft-service-and-recertification"
               >
                 Liferaft Service & Recertification
               </Link>
             </nav>
           ) : null}
-          <Link
-            className="py-2 pl-6 uppercase  border-b-[1px]  border-neutral-300"
-            href="#contact"
-          >
+          <Link className="py-2 pl-6 uppercase " href="#contact">
             Contact
           </Link>
         </nav>
