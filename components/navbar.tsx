@@ -125,7 +125,7 @@ export default function NavBar() {
 
       {/* Side Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 font-[lato] h-full w-[65%] bg-gray-100 text-neutral-900 z-[3000] transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -136,9 +136,9 @@ export default function NavBar() {
           </button>
         </div>
 
-        <nav className="text-base font-medium  font-[lato] flex flex-col">
+        <nav className="text-sm font-medium  font-[lato] flex flex-col">
           <Link
-            className="py-5 pl-6 uppercase flex items-center justify-between border-b-[1px]  border-neutral-300"
+            className="py-2 pl-6 uppercase flex items-center justify-between border-b-[1px]  border-neutral-300"
             href="#about"
           >
             About
@@ -157,35 +157,23 @@ export default function NavBar() {
             )}
           </Link>
           {aboutOpen ? (
-            <nav className="flex text-base pl-6 flex-col">
-              <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
-              >
+            <nav className="flex text-sm pl-6 flex-col">
+              <Link className="py-2 pl-6 capitalize" href="#contact">
                 company profile
               </Link>
-              <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
-              >
+              <Link className="py-2 pl-6 capitalize" href="#contact">
                 Vision and Mission Statement
               </Link>
-              <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
-                href="#contact"
-              >
+              <Link className="py-2 pl-6 capitalize " href="#contact">
                 Core Values
               </Link>
             </nav>
           ) : null}
-          <Link
-            className="py-5 pl-6 uppercase   border-b-[1px]  border-neutral-300"
-            href="#products"
-          >
+          <Link className="py-2 pl-6 uppercase" href="#products">
             Products
           </Link>
           <Link
-            className="py-5 flex items-center flex-row justify-between pl-6 uppercase  border-b-[1px]  border-neutral-300"
+            className="py-2 flex items-center flex-row justify-between pl-6 uppercase  border-b-[1px]  border-neutral-300"
             href="#"
           >
             Services
@@ -204,27 +192,27 @@ export default function NavBar() {
             )}
           </Link>
           {serviceOpen ? (
-            <nav className="flex text-base pl-6 flex-col">
+            <nav className="flex text-sm pl-6 flex-col">
               <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
+                className="py-2 pl-6 capitalize  "
                 href="/Cylinder-Hydrotesting-and-Requalification"
               >
                 Cylinder Hydrotesting & Requalification
               </Link>
               <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
+                className="py-2 pl-6 capitalize  "
                 href="/carbon-dioxide-refilling"
               >
                 Carbon Dioxide Refilling
               </Link>
               <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
+                className="py-2 pl-6 capitalize  "
                 href="/inflatable-liferaft-rental"
               >
                 Inflatable Liferaft Rental
               </Link>
               <Link
-                className="py-5 pl-6 capitalize  border-b-[1px]  border-neutral-300"
+                className="py-2 pl-6 capitalize  "
                 href="/liferaft-service-and-recertification"
               >
                 Liferaft Service & Recertification
@@ -232,7 +220,7 @@ export default function NavBar() {
             </nav>
           ) : null}
           <Link
-            className="py-5 pl-6 uppercase  border-b-[1px]  border-neutral-300"
+            className="py-2 pl-6 uppercase  border-b-[1px]  border-neutral-300"
             href="#contact"
           >
             Contact
