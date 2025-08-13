@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-white">
       <div className="relative">
         <div className="absolute top-[18%] lg:top[60%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-7xl">Products</h1>
+          <h1 className="text-4xl lg:text-7xl">Products</h1>
         </div>
         <Image
           width={1000}
@@ -13,10 +13,10 @@ export default function Page() {
           src="/images/boat-men.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[180px] lg:h-[300px] object-cover"
+          className="brightness-50 w-full h-[100px] lg:h-[300px] object-cover"
         />
       </div>
-      <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
+      <main className="mx-auto font-[lato] px-3 lg:px-0 lg:w-[80%]">
         <div className="grid grid-cols-2 mt-3 mb-6 lg:grid-cols-3 gap-6">
           {[
             {
@@ -94,7 +94,7 @@ export default function Page() {
           ].map((product, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+              className="bg-white p-2 h-fit rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
             >
               <div className="mb-4">
                 <Image
@@ -105,10 +105,10 @@ export default function Page() {
                   className="w-full h-[140px]  object-conver"
                 />
               </div>
-              <h3 className="text-lg font-bold mb-1 text-gray-900">
+              <h3 className="text-base lg:text-lg leading-tight font-bold mb-1 text-gray-900">
                 {product.title}
               </h3>
-              <p className="text-gray-600 text-sm font-[lato]">
+              <p className="text-gray-600   text-sm font-[lato]">
                 {product.description}
               </p>
             </div>

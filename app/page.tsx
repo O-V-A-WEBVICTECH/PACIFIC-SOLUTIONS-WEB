@@ -144,7 +144,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-4">
-              <Link href="#">
+              <Link href="/company-profile">
                 <button className="text-base text-white flex items-center flex-row gap-1 uppercase font-medium font-[lato] w-fit px-6 py-2 bg-orange-600">
                   <Compass size={17} />
                   our Company profile

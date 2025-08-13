@@ -135,7 +135,7 @@ export default function NavBar() {
         <nav className="text-sm font-semibold flex flex-col">
           <Link
             className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#about"
+            href="#"
           >
             About
             {aboutOpen ? (
@@ -180,7 +180,7 @@ export default function NavBar() {
           <Link
             onClick={toggleMenu}
             className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#products"
+            href="/products"
           >
             Products
           </Link>
