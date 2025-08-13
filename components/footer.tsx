@@ -13,11 +13,11 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               {/* <FaMapMarkedAlt className="mt-1" /> */}
               <span>
-                Cor. Tucker Valley &amp; Airways Roads,
+                Somewhere in Africa,
                 <br />
-                Chaguaramas,
+                ******
                 <br />
-                Trinidad, W.I.
+                ****
               </span>
             </li>
           </ul>
@@ -137,18 +137,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="bg-[#00457a] text-center py-4 text-xs">
-        <strong>
-          Marine Safety Equipment Service and Sales Company Limited
-        </strong>{" "}
-        &copy; 2025 | Site By{" "}
-        <a
-          href="https://forwardmultimedia.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline font-bold"
-        >
-          Forward Multimedia Ltd
-        </a>
+        <strong>Pacific Solutions Limited</strong> &copy; 2025 | Site By <a></a>
         .
       </div>
     </footer>
