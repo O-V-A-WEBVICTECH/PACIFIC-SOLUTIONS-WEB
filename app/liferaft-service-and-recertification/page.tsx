@@ -16,7 +16,7 @@ export default function Page() {
           className="brightness-50 w-full h-[400px] object-cover"
         />
       </div>
-      <main className="mx-auto  min-h-screen w-[80%]">
+      <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
         <p className="text-base text-neutral-950 text-justify leading-loose mt-10">
           At Marine Safety Equipment Service and Sales Company Limited we
           operate a Liferaft service station which is certified and fully

@@ -4,8 +4,8 @@ export default function Page() {
   return (
     <div className="bg-white">
       <div className="relative">
-        <div className="absolute top-[18vh] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-7xl">Inflatable Liferaft Rental</h1>
+        <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
+          <h1 className="text-5xl lg:text-7xl">Inflatable Liferaft Rental</h1>
         </div>
         <Image
           width={1000}
@@ -13,11 +13,11 @@ export default function Page() {
           src="/images/boat-men.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[400px] object-cover"
+          className="brightness-50 w-full h-[180px] lg:h-[300px] object-cover"
         />
       </div>
-      <main className="mx-auto  min-h-screen w-[80%]">
-        <p className="text-base font-[lato] text-neutral-950 text-justify leading-loose mt-10">
+      <main className="mx-auto  mb-6 px-3 lg:px-0 lg:w-[80%]">
+        <p className="text-base font-[lato] text-neutral-950 text-justify  mt-4 lg:mt-10">
           At Marine Safety Equipment Service and Sales Company Limited we offer
           a Life Raft Rental Service to all our customers as many operators find
           it beneficial to rent life rafts for either short or extended periods.
@@ -28,7 +28,7 @@ export default function Page() {
         <h3 className="font-bold text-lg">
           Benefits of renting a life raft for short term use
         </h3>
-        <ul className="font-[lato]">
+        <ul className="font-[lato] pl-8 list-disc">
           <li>Quickly and easily available</li>
           <li>
             Life rafts are generally available from stock with none or little
@@ -50,7 +50,7 @@ export default function Page() {
         <h3 className="font-bold text-lg">
           Benefits of renting a life raft for long term use
         </h3>
-        <ul>
+        <ul className="font-[lato] list-disc pl-8">
           <li>Economical</li>
           <li>There is no capital outlay.</li>
           <li>Comprehensive payment</li>
@@ -61,7 +61,7 @@ export default function Page() {
           older equipment is concerned.
         </p>
         <h3>No worrying about fine details </h3>
-        <p>
+        <p className="font-[lato]">
           When the requirement ends the equipment can simply be collected /
           returned and the rental concluded. There is no surplus to requirement
           Liferafts to store, service or dispose of.

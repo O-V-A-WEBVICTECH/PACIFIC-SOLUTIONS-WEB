@@ -1,4 +1,4 @@
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -48,28 +48,14 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li>
-              <a
-                href="https://marinesafetytt.com/about-mse/company-profile/"
-                className="hover:underline"
-              >
+              <Link href="" className="hover:underline">
                 Company Profile
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://marinesafetytt.com/contact-us/"
-                className="hover:underline"
-              >
+              <Link href="" className="hover:underline">
                 Contact us
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://marinesafetytt.com/online-payment/"
-                className="hover:underline"
-              >
-                Online Payment
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -81,36 +67,36 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li>
-              <a
-                href="https://marinesafetytt.com/our-services/inflatable-liferaft-service-recertification/"
+              <Link
+                href="/liferaft-service-and-recertification"
                 className="hover:underline"
               >
                 Liferaft Service &amp; Recertification
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://marinesafetytt.com/our-services/gas-cylinder-hydrotesting-requalificatio/"
+              <Link
+                href="/cylinder-hydrotesting-and-requalification"
                 className="hover:underline"
               >
                 Cylinder Hydrotesting &amp; Requalification
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://marinesafetytt.com/our-services/carbon-dioxide-refilling/"
+              <Link
+                href="/carbon-dioxide-refilling"
                 className="hover:underline"
               >
                 Carbon Dioxide Refilling
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://marinesafetytt.com/our-services/inflatable-liferaft-rental/"
+              <Link
+                href="/inflatable-liferaft-rental"
                 className="hover:underline"
               >
                 Inflatable Liferaft Rental
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -122,7 +108,7 @@ export default function Footer() {
           </h4>
           <div className="flex gap-3">
             <a
-              href="https://www.facebook.com/marinesafetytt/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
@@ -130,7 +116,7 @@ export default function Footer() {
               {/* <FaFacebook /> */}
             </a>
             <a
-              href="http://instagram.com/marinesafety.tt/"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
@@ -138,7 +124,7 @@ export default function Footer() {
               {/* <FaInstagram /> */}
             </a>
             <a
-              href="https://tt.linkedin.com/company/marine-safety-equipment-service-&-sales-company-limited"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
