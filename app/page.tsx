@@ -52,15 +52,7 @@ export default function Home() {
   return (
     <div className="min-h-screen  overflow-x-hidden bg-white text-black">
       {/* Hero Section */}
-      <section
-        className="relative lg:h-[560px] w-full"
-        style={{
-          clipPath:
-            "polygon(0 0, 100% 0, 100% 90%, 75% 100%, 50% 90%, 25% 100%, 0 90%)",
-          WebkitClipPath:
-            "polygon(0 0, 100% 0, 100% 90%, 75% 100%, 50% 90%, 25% 100%, 0 90%)",
-        }}
-      >
+      <section className="relative lg:h-[560px] w-full">
         <div className="relative w-full h-full">
           <div>
             {slides.map((slide, index) => (
@@ -89,7 +81,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-20 lg:pt-32 pb-20 lg:pb-48 flex  h-full">
+          <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-32 pb-10 lg:pb-48 flex  h-full">
             <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
                 YOUR TRUSTED PARTNER IN MARINE SAFETY & LIFE RAFT SERVICES
@@ -99,14 +91,14 @@ export default function Home() {
                 premier fiberglass solutions crafted for durability and
                 excellence.
               </p>
-              <div className="flex flex-row items-center  gap-4 mt-2">
+              <div className="flex flex-row items-center  gap-4 lg:mt-2">
                 <Link href="/products">
                   <button className="bg-white uppercase text-black text-sm px-6  py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition">
                     Explore Our Products
                   </button>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 mt-12">
+              <div className="flex items-center gap-2 mt-4 lg:mt-12">
                 {slides.map((_, index) => (
                   <div
                     key={index}
@@ -123,8 +115,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="#about" className="py-16 mb-16 bg-white text-[#121212]">
-        <div className="container mx-auto px-6 lg:px-0 flex items-center flex-col lg:flex-row  gap-10">
+      <section id="#about" className="py-5 mb-16 bg-white text-[#121212]">
+        <div className="container mx-auto px-3 lg:px-0 flex items-center flex-col lg:flex-row  gap-10">
           {/* Text content */}
           <div className="flex-1 ">
             <h1 className="text-5xl md:text-6xl font-bold font-[lato]  mb-2">
