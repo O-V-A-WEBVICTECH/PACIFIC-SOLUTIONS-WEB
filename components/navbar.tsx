@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronRight, ChevronDown } from "lucide-react";
+import { Menu, ChevronRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 interface NavLinks {
@@ -14,11 +14,14 @@ interface NavLinks {
 const navLinks: NavLinks[] = [
   {
     title: "About",
-    url: "#about",
+    url: "/company-profile",
     subItems: [
-      { title: "Company Profile", url: "#contact" },
-      { title: "Vision and Mission Statement", url: "#contact" },
-      { title: "Core Values", url: "#contact" },
+      { title: "Company Profile", url: "/company-profile" },
+      {
+        title: "Vision and Mission Statement",
+        url: "/vision-and-mission-statements",
+      },
+      { title: "Core Values", url: "/core-values" },
     ],
   },
   {
@@ -46,7 +49,7 @@ const navLinks: NavLinks[] = [
   },
   {
     title: "Contact",
-    url: "#contact",
+    url: "#",
   },
 ];
 
@@ -125,86 +128,118 @@ export default function NavBar() {
 
       {/* Side Mobile Menu */}
       <div
-        className={`fixed top-0 pt-10 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 ${
+        className={`fixed top-0 pt-12 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 shadow-xl ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <nav className="text-xs font-medium  flex flex-col">
+        <nav className="text-sm font-semibold flex flex-col">
           <Link
-            className="py-2 pl-6 uppercase flex items-center justify-between  border-neutral-300"
+            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
             href="#about"
           >
             About
             {aboutOpen ? (
-              <ChevronDown onClick={toggleAbout} size={20} className="mx-4 " />
+              <ChevronDown
+                onClick={toggleAbout}
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+              />
             ) : (
-              <ChevronRight onClick={toggleAbout} size={20} className="mx-4 " />
+              <ChevronRight
+                onClick={toggleAbout}
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+              />
             )}
           </Link>
-          {aboutOpen ? (
-            <nav className="flex text-sm pl-6 flex-col">
-              <Link className="py-2 pl-2 capitalize" href="#contact">
-                company profile
+          {aboutOpen && (
+            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/company-profile"
+              >
+                Company Profile
               </Link>
-              <Link className="py-2 pl-2 capitalize" href="#contact">
-                Vision and Mission Statement
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/vision-and-mission-statements"
+              >
+                Vision and Mission
               </Link>
-              <Link className="py-2 pl-2 capitalize " href="#contact">
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/core-values"
+              >
                 Core Values
               </Link>
             </nav>
-          ) : null}
-          <Link className="py-2 pl-6 uppercase" href="#products">
+          )}
+          <Link
+            onClick={toggleMenu}
+            className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+            href="#products"
+          >
             Products
           </Link>
           <Link
-            className="py-2 flex items-center flex-row justify-between pl-6 uppercase  "
+            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
             href="#"
           >
             Services
             {serviceOpen ? (
               <ChevronDown
                 onClick={toggleService}
-                size={20}
-                className="mx-4 text-neutral-900 border-l-[1px] border-gray-300"
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
               />
             ) : (
               <ChevronRight
                 onClick={toggleService}
-                size={20}
-                className="mx-4 border-l-[1px] border-gray-300"
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
               />
             )}
           </Link>
-          {serviceOpen ? (
-            <nav className="flex text-sm pl-6 flex-col">
+          {serviceOpen && (
+            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
               <Link
-                className="py-2 pl-2 capitalize  "
-                href="/Cylinder-Hydrotesting-and-Requalification"
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/cylinder-hydrotesting-and-requalification"
               >
                 Cylinder Hydrotesting & Requalification
               </Link>
               <Link
-                className="py-2 pl-2 capitalize  "
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/carbon-dioxide-refilling"
               >
                 Carbon Dioxide Refilling
               </Link>
               <Link
-                className="py-2 pl-2 capitalize  "
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/inflatable-liferaft-rental"
               >
-                Inflatable Liferaft Rental
+                Inflatable Liferaft Rental
               </Link>
               <Link
-                className="py-2 pl-2 capitalize  "
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/liferaft-service-and-recertification"
               >
                 Liferaft Service & Recertification
               </Link>
             </nav>
-          ) : null}
-          <Link className="py-2 pl-6 uppercase " href="#contact">
+          )}
+          <Link
+            onClick={toggleMenu}
+            className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+            href="#contact"
+          >
             Contact
           </Link>
         </nav>
