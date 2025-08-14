@@ -17,7 +17,7 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
-        <p className="text-base text-neutral-950 text-justify leading-loose mt-10">
+        <p className="text-base text-neutral-950 text-justify leading-relaxed mt-10">
           At Marine Safety Equipment Service and Sales Company Limited we
           operate a Liferaft service station which is certified and fully
           compliant with IMO Resolution A.761(18) as amended by RESOLUTION
