@@ -31,7 +31,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Your Name <span className="text-red-600">*</span>
               </label>
@@ -40,7 +40,7 @@ export default function Page() {
                 name="name"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -48,7 +48,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="companyName"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Company&apos;s Name
               </label>
@@ -56,7 +56,7 @@ export default function Page() {
                 id="companyName"
                 name="companyName"
                 type="text"
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -64,7 +64,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="vesselName"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Vessel/Boat Name
               </label>
@@ -72,7 +72,7 @@ export default function Page() {
                 id="vesselName"
                 name="vesselName"
                 type="text"
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -80,7 +80,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Email Address <span className="text-red-600">*</span>
               </label>
@@ -89,7 +89,7 @@ export default function Page() {
                 name="email"
                 type="email"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -97,7 +97,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="phone"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Phone Number <span className="text-red-600">*</span>
               </label>
@@ -108,7 +108,7 @@ export default function Page() {
                 inputMode="numeric"
                 autoComplete="off"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -116,7 +116,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="streetAddress"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Street Address <span className="text-red-600">*</span>
               </label>
@@ -125,7 +125,7 @@ export default function Page() {
                 name="streetAddress"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -133,7 +133,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="city"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 City <span className="text-red-600">*</span>
               </label>
@@ -142,7 +142,7 @@ export default function Page() {
                 name="city"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -150,7 +150,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="country"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Country <span className="text-red-600">*</span>
               </label>
@@ -158,7 +158,7 @@ export default function Page() {
                 id="country"
                 name="country"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 bg-white focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 bg-white focus:ring-2 focus:ring-green-500 focus:outline-none"
               >
                 <option value="">Select country</option>
                 <option value="Afghanistan">Afghanistan</option>
@@ -471,7 +471,7 @@ export default function Page() {
             <div>
               <label
                 htmlFor="brandOfLiferaft"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-sm font-medium text-neutral-900"
               >
                 Brand of Liferaft <span className="text-red-600">*</span>
               </label>
@@ -480,20 +480,20 @@ export default function Page() {
                 name="brandOfLiferaft"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
             {/* Date Service Required (required 3-part) */}
             <fieldset className="border border-gray-200 rounded-xl p-4">
-              <legend className="px-2 text-sm font-medium text-gray-700">
+              <legend className="px-2 text-sm font-medium text-neutral-900">
                 Date Service Required <span className="text-red-600">*</span>
               </legend>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <label
                     htmlFor="month"
-                    className="block text-sm text-gray-700"
+                    className="block text-sm text-neutral-900"
                   >
                     Month <span className="text-red-600">*</span>
                   </label>
@@ -505,7 +505,7 @@ export default function Page() {
                     max={12}
                     placeholder="E.g. 01"
                     required
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -520,7 +520,7 @@ export default function Page() {
                     max={31}
                     placeholder="E.g. 01"
                     required
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -534,7 +534,7 @@ export default function Page() {
                     min={1}
                     placeholder="E.g. 2000"
                     required
-                    className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -552,7 +552,7 @@ export default function Page() {
                 id="comments"
                 name="comments"
                 rows={6}
-                className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
               />
             </div>
 
@@ -580,7 +580,7 @@ export default function Page() {
             </div>
 
             {/* reCAPTCHA placeholder (implement with your own site key) */}
-            <div className="rounded-lg border border-dashed border-gray-300 p-4 text-sm text-gray-600">
+            <div className="rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-gray-600">
               <span className="font-medium">reCAPTCHA:</span> Add your v2
               Invisible or v3 integration here (client script + server
               verification).

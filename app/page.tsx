@@ -83,7 +83,7 @@ export default function Home() {
 
           <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-32 pb-10 lg:pb-48 flex  h-full">
             <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-3xl lg:text-6xl font-bold leading-tight text-white">
                 YOUR TRUSTED PARTNER IN MARINE SAFETY & LIFE RAFT SERVICES
               </h1>
               <p className="text-sm lg:text-base text-white lg:w-[70%]">
@@ -119,7 +119,7 @@ export default function Home() {
         <div className="container mx-auto px-3 lg:px-0 flex items-center flex-col lg:flex-row  gap-10">
           {/* Text content */}
           <div className="flex-1 ">
-            <h1 className="text-5xl md:text-6xl font-bold font-[lato]  mb-2">
+            <h1 className="text-4xl md:text-6xl font-bold font-[lato]  mb-2">
               Your Trusted Partner in Safety Solutions
             </h1>
 
@@ -137,7 +137,7 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <Link href="/company-profile">
-                <button className="text-base text-white flex items-center flex-row gap-1 uppercase font-medium font-[lato] w-fit px-6 py-2 bg-orange-600">
+                <button className="text-sm lg:text-base text-white flex items-center flex-row gap-1 uppercase font-medium font-[lato] w-fit px-6 py-2 bg-orange-600">
                   <Compass size={17} />
                   our Company profile
                 </button>

@@ -34,12 +34,12 @@ export default function Page() {
         />
       </div>
       <main className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 text-neutral-950 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-6">GET IN TOUCH</h4>
 
-            <ul className="space-y-4 text-gray-700">
+            <ul className="space-y-4 text-neutral-950">
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">
                   <i className="fas fa-map-marked-alt"></i>
@@ -85,13 +85,13 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -100,13 +100,13 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
                   type="text"
                   placeholder="Company"
-                  className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -114,11 +114,11 @@ export default function Page() {
                 placeholder="Enter your message..."
                 maxLength={180}
                 rows={6}
-                className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
 
               <select
-                className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               >
                 <option value="">How did you hear about our website</option>

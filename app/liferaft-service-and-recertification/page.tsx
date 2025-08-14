@@ -4,8 +4,10 @@ export default function Page() {
   return (
     <div className="bg-white text-neutral-950">
       <div className="relative">
-        <div className="absolute top-[18vh] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-7xl">Liferaft Service & Recertification</h1>
+        <div className="absolute top-[18%] z-[100] w-full flex items-center justify-center text-white">
+          <h1 className="text-4xl text-center lg:text-7xl">
+            Liferaft Service & Recertification
+          </h1>
         </div>
         <Image
           width={1000}
@@ -13,11 +15,11 @@ export default function Page() {
           src="/images/boat-men.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[400px] object-cover"
+          className="brightness-50 w-full h-[120px] lg:h-[400px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
-        <p className="text-sm lg:text-base text-neutral-950 text-justify leading-relaxed mt-10">
+        <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-3 lg:mt-10">
           At Marine Safety Equipment Service and Sales Company Limited we
           operate a Liferaft service station which is certified and fully
           compliant with IMO Resolution A.761(18) as amended by RESOLUTION
