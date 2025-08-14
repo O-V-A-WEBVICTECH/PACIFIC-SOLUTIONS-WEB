@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-neutral-950">
       <div className="relative">
         <div className="absolute top-[18%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-3xl text-center lg:text-7xl">

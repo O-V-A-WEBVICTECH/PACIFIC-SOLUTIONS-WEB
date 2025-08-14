@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-neutral-950">
       <div className="relative">
         <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl lg:text-7xl">Core Values</h1>
@@ -16,7 +16,7 @@ export default function Page() {
           className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="mx-auto font-[lato] px-2 lg:px-0  lg:w-[80%]">
+      <main className="mx-auto text-neutral-950 font-[lato] px-2 lg:px-0  lg:w-[80%]">
         <h2 className="text-lg lg:text-xl mb-1 mt-3 font-bold">
           Customer Focus
         </h2>
