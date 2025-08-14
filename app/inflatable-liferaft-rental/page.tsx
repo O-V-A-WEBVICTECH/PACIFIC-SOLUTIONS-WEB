@@ -17,7 +17,7 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto  mb-6 px-3 lg:px-0 lg:w-[80%]">
-        <p className="text-base font-[lato] text-neutral-950 text-justify  mt-4 lg:mt-10">
+        <p className="text-sm lg:text-base font-[lato] text-neutral-950 text-justify  mt-4 lg:mt-10">
           At Marine Safety Equipment Service and Sales Company Limited we offer
           a Life Raft Rental Service to all our customers as many operators find
           it beneficial to rent life rafts for either short or extended periods.
@@ -28,7 +28,7 @@ export default function Page() {
         <h3 className="font-bold text-lg">
           Benefits of renting a life raft for short term use
         </h3>
-        <ul className="font-[lato] pl-8 list-disc">
+        <ul className="font-[lato] text-sm lg:text-base pl-8 list-disc">
           <li>Quickly and easily available</li>
           <li>
             Life rafts are generally available from stock with none or little

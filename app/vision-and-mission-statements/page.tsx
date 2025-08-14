@@ -17,8 +17,10 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto px-2 lg:px-0  font-[lato] lg:w-[80%]">
-        <h2 className="text-xl mb-1  mt-3 font-bold">Mission Statement</h2>
-        <p className="text-base text-justify mb-2">
+        <h2 className="text-lg lg:text-xl mb-1  mt-3 font-bold">
+          Mission Statement
+        </h2>
+        <p className="text-sm lg:text-base text-justify mb-2">
           At Pacific Safety Solution Limited we are committed to safety and the
           principles and values guiding it rules in accordance with national and
           international safety laws and with customer service of the highest
@@ -28,8 +30,8 @@ export default function Page() {
           of marine safety & survival.
         </p>
 
-        <h2 className="text-xl mb-1 font-bold">Vision Statement</h2>
-        <p className="text-justify mb-4">
+        <h2 className="text-lg lg:text-xl mb-1 font-bold">Vision Statement</h2>
+        <p className="text-justify text-sm lg:text-base  mb-4">
           To become the best leading marine safety and survival provider company
           where our customers receive the best technical and professional
           services with the right team, tools and paper work to deliver a

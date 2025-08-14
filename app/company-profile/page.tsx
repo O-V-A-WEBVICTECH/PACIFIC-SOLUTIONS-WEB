@@ -17,7 +17,7 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto px-2 lg:px-0  font-[lato] lg:w-[80%]">
-        <p className="text-base text-neutral-950 text-justify leading-relaxed mt-2 mb-1 lg:mt-10">
+        <p className="text-sm text-neutral-950 text-justify leading-relaxed mt-2 mb-1 lg:mt-10">
           PACIFIC SAFETY SOLUTION LIMITED is a duly registered, Limited
           Liability Company with CAC in the federal republic of Nigeria with
           registration number RC1928296. The company’s service station is
@@ -28,7 +28,7 @@ export default function Page() {
           vessels through their local agents as well as foreign and locally
           registered yachts.
         </p>
-        <p className="pt-1">
+        <p className="pt-1 text-sm">
           The company was founded in 2022 primarily as an LSA/FFA Service
           provider and later grown into supplies of other marine and ship
           maintenance parts such as:
@@ -48,7 +48,7 @@ export default function Page() {
             Wire Ropes, Lifting Gears, Anchor Chains, Mooring Rope
           </li>
         </ul>
-        <p className="my-3 font-[lato] text-justify leading-relaxed">
+        <p className="my-3 text-sm font-[lato] text-justify leading-relaxed">
           We also offer a Liferaft rental service for operators who find it
           beneficial to rent liferafts for either short or extended periods. Our
           Service Engineers receive a refresher training courses at the
