@@ -49,7 +49,17 @@ const navLinks: NavLinks[] = [
   },
   {
     title: "Contact",
-    url: "#",
+    url: "/contact-us",
+    subItems: [
+      {
+        title: "Contact Us",
+        url: "/contact-us",
+      },
+      {
+        title: "Liferaft Service Request Form",
+        url: "/liferaft-service-request",
+      },
+    ],
   },
 ];
 
@@ -57,6 +67,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [serviceOpen, setService] = useState<boolean>(false);
   const [aboutOpen, setAbout] = useState<boolean>(false);
+  const [openContact, setContact] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -65,6 +76,7 @@ export default function NavBar() {
   };
   const toggleAbout = () => setAbout(!aboutOpen);
   const toggleService = () => setService(!serviceOpen);
+  const toggleContact = () => setContact(!openContact);
 
   useEffect(() => {
     if (menuOpen) {
@@ -98,7 +110,7 @@ export default function NavBar() {
                 {item.title}
               </Link>
               {item.subItems && (
-                <div className="absolute left-0 top-full mt-2 min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
+                <div className="absolute left-0 top-full mt-1 min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
                   {item.subItems.map((sub, subIdx) => (
                     <Link
                       key={subIdx}
@@ -236,12 +248,42 @@ export default function NavBar() {
             </nav>
           )}
           <Link
-            onClick={toggleMenu}
-            className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#contact"
+            className="py-3 pl-8 uppercase border-b flex items-center justify-between border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+            href="#"
           >
             Contact
+            {openContact ? (
+              <ChevronDown
+                onClick={toggleContact}
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
+              />
+            ) : (
+              <ChevronRight
+                onClick={toggleContact}
+                size={24}
+                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+              />
+            )}
           </Link>
+          {openContact && (
+            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/contact-us"
+              >
+                Contact us
+              </Link>
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/liferaft-service-request"
+              >
+                Liferaft service request form
+              </Link>
+            </nav>
+          )}
         </nav>
       </div>
 
