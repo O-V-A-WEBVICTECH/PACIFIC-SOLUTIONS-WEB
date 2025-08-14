@@ -86,7 +86,7 @@ export default function Home() {
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
                 YOUR TRUSTED PARTNER IN MARINE SAFETY & LIFE RAFT SERVICES
               </h1>
-              <p className="text-base text-white lg:w-[70%]">
+              <p className="text-sm lg:text-base text-white lg:w-[70%]">
                 Ensure your safety with our top-grade safety equipment and
                 premier fiberglass solutions crafted for durability and
                 excellence.
@@ -124,7 +124,7 @@ export default function Home() {
             </h1>
 
             <div className="text-justify text-base font-[lato]">
-              <p className="text-base">
+              <p className="text-sm lg:text-base">
                 At Pacific Safety Solution, based in the vibrant city of Lagos,
                 Nigeria, we specialize in providing top-tier safety equipment
                 and fiberglass services. Our dedication to quality and
@@ -189,7 +189,7 @@ export default function Home() {
               <h2 className="text-3xl lg:text-5xl  font-bold">
                 Proven Safety Solutions: Client Success Stories
               </h2>
-              <pre className="text-base lg:w-[45%] font-[lato]">
+              <pre className="text-sm lg:text-base  lg:w-[45%] font-[lato]">
                 &quot;Excellent service and top-quality safety equipment. Their
                 expertise in fiberglass solutions is unmatched in Lagos. Highly
                 recommended!&quot; - Ada N.
@@ -301,7 +301,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-inter-tight">
                   Ensure Your Safety Today
                 </h2>
-                <p className="text-base md:text-lg text-gray-900 font-lato">
+                <p className="text-sm lg:text-base md:text-lg text-gray-900 font-lato">
                   Choose Pacific Safety Solution in Lagos for expert maintenance
                   of safety equipment and fiberglass services. Secure your
                   life-saving appliances with our reliable and professional
