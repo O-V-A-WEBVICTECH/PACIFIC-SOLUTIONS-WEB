@@ -110,7 +110,7 @@ export default function NavBar() {
                 {item.title}
               </Link>
               {item.subItems && (
-                <div className="absolute left-0 top-full mt-1 min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
+                <div className="absolute left-0 top-full  min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
                   {item.subItems.map((sub, subIdx) => (
                     <Link
                       key={subIdx}
