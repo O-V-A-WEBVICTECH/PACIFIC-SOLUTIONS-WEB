@@ -244,6 +244,20 @@ export default function NavBar() {
               <Link
                 onClick={toggleMenu}
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/marine-equipment-and-ship-maintenance"
+              >
+                Marine Safety Equipment & Ship Maintenance Parts
+              </Link>
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/fiberglass-repairs"
+              >
+                Fiberglass Repairs
+              </Link>
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/inflatable-liferaft-rental"
               >
                 Inflatable Liferaft Rental

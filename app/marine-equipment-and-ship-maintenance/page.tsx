@@ -6,7 +6,7 @@ export default function Page() {
       <div className="relative">
         <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl text-center lg:text-7xl">
-            CO2 Refilling & Medical Oxygen
+            Marine Safety Equipment & Ship Maintenance Parts
           </h1>
         </div>
         <Image
@@ -20,10 +20,11 @@ export default function Page() {
       </div>
       <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
         <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-2 mb-4 lg:mt-10">
-          We offer professional refilling services for fire suppression systems,
-          including carbon dioxide (CO2) cylinders. We also provide medical
-          oxygen supplies, ensuring you have critical resources on board for
-          any emergencie
+          We are your one-stop shop for all marine safety equipment and ship
+          maintenance parts. We supply everything from life jackets and fire
+          extinguishers to essential engine components and deck gear. Our
+          extensive inventory ensures you get the quality parts you need,
+          when you need them.
         </p>
       </main>
     </div>
