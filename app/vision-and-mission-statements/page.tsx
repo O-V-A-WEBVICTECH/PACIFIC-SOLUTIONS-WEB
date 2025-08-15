@@ -16,7 +16,7 @@ export default function Page() {
           className="brightness-50 w-full h-[100px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="mx-auto px-2 lg:px-0  font-[lato] lg:w-[80%]">
+      <main className="mx-auto px-3 lg:px-0  font-[lato] lg:w-[80%]">
         <h2 className="text-lg lg:text-xl mb-1  mt-3 font-bold">
           Mission Statement
         </h2>

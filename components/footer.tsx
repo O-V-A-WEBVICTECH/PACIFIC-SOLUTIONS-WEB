@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#005a9c] text-white">
+    <footer className="bg-[#661cfa] text-white">
       <div className="container mx-auto px-6 py-10 grid gap-8 md:grid-cols-3 lg:grid-cols-5">
         {/* Location */}
         <div>
@@ -76,10 +76,10 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/cylinder-hydrotesting-and-requalification"
+                href="/ffa-Inspection-and-recertification"
                 className="hover:underline"
               >
-                Cylinder Hydrotesting &amp; Requalification
+                FFA & LSA Inspection AND Re Certification
               </Link>
             </li>
             <li>
@@ -136,7 +136,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="bg-[#00457a] text-center py-4 text-xs">
+      <div className="bg-[#7533f7] text-center py-4 text-xs">
         <strong>Pacific Solutions Limited</strong> &copy; 2025 | Site By <a></a>
         .
       </div>

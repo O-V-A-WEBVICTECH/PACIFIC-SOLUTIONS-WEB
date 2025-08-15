@@ -18,7 +18,7 @@ export default function Page() {
           className="brightness-50 w-full h-[130px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="mx-auto px-2 lg:px-0  lg:w-[80%]">
+      <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
         <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-2 mb-4 lg:mt-10">
           We operate a highly efficient carbon dioxide filling facility using a
           4.5 ton refrigerated bulk storage tank and High Torque Pumping unit

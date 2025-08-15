@@ -13,6 +13,10 @@ interface NavLinks {
 
 const navLinks: NavLinks[] = [
   {
+    title: "Home",
+    url: "/",
+  },
+  {
     title: "About",
     url: "/company-profile",
     subItems: [
@@ -33,8 +37,8 @@ const navLinks: NavLinks[] = [
     url: "#",
     subItems: [
       {
-        title: "Cylinder Hydrotesting & Requalification",
-        url: "/cylinder-hydrotesting-and-requalification",
+        title: "FFA & LSA Inspection AND Re Certification",
+        url: "/ffa-Inspection-and-recertification",
       },
       { title: "Carbon Dioxide Refilling", url: "/carbon-dioxide-refilling" },
       {
@@ -147,6 +151,12 @@ export default function NavBar() {
         <nav className="text-sm font-semibold flex flex-col">
           <Link
             className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
             href="#"
           >
             About
@@ -220,9 +230,9 @@ export default function NavBar() {
               <Link
                 onClick={toggleMenu}
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/cylinder-hydrotesting-and-requalification"
+                href="/ffa-Inspection-and-recertification"
               >
-                Cylinder Hydrotesting & Requalification
+                FFA & LSA Inspection AND Re Certification
               </Link>
               <Link
                 onClick={toggleMenu}

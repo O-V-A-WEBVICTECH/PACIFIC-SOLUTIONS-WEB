@@ -33,7 +33,7 @@ export default function Page() {
           className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="container mx-auto px-4 py-12">
+      <main className="container mx-auto px-3 py-12">
         <div className="grid grid-cols-1 text-neutral-950 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div>

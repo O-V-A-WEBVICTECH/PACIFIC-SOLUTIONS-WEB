@@ -16,7 +16,7 @@ export default function Page() {
           className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="mx-auto px-2 lg:px-0  font-[lato] lg:w-[80%]">
+      <main className="mx-auto px-3 lg:px-0  font-[lato] lg:w-[80%]">
         <p className="text-sm text-neutral-950 text-justify leading-relaxed mt-2 mb-1 lg:mt-10">
           PACIFIC SAFETY SOLUTION LIMITED is a duly registered, Limited
           Liability Company with CAC in the federal republic of Nigeria with

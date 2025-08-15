@@ -84,7 +84,7 @@ export default function Home() {
           <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-32 pb-10 lg:pb-48 flex  h-full">
             <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
               <h1 className="text-3xl lg:text-6xl font-bold leading-tight text-white">
-                YOUR TRUSTED PARTNER IN MARINE SAFETY & LIFE RAFT SERVICES
+                YOUR TRUSTED PARTNER IN MARINE SAFETY AND OTHER SHIP SUPPLIES.
               </h1>
               <p className="text-sm lg:text-base text-white lg:w-[70%]">
                 Ensure your safety with our top-grade safety equipment and
@@ -125,9 +125,9 @@ export default function Home() {
 
             <div className="text-justify text-base font-[lato]">
               <p className="text-sm lg:text-base">
-                At Pacific Safety Solution, based in the vibrant city of Lagos,
-                Nigeria, we specialize in providing top-tier safety equipment
-                and fiberglass services. Our dedication to quality and
+                At Pacific Safety Solution limited, based in the vibrant city of
+                Lagos, Nigeria, we specialize in providing top-tier safety
+                equipment and fiberglass services. Our dedication to quality and
                 innovation ensures that each product meets stringent safety
                 standards and client needs. We are committed to safeguarding
                 your work environment with reliable solutions that offer peace
