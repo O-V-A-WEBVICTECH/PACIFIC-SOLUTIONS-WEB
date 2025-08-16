@@ -15,7 +15,7 @@ export default function Page() {
           src="/images/boat-men.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[120px] lg:h-[300px] object-cover"
+          className="brightness-50 w-full h-[120px] lg:h-[240px] object-cover"
         />
       </div>
       <main className="mx-auto mt-3 mb-5 px-3 lg:px-0 lg:w-[80%]">

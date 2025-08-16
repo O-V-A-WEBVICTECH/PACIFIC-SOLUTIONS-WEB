@@ -37,17 +37,21 @@ export default function Page() {
         <div className="grid grid-cols-1 text-neutral-950 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">GET IN TOUCH</h4>
+            <h4 className="text-base pl-2 lg:pl-0 lg:text-lg font-semibold mb-2 lg:mb-6">
+              GET IN TOUCH
+            </h4>
 
-            <ul className="space-y-4 text-neutral-950">
+            <ul className="space-y-2 text-sm lg:text-base text-neutral-950">
               <li className="flex items-start">
                 <span className="text-blue-600 mr-3">
                   <i className="fas fa-map-marked-alt"></i>
                 </span>
                 <span>
-                  Cor. Tucker Valley &amp; Airways Roads,
+                  PLOT QFF 10. IBAFON STREET
                   <br />
-                  Chaguaramas, Trinidad, W.I.
+                  OFF APAPA-OSHODI EXPRESS WAY
+                  <br />
+                  LAGOS-NIGERIA.
                 </span>
               </li>
 
@@ -55,28 +59,21 @@ export default function Page() {
                 <span className="text-blue-600 mr-3">
                   <i className="fas fa-mobile-alt"></i>
                 </span>
-                <span>1-868-634-4410</span>
-              </li>
-
-              <li className="flex items-center">
-                <span className="text-blue-600 mr-3">
-                  <i className="fas fa-fax"></i>
-                </span>
-                <span>1-868-634-2067</span>
+                <span>+2348054094490</span>
               </li>
 
               <li className="flex items-center">
                 <span className="text-blue-600 mr-3">
                   <i className="far fa-envelope"></i>
                 </span>
-                <span>info@companyemail</span>
+                <span>pacificsafety2020@yahoo.com</span>
               </li>
             </ul>
           </div>
 
           {/* Right Side - Contact Form */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">
+            <h4 className="text-base lg:text-lg font-semibold mb-3 lg:mb-6">
               CONTACT US FOR ANY QUESTIONS
             </h4>
 

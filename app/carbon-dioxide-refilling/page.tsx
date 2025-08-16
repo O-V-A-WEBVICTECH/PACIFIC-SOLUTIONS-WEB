@@ -6,7 +6,7 @@ export default function Page() {
       <div className="relative">
         <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl text-center lg:text-7xl">
-            Carbon Dioxide Refilling & Medical Oxygen n
+            Carbon Dioxide Refilling & Medical Oxygen
           </h1>
         </div>
         <Image
@@ -15,7 +15,7 @@ export default function Page() {
           src="/images/boat-men.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[130px] lg:h-[280px] object-cover"
+          className="brightness-50 w-full h-[130px] lg:h-[240px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">

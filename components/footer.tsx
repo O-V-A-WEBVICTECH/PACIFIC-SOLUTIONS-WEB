@@ -38,10 +38,10 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> <span>Tel: 1-868-634-4410</span>
+              <FaPhoneAlt /> <span>Tel: +2348054094490</span>
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> <span>info@company.com</span>
+              <FaEnvelope /> <span>pacificsafety2020@yahoo.com</span>
             </li>
           </ul>
         </div>
