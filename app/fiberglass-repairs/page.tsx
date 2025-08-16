@@ -14,16 +14,26 @@ export default function Page() {
           height={600}
           src="/images/boat-men.jpg"
           alt="boat men"
-          priority
           className="brightness-50 w-full h-[110px] lg:h-[280px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
         <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-2 mb-4 lg:mt-10">
-          From minor cosmetic fixes to structural repairs, our team specializes
-          in fiberglass work. We restore your vessel&apos;s integrity and
-          appearance, protecting your investment and ensuring
-          long-term durability.
+          Over time, wear and tear, and even minor collisions can compromise a
+          vessel&apos;s fiberglass hull and deck. These issues are more than
+          just cosmetic; if left unaddressed, they can lead to water ingress,
+          delamination, and structural failure. Our team consists of skilled
+          fiberglass technicians who are experts in a wide range of repair
+          services, from simple gelcoat touch-ups to complex structural
+          reinforcements. We handle everything from minor scratches and spider
+          cracks to significant impact damage. Our process begins with a
+          detailed assessment of the damage, followed by the use of high-quality
+          marine-grade resins and fabrics to restore the material&apos;s
+          strength and integrity. We meticulously blend colors to match your
+          vessel&apos;s original finish, making the repair virtually invisible.
+          By addressing fiberglass damage promptly and professionally, we not
+          only restore your vessel&apos;s aesthetic appeal but also protect its
+          value and extend its operational life.
         </p>
       </main>
     </div>

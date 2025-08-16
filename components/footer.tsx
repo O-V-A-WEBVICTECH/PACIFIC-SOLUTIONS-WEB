@@ -1,4 +1,12 @@
 import Link from "next/link";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaMapMarkedAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -11,13 +19,13 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
-              {/* <FaMapMarkedAlt className="mt-1" /> */}
-              <span>
-                Somewhere in Africa,
+              <FaMapMarkedAlt className="mt-1" />
+              <span className="capitalize">
+                PLOT QFF 10. IBAFON STREET
                 <br />
-                ******
+                OFF APAPA-OSHODI EXPRESS WAY
                 <br />
-                ****
+                LAGOS-NIGERIA.
               </span>
             </li>
           </ul>
@@ -30,13 +38,10 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              {/* <FaPhoneAlt /> <span>Tel: 1-868-634-4410</span> */}
+              <FaPhoneAlt /> <span>Tel: 1-868-634-4410</span>
             </li>
             <li className="flex items-center gap-2">
-              {/* <FaFax /> <span>Fax: 1-868-634-2067</span> */}
-            </li>
-            <li className="flex items-center gap-2">
-              {/* <FaEnvelope /> <span>info@marinesafetytt.com</span> */}
+              <FaEnvelope /> <span>info@company.com</span>
             </li>
           </ul>
         </div>
@@ -113,7 +118,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
             >
-              {/* <FaFacebook /> */}
+              <FaFacebook />
             </a>
             <a
               href=""
@@ -121,7 +126,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
             >
-              {/* <FaInstagram /> */}
+              <FaInstagram />
             </a>
             <a
               href=""
@@ -129,7 +134,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
             >
-              {/* <FaLinkedin /> */}
+              <FaLinkedin />
             </a>
           </div>
         </div>

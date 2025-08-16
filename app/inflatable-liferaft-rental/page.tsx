@@ -6,7 +6,7 @@ export default function Page() {
       <div className="relative">
         <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl text-center lg:text-7xl">
-            Inflatable Liferaft Rental
+            Inflatable Liferaft on Rental Basis
           </h1>
         </div>
         <Image
@@ -20,10 +20,21 @@ export default function Page() {
       </div>
       <main className="mx-auto mt-3 mb-5 px-3 lg:px-0 lg:w-[80%]">
         <p className="text-justify">
-          Whether you need a temporary solution or want to avoid the costs of
-          ownership and maintenance, our inflatable liferaft rental service is
-          the perfect choice. We offer a variety of sizes and capacities to suit
-          your specific needs, all maintained to the highest safety standards.
+          Owning an inflatable liferaft comes with the significant overhead of
+          regular inspection, servicing, and storage, which can be a complex and
+          costly process. Our inflatable liferaft rental program provides a
+          flexible, cost-effective, and hassle-free alternative. We offer a wide
+          range of liferafts, from small 4-person units to large 25-person
+          models, all of which are meticulously maintained and certified to the
+          highest safety standards. When you rent from us, you get a fully
+          serviced, inspected, and ready-to-deploy liferaft without the
+          long-term commitment or maintenance burdens. This is an ideal solution
+          for vessels that operate seasonally, for recreational boat owners who
+          want the highest level of safety without the ownership costs, or for
+          commercial operators looking to manage their budget more efficiently.
+          Our team handles all the servicing, ensuring the liferaft you receive
+          is in perfect working order and fully compliant with all regulations.
+          We provide the equipment, you get the peace of mind.
         </p>
       </main>
     </div>
