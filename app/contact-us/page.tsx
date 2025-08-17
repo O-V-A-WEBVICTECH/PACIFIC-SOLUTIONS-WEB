@@ -49,7 +49,7 @@ export default function Page() {
         formDetails
       );
       if (res.status === 200)
-        return toast("Form Submited", {
+        return toast("✅Form Submited", {
           autoClose: 5000,
           hideProgressBar: true,
           closeOnClick: false,
@@ -80,7 +80,7 @@ export default function Page() {
           className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="container mx-auto mb-20 lg:mb-0 px-3 py-12">
+      <main className="container mx-auto mb-20  px-3 py-12">
         <div className="grid grid-cols-1 text-neutral-950 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div>
