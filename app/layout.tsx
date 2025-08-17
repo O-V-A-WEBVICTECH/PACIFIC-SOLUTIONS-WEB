@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/navbar";
 import { Lato, Inter_Tight } from "next/font/google";
 import Footer from "@/components/footer";
+import { ToastContainer } from "react-toastify";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );

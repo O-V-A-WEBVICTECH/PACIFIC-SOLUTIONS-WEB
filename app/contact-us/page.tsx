@@ -1,11 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { Loader2 } from "lucide-react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function Page() {
+  const [loading, setLoading] = useState<boolean>(false);
+
   useEffect(() => {
     mapboxgl.accessToken =
       "pk.eyJ1IjoiZHVyYWJsZSIsImEiOiJjbGJjOHV1bHUwcjM5M3huOHdoZXdkdDRsIn0.geBkTZ4KBXWb669GQBr8rw";
@@ -17,6 +22,48 @@ export default function Page() {
       zoom: 13,
     });
   }, []);
+
+  //function to submit form
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
+    const company = formData.get("company");
+
+    const formDetails = {
+      name,
+      email,
+      phone,
+      message,
+      company,
+    };
+
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        "https://app.proforms.top/f/pr45a06a7",
+        formDetails
+      );
+      if (res.status === 200)
+        return toast("Form Submited", {
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: false,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+    } catch (error) {
+      return console.log("error submititng form:", error);
+    } finally {
+      return setLoading(false);
+    }
+  }
 
   return (
     <div className="bg-white">
@@ -33,7 +80,7 @@ export default function Page() {
           className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="container mx-auto px-3 py-12">
+      <main className="container mx-auto mb-20 lg:mb-0 px-3 py-12">
         <div className="grid grid-cols-1 text-neutral-950 lg:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
           <div>
@@ -77,16 +124,18 @@ export default function Page() {
               CONTACT US FOR ANY QUESTIONS
             </h4>
 
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
                   className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
                   className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
@@ -95,7 +144,8 @@ export default function Page() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
-                  type="text"
+                  type="phone"
+                  name="phone"
                   placeholder="Phone Number"
                   className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
@@ -103,6 +153,7 @@ export default function Page() {
                 <input
                   type="text"
                   placeholder="Company"
+                  name="company"
                   className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -110,6 +161,7 @@ export default function Page() {
               <textarea
                 placeholder="Enter your message..."
                 maxLength={180}
+                name="message"
                 rows={6}
                 className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
@@ -126,10 +178,12 @@ export default function Page() {
               </select>
 
               <button
+                disabled={loading}
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded"
+                className="bg-blue-600 flex items-center gap-1   hover:bg-blue-700 text-white px-6 py-2 rounded"
               >
                 Send Message
+                {loading ? <Loader2 className="h4 w-4 animate-spin" /> : null}
               </button>
             </form>
           </div>
