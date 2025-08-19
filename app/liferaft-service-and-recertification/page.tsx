@@ -19,7 +19,7 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
-        <div className="flex flex-col mt-3 lg:flex-row gap-1 lg:gap-10">
+        <div className="flex mb-2 flex-col mt-3 lg:flex-row gap-1 lg:gap-10">
           <div className="order-[5] lg:order-none flex-1">
             <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed">
               At Marine Safety Equipment Service and Sales Company Limited we

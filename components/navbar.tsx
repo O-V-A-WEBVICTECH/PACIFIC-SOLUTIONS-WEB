@@ -49,6 +49,14 @@ const navLinks: NavLinks[] = [
         title: "Liferaft Service & Recertification",
         url: "/liferaft-service-and-recertification",
       },
+      {
+        title: " Marine Safety Equipment & Ship Maintenance Parts",
+        url: "/marine-equipment-and-ship-maintenance",
+      },
+      {
+        title: "Fiberglass Repairs",
+        url: "/fiberglass-repairs",
+      },
     ],
   },
   {
