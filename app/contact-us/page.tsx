@@ -33,6 +33,7 @@ export default function Page() {
     const phone = formData.get("phone");
     const message = formData.get("message");
     const company = formData.get("company");
+    const referral = formData.get("referral");
 
     const formDetails = {
       name,
@@ -40,6 +41,7 @@ export default function Page() {
       phone,
       message,
       company,
+      referral,
     };
 
     try {
@@ -169,6 +171,7 @@ export default function Page() {
               <select
                 className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
+                name="referral"
               >
                 <option value="">How did you hear about our website</option>
                 <option value="web-search">Web Search</option>

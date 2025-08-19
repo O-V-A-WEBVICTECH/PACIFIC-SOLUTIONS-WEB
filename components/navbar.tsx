@@ -37,7 +37,7 @@ const navLinks: NavLinks[] = [
     url: "#",
     subItems: [
       {
-        title: "FFA & LSA Inspection AND Re Certification",
+        title: "FFA & LSA Inspection and re-certification",
         url: "/ffa-Inspection-and-recertification",
       },
       { title: "Carbon Dioxide Refilling", url: "/carbon-dioxide-refilling" },

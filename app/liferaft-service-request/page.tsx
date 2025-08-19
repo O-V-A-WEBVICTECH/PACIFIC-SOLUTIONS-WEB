@@ -1,8 +1,62 @@
 "use client";
 import Image from "next/image";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { useState, FormEvent } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { Loader2 } from "lucide-react";
 
 export default function Page() {
+  const [loading, setLoading] = useState<boolean>(false);
+
+  async function handleFormSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const country = formData.get("country");
+    const companyName = formData.get("companyName");
+    const vesselName = formData.get("vesselName");
+    const streetAddress = formData.get("streetAddress");
+    const city = formData.get("city");
+    //country goes here
+    const month = formData.get("month");
+    const day = formData.get("day");
+    const year = formData.get("year");
+    const comments = formData.get("comments");
+
+    const formDetails = {
+      name,
+      email,
+      phone,
+      country,
+      companyName,
+      vesselName,
+      streetAddress,
+      city,
+      month,
+      day,
+      year,
+      comments,
+    };
+
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        "https://app.proforms.top/f/pr45a06a7",
+        formDetails
+      );
+      console.log("submision data:", res);
+      if (res.status === 200) return toast("form Submited");
+    } catch (error) {
+      console.log(error);
+      return toast("something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div className="bg-white text-neutral-950">
       <div className="relative">
@@ -26,7 +80,10 @@ export default function Page() {
             Get in Touch
           </h1>
 
-          <form className="bg-white rounded-2xl font-[lato] shadow p-6 md:p-8 space-y-6">
+          <form
+            onSubmit={handleFormSubmit}
+            className="bg-white rounded-2xl font-[lato] shadow p-6 md:p-8 space-y-6"
+          >
             {/* Your Name (required) */}
             <div>
               <label
@@ -557,7 +614,7 @@ export default function Page() {
             </div>
 
             {/* File Upload (Last Service Certificates) */}
-            <div>
+            {/* <div>
               <label
                 htmlFor="certificate"
                 className="block text-sm font-medium text-gray-700"
@@ -572,12 +629,12 @@ export default function Page() {
                 // Same accept list as original (very broad)
                 accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.webp,.avif,.ico,.heic,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.vtt,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.pdf,.class,.tar,.zip,.gz,.gzip,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svgz,.ttf,.eot,.woff,.woff2"
               />
-              {/* {file && (
+              {file && (
                 <p className="mt-2 text-xs text-gray-600">
                   Selected: {file.name}
                 </p>
-              )} */}
-            </div>
+              )}
+            </div> */}
 
             {/* reCAPTCHA placeholder (implement with your own site key) */}
             <div className="rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-gray-600">
@@ -589,11 +646,12 @@ export default function Page() {
             {/* Submit */}
             <div className="pt-2">
               <button
+                disabled={loading}
                 type="submit"
-                className="w-full rounded-lg bg-green-600 px-5 py-3 font-medium text-white transition hover:bg-green-700 disabled:opacity-60"
+                className=" flex items-center justify-center  gap-1 w-full rounded-lg bg-green-600  py-3 font-medium text-white transition hover:bg-green-700 disabled:opacity-60"
               >
                 Submit
-                {/* {submitting ? "Submitting…" : "Submit"} */}
+                {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : null}
               </button>
             </div>
           </form>

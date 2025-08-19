@@ -84,7 +84,7 @@ export default function Footer() {
                 href="/ffa-Inspection-and-recertification"
                 className="hover:underline"
               >
-                FFA & LSA Inspection AND Re Certification
+                FFA & LSA Inspection and re-certification
               </Link>
             </li>
             <li>
