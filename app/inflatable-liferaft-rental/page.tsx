@@ -19,23 +19,37 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto mt-3 mb-5 px-3 lg:px-0 lg:w-[80%]">
-        <p className="text-justify">
-          Owning an inflatable liferaft comes with the significant overhead of
-          regular inspection, servicing, and storage, which can be a complex and
-          costly process. Our inflatable liferaft rental program provides a
-          flexible, cost-effective, and hassle-free alternative. We offer a wide
-          range of liferafts, from small 4-person units to large 25-person
-          models, all of which are meticulously maintained and certified to the
-          highest safety standards. When you rent from us, you get a fully
-          serviced, inspected, and ready-to-deploy liferaft without the
-          long-term commitment or maintenance burdens. This is an ideal solution
-          for vessels that operate seasonally, for recreational boat owners who
-          want the highest level of safety without the ownership costs, or for
-          commercial operators looking to manage their budget more efficiently.
-          Our team handles all the servicing, ensuring the liferaft you receive
-          is in perfect working order and fully compliant with all regulations.
-          We provide the equipment, you get the peace of mind.
-        </p>
+        <div className="flex flex-col lg:flex-row gap-1 lg:gap-10">
+          <div className="flex-1 order-5 lg:order-none">
+            <p className="text-justify">
+              Owning an inflatable liferaft comes with the significant overhead
+              of regular inspection, servicing, and storage, which can be a
+              complex and costly process. Our inflatable liferaft rental program
+              provides a flexible, cost-effective, and hassle-free alternative.
+              We offer a wide range of liferafts, from small 4-person units to
+              large 25-person models, all of which are meticulously maintained
+              and certified to the highest safety standards. When you rent from
+              us, you get a fully serviced, inspected, and ready-to-deploy
+              liferaft without the long-term commitment or maintenance burdens.
+              This is an ideal solution for vessels that operate seasonally, for
+              recreational boat owners who want the highest level of safety
+              without the ownership costs, or for commercial operators looking
+              to manage their budget more efficiently. Our team handles all the
+              servicing, ensuring the liferaft you receive is in perfect working
+              order and fully compliant with all regulations. We provide the
+              equipment, you get the peace of mind.
+            </p>
+          </div>
+          <div className="flex-1 order-1 lg:order-none">
+            <Image
+              alt="raft"
+              width={1000}
+              height={1000}
+              src="/images/liferaft.webp"
+              className="rounded-md"
+            />
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -53,7 +53,7 @@ export default function Page() {
               title: "Inflatable Life Rafts",
               description:
                 "High-quality inflatable life rafts for emergency evacuation and survival at sea.",
-              image: "/images/inflatables.jpg",
+              image: "/images/liferaft.webp",
             },
             {
               title: "MOB, HRU & Line Thrower",

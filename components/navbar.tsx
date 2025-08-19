@@ -229,10 +229,10 @@ export default function NavBar() {
             <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
               <Link
                 onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className="py-3 pl-3  hover:bg-neutral-100 transition-colors duration-200"
                 href="/ffa-Inspection-and-recertification"
               >
-                FFA & LSA Inspection AND Re Certification
+                FFA & LSA Inspection and re-certification
               </Link>
               <Link
                 onClick={toggleMenu}

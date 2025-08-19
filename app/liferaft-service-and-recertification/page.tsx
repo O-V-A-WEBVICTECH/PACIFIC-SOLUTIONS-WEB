@@ -19,25 +19,40 @@ export default function Page() {
         />
       </div>
       <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
-        <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-3 lg:mt-4">
-          At Marine Safety Equipment Service and Sales Company Limited we
-          operate a Liferaft service station which is certified and fully
-          compliant with IMO Resolution A.761(18) as amended by RESOLUTION
-          MSC.55(66), and all manufactures whom we represent. Our Technicians
-          are factory trained internationally by the manufactures we represent
-          frequently, and work in a controlled facility which is clean, well lit
-          , fully enclosed and large enough to service several Liferafts at once
-          , we are also able to maintain sufficient control of temperature and
-          humidity to carry out effective service and repairs. A full inventory
-          of spare parts is always in stock to support our facility and our own
-          in-house cylinder shop is capable of hydro-testing Liferaft cylinders
-          and refilling of Carbon Dioxide and Nitrogen, which significantly
-          reduces the time and cost of Liferaft overhauls. Performing 10%
-          overload tests on Davit Launch Liferafts are not a problem with our
-          Davit Launch testing system capable of testing up to 37 Person DL –
-          type Liferafts in accordance with SOLAS and guidelines as specified by
-          the manufacturer.
-        </p>
+        <div className="flex flex-col mt-3 lg:flex-row gap-1 lg:gap-10">
+          <div className="order-[5] lg:order-none flex-1">
+            <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed">
+              At Marine Safety Equipment Service and Sales Company Limited we
+              operate a Liferaft service station which is certified and fully
+              compliant with IMO Resolution A.761(18) as amended by RESOLUTION
+              MSC.55(66), and all manufactures whom we represent. Our
+              Technicians are factory trained internationally by the
+              manufactures we represent frequently, and work in a controlled
+              facility which is clean, well lit , fully enclosed and large
+              enough to service several Liferafts at once , we are also able to
+              maintain sufficient control of temperature and humidity to carry
+              out effective service and repairs. A full inventory of spare parts
+              is always in stock to support our facility and our own in-house
+              cylinder shop is capable of hydro-testing Liferaft cylinders and
+              refilling of Carbon Dioxide and Nitrogen, which significantly
+              reduces the time and cost of Liferaft overhauls. Performing 10%
+              overload tests on Davit Launch Liferafts are not a problem with
+              our Davit Launch testing system capable of testing up to 37 Person
+              DL – type Liferafts in accordance with SOLAS and guidelines as
+              specified by the manufacturer.
+            </p>
+          </div>
+          <div className="order-[1] lg:order-none flex-1">
+            <Image
+              alt="raft"
+              width={1000}
+              height={1000}
+              src="/images/liferaft-3.jpg"
+              quality={100}
+              className="rounded-md"
+            />
+          </div>
+        </div>
       </main>
     </div>
   );
