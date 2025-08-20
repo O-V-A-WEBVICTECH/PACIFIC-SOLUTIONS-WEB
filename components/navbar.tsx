@@ -27,7 +27,7 @@ const navLinks: NavLinks[] = [
       },
       { title: "Core Values", url: "/core-values" },
       {
-        title: "Health safety and enviroment(HSE) policy",
+        title: "Health safety and enviroment (HSE) policy",
         url: "/health-safety-and-enviroment-policy",
       },
     ],
