@@ -26,6 +26,10 @@ const navLinks: NavLinks[] = [
         url: "/vision-and-mission-statements",
       },
       { title: "Core Values", url: "/core-values" },
+      {
+        title: "Health safety and enviroment(HSE) policy",
+        url: "/health-safety-and-enviroment-policy",
+      },
     ],
   },
   {
@@ -204,6 +208,13 @@ export default function NavBar() {
                 href="/core-values"
               >
                 Core Values
+              </Link>
+              <Link
+                onClick={toggleMenu}
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/health-safety-and-enviroment-policy"
+              >
+                Health safety and enviroment (HSE) policy
               </Link>
             </nav>
           )}
