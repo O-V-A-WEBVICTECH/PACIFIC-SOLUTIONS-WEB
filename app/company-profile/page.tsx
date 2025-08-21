@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-white text-neutral-950">
       <div className="relative">
         <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-4xl lg:text-7xl">Company Profile</h1>
+          <h1 className="text-4xl font-bold lg:text-7xl">Company Profile</h1>
         </div>
         <Image
           width={1000}

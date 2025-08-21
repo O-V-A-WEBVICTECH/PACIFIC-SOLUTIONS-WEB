@@ -17,10 +17,10 @@ export default function Page() {
           className="brightness-50 w-full h-[110px] lg:h-[280px] object-cover"
         />
       </div>
-      <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
+      <main className="mx-auto px-3 text-neutral-950 lg:px-0  lg:w-[80%]">
         <div className="flex flex-col mt-3 mb-2 lg:flex-row gap-1 lg:gap-10">
           <div className="order-[5] lg:order-none flex-1">
-            <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed">
+            <p className="text-sm font-[lato] lg:text-base text-justify leading-relaxed">
               Pacific Safety solution limited is committed to providing a safe
               and healthy working enviroment for all employees, visitors,
               clients and vendors operating within and outside the marine
