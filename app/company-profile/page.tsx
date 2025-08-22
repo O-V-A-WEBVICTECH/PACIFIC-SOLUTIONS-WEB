@@ -22,16 +22,19 @@ export default function Page() {
           Liability Company with CAC in the federal republic of Nigeria with
           registration number RC1928296. The company’s service station is
           situated in Lagos Nigeria and the company covers/render services to
-          vessels trading within other Africa countries. Its major customers
-          include oil/gas companies with offshore installations, vessel
-          owners/managers, ship agencies and other foreign registered commercial
-          vessels through their local agents as well as foreign and locally
-          registered yachts.
+          vessels trading within other Africa countries which includes
+          Cotonou-Benin Republic, Lome-Togo, Tema and Takoradi-Ghana,
+          Dakar-Senegal, Douala-Cameroon, Freetown-Sierra Leone, Abidjan-Ivory
+          Coast, Guinea-Conakry, Republic of Liberia, Angola, Tanzania, Gabon,
+          Mauritania.
         </p>
         <p className="pt-1 text-sm">
-          The company was founded in 2022 primarily as an LSA/FFA Service
-          provider and later grown into supplies of other marine and ship
-          maintenance parts such as:
+          Her major customers include oil/gas companies with offshore
+          installations, vessel owners/managers, ship agencies and other foreign
+          registered commercial vessels through their local agents as well as
+          foreign and locally registered yachts. The company was founded in 2022
+          primarily as an LSA/FFA Service provider and later grown into supplies
+          of other marine and ship maintenance parts such as:
         </p>
         <ul className="font-[lato]  text-sm list-inside mt-2 list-disc text-neutral-900 ">
           <li className="py-1 ">Life Jackets and Work Vests</li>
@@ -53,7 +56,7 @@ export default function Page() {
           beneficial to rent liferafts for either short or extended periods. Our
           Service Engineers receive a refresher training courses at the
           respective factories frequently and our Service facility is fully
-          equipped and approved in accordance with international standards
+          equipped and approved in accordance with international standards
         </p>
       </main>
     </div>
