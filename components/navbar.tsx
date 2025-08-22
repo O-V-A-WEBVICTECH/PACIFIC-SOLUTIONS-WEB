@@ -95,15 +95,26 @@ export default function NavBar() {
   const toggleContact = () => setContact(!openContact);
 
   useEffect(() => {
+    let scrollY = 0;
+
     if (menuOpen) {
-      document.body.style.overflow = "hidden";
+      scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
     } else {
-      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
     }
   }, [menuOpen]);
 
   return (
-    <header className="sticky top-0 z-[2000] bg-[#5200f5] text-white transition-colors duration-300">
+    <header
+      className={`sticky top-0 z-[2000] bg-[#5200f5] text-white transition-colors duration-300 ${
+        menuOpen ? "overflow-hidden" : ""
+      }`}
+    >
       <div className="container mx-auto px-6 lg:px-12 py-4 lg:py-6 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -113,7 +124,7 @@ export default function NavBar() {
             src="/images/logo.png"
             alt="logo"
           />
-          <p className="text-base font-[lato] lg:text-2xl font-bold truncate">
+          <p className="text-base  lg:text-2xl font-bold truncate">
             Pacific Safety Solution Limited
           </p>
         </Link>

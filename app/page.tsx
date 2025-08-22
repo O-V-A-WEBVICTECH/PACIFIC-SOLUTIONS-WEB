@@ -200,36 +200,25 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row gap-4">
               {[
                 {
-                  name: "Adewale Johnson",
+                  name: " Kab Agencies Ltd.",
                   quote:
-                    "Pacific Safety Solution exceeded my expectations with top-notch equipment and professional fiberglass services. Their team is incredibly knowledgeable and attentive to client needs. I highly recommend them to anyone seeking reliable safety solutions in Lagos.",
-                  image: "/images/feedback-2.jpg",
+                    "Pacific Safety Solution Ltd exceeded our expectations with top-notch marine safety equipment’s and professional LSA/FFA services. Their team is incredibly knowledgeable and attentive to client needs. I highly recommend them to anyone seeking reliable safety solutions in west Africa.",
                 },
                 {
-                  name: "Ngozi Okafor",
+                  name: "Zodiac Maritime UK",
                   quote:
                     "Pacific Safety Solution impressed me with their exceptional service and high-quality safety equipment. The team’s expertise in fiberglass services was evident, and they were always ready to assist. A trustworthy company for all safety needs in Lagos!",
-                  image: "/images/feedback.jpg",
                 },
                 {
-                  name: "Chidi Nwosu",
+                  name: "TMS Offshore Lome Sarl",
                   quote:
-                    "I am thoroughly impressed by Pacific Safety Solution's dedication to providing top-tier safety equipment and fiberglass services. Their expertise and customer-focused approach set them apart in Lagos. It's always a pleasure working with such a reliable and professional team.",
-                  image: "/images/feedback-1.jpg",
+                    "We are thoroughly impressed by Pacific Safety Solution's dedication to providing top-tier safety equipment services-LSA/FFA. And Their expertise and customer-focused approach set them apart in the maritime environment. It's always a pleasure working with such a reliable and professional team.",
                 },
               ].map((testimonial, index) => (
                 <div
                   key={index}
                   className="flex flex-col gap-6 p-4  bg-[#7533f7] bg-opacity-20 rounded-lg font-[lato] text-[#fafafa] max-w-2xl"
                 >
-                  <div className="relative  w-18 h-18 rounded-full overflow-hidden">
-                    <Image
-                      src={testimonial.image}
-                      alt={`- ${testimonial.name}`}
-                      fill
-                      className="object-cover w-18 h-18"
-                    />
-                  </div>
                   <h3 className="text-base lg:text-lg font-medium">
                     {testimonial.quote}
                   </h3>

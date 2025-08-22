@@ -6,7 +6,7 @@ export default function Page() {
       <div className="relative">
         <div className="absolute top-[18%] lg:top-[22%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-3xl text-center lg:text-7xl">
-            FFA & LSA Inspection and Re Certification
+            LSA/FFA Inspection and Re-Certification
           </h1>
         </div>
         <Image

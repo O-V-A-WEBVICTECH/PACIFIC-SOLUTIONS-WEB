@@ -73,34 +73,50 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li>
               <Link
-                href="/liferaft-service-and-recertification"
-                className="hover:underline"
-              >
-                Liferaft Service &amp; Recertification
-              </Link>
-            </li>
-            <li>
-              <Link
+                className="py-3 pl-3 hover:bg-neutral-100 transition-colors duration-200"
                 href="/ffa-Inspection-and-recertification"
-                className="hover:underline"
               >
                 FFA & LSA Inspection and re-certification
               </Link>
             </li>
             <li>
               <Link
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/carbon-dioxide-refilling"
-                className="hover:underline"
               >
                 Carbon Dioxide Refilling
               </Link>
             </li>
             <li>
               <Link
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/marine-equipment-and-ship-maintenance"
+              >
+                Marine Safety Equipment & Ship Maintenance Parts
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/fiberglass-repairs"
+              >
+                Fiberglass Repairs
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/inflatable-liferaft-rental"
-                className="hover:underline"
               >
                 Inflatable Liferaft Rental
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                href="/liferaft-service-and-recertification"
+              >
+                Liferaft Service & Recertification
               </Link>
             </li>
           </ul>
