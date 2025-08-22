@@ -10,10 +10,10 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/liferaft.webp"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[120px] lg:h-[280px] object-cover"
+          className="brightness-50 w-full h-[160px] lg:h-[360px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0  font-[lato] lg:w-[80%]">

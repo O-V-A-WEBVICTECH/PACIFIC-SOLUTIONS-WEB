@@ -76,7 +76,7 @@ export default function Footer() {
                 className="py-3 pl-3 hover:bg-neutral-100 transition-colors duration-200"
                 href="/ffa-Inspection-and-recertification"
               >
-                FFA & LSA Inspection and re-certification
+                LSA/FFA Inspection and Re-Certification
               </Link>
             </li>
             <li>
