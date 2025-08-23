@@ -72,7 +72,7 @@ const navLinks: NavLinks[] = [
         url: "/contact-us",
       },
       {
-        title: "Liferaft Service Request Form",
+        title: "Services request form",
         url: "/liferaft-service-request",
       },
     ],
@@ -334,7 +334,7 @@ export default function NavBar() {
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/liferaft-service-request"
               >
-                Liferaft service request form
+                Services request form
               </Link>
             </nav>
           )}

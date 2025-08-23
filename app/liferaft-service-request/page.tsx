@@ -20,7 +20,6 @@ export default function Page() {
     const vesselName = formData.get("vesselName");
     const streetAddress = formData.get("streetAddress");
     const city = formData.get("city");
-    //country goes here
     const month = formData.get("month");
     const day = formData.get("day");
     const year = formData.get("year");
@@ -61,17 +60,15 @@ export default function Page() {
     <div className="bg-white text-neutral-950">
       <div className="relative">
         <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-3xl lg:text-7xl">
-            Liferaft Service Request Form
-          </h1>
+          <h1 className="text-2xl lg:text-7xl">REPAIR/SERVICES REQUEST FORM</h1>
         </div>
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/boat-2.webp"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[100px] lg:h-[280px] object-cover"
+          className="brightness-50 w-full h-[180px] lg:h-[280px] object-cover"
         />
       </div>
       <section className="py-12">

@@ -16,16 +16,12 @@ interface Slide {
 export default function Home() {
   const slides: Slide[] = [
     {
-      src: "/images/hero-image-2.jpg",
+      src: "/images/hero-image-1.webp",
       alt: "Close up technician engineer wearing and adjust protective safety glasses.",
     },
     {
-      src: "/images/hero-image-1.jpg",
+      src: "/images/boat-2.webp",
       alt: "Fire extinguisher and a protective helmet.",
-    },
-    {
-      src: "/images/hero-image-3.jpg",
-      alt: "Selective focus at safety hardhat in the factory production line.",
     },
   ];
 
@@ -115,10 +111,10 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="#about" className="py-5 mb-16 bg-white text-[#121212]">
-        <div className="container mx-auto px-3 lg:px-0 flex items-center flex-col lg:flex-row  gap-10">
+      <section id="#about" className="py-5 mb-8 bg-white text-[#121212]">
+        <div className="container mx-auto px-3  lg:px-0 flex items-center lg:items-start flex-col lg:flex-row  gap-10">
           {/* Text content */}
-          <div className="flex-1 ">
+          <div className="flex-1">
             <h1 className="text-4xl md:text-6xl font-bold font-[lato]  mb-2">
               Your Trusted Partner in Safety Solutions
             </h1>
@@ -149,11 +145,11 @@ export default function Home() {
           <div className="flex-1">
             <div className="relative w-full lg:h-full shadow-lg">
               <Image
-                src="/images/hero-image-2.jpg"
+                src="/images/raft-3.webp"
                 alt="Technician adjusting safety glasses"
                 width={500}
                 height={500}
-                className="object-cover rounded-2xl  w-full min-h-[100%]"
+                className="object-cover lg:h-[380px] rounded-md  w-full min-h-[100%]"
               />
             </div>
           </div>
@@ -167,12 +163,8 @@ export default function Home() {
           style={{
             minHeight: "0px",
             zIndex: 35,
-            scrollMarginTop: "5rem",
-            marginTop: "-89px",
-            paddingTop: "89px",
-            paddingBottom: "88px",
-            clipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0 100%)",
-            WebkitClipPath: "polygon(0 10%, 100% 0%, 100% 100%, 0 100%)",
+            paddingTop: "20px",
+            paddingBottom: "40px",
           }}
         >
           {/* Background */}
@@ -181,7 +173,7 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative px-4 lg:px-0 z-10 container mx-auto  pt-30 lg:pt-32 pb-8 lg:pb-10">
+          <div className="relative px-4 lg:px-0 z-10 container mx-auto  pt-10 lg:pt-32 pb-8 lg:pb-10">
             <div className="flex flex-col gap-4 max-w-5xl mb-12 text-left text-white">
               <p className="text-sm font-[lato] font-semibold">
                 Trusted Feedback
