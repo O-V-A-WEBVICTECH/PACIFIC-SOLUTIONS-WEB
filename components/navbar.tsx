@@ -110,244 +110,269 @@ export default function NavBar() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`sticky top-0 z-[2000] bg-[#5200f5] text-white transition-colors duration-300 ${
-        menuOpen ? "overflow-hidden" : ""
-      }`}
-    >
-      <div className="container mx-auto px-6 lg:px-12 py-4 lg:py-6 flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            width={200}
-            height={200}
-            className="w-6 lg:w-6 h-auto"
-            src="/images/logo.png"
-            alt="logo"
-          />
-          <p className="text-base  lg:text-2xl font-bold truncate">
-            Pacific Safety Solution Limited
-          </p>
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
-          {navLinks.map((item, index) => (
-            <div key={index} className="relative group">
-              <Link href={item.url} className="hover:text-gray-300 transition">
-                {item.title}
-              </Link>
-              {item.subItems && (
-                <div className="absolute left-0 top-full  min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
-                  {item.subItems.map((sub, subIdx) => (
-                    <Link
-                      key={subIdx}
-                      href={sub.url}
-                      className="block px-6 py-3 hover:bg-gray-100 border-b last:border-b-0 border-gray-200"
-                    >
-                      {sub.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-
-        {/* Mobile Hamburger */}
-        {menuOpen ? null : (
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden focus:outline-none"
-            aria-label="Toggle menu"
+    <>
+      {/* Top Bar */}
+      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4 flex justify-center items-center gap-6">
+        <span>
+          📞{" "}
+          <a href="tel:+1234567890" className="hover:underline">
+            +1 234 567 890
+          </a>
+        </span>
+        <span>
+          ✉️{" "}
+          <a
+            href="mailto:info@pacificsolutions.com"
+            className="hover:underline"
           >
-            <Menu className="w-9 h-5" />
-          </button>
-        )}
+            info@pacificsolutions.com
+          </a>
+        </span>
       </div>
 
-      {/* Side Mobile Menu */}
-      <div
-        className={`fixed top-0 pt-12 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 shadow-xl ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
+      {/* Main Header */}
+      <header
+        className={`sticky top-0 z-[2000] bg-[#5200f5] text-white transition-colors duration-300 ${
+          menuOpen ? "overflow-hidden" : ""
         }`}
       >
-        <nav className="text-sm font-semibold flex flex-col">
-          <Link
-            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="/"
-          >
-            Home
+        <div className="container mx-auto px-6 lg:px-12 py-4 lg:py-6 flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              width={200}
+              height={200}
+              className="w-6 lg:w-6 h-auto"
+              src="/images/logo.png"
+              alt="logo"
+            />
+            <p className="text-base  lg:text-2xl font-bold truncate">
+              Pacific Safety Solution Limited
+            </p>
           </Link>
-          <Link
-            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#"
-          >
-            About
-            {aboutOpen ? (
-              <ChevronDown
-                onClick={toggleAbout}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
-              />
-            ) : (
-              <ChevronRight
-                onClick={toggleAbout}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
-              />
-            )}
-          </Link>
-          {aboutOpen && (
-            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/company-profile"
-              >
-                Company Profile
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/vision-and-mission-statements"
-              >
-                Vision and Mission
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/core-values"
-              >
-                Core Values
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/health-safety-and-enviroment-policy"
-              >
-                Health safety and enviroment (HSE) policy
-              </Link>
-            </nav>
-          )}
-          <Link
-            onClick={toggleMenu}
-            className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="/products"
-          >
-            Products
-          </Link>
-          <Link
-            className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#"
-          >
-            Services
-            {serviceOpen ? (
-              <ChevronDown
-                onClick={toggleService}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
-              />
-            ) : (
-              <ChevronRight
-                onClick={toggleService}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
-              />
-            )}
-          </Link>
-          {serviceOpen && (
-            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3  hover:bg-neutral-100 transition-colors duration-200"
-                href="/ffa-Inspection-and-recertification"
-              >
-                LSA/FFA Inspection and Re-Certification
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/carbon-dioxide-refilling"
-              >
-                Carbon Dioxide Refilling
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/marine-equipment-and-ship-maintenance"
-              >
-                Marine Safety Equipment & Ship Maintenance Parts
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/fiberglass-repairs"
-              >
-                Fiberglass Repairs
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/inflatable-liferaft-rental"
-              >
-                Inflatable Liferaft Rental
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/liferaft-service-and-recertification"
-              >
-                Liferaft Service & Recertification
-              </Link>
-            </nav>
-          )}
-          <Link
-            className="py-3 pl-8 uppercase border-b flex items-center justify-between border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
-            href="#"
-          >
-            Contact
-            {openContact ? (
-              <ChevronDown
-                onClick={toggleContact}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
-              />
-            ) : (
-              <ChevronRight
-                onClick={toggleContact}
-                size={24}
-                className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
-              />
-            )}
-          </Link>
-          {openContact && (
-            <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/contact-us"
-              >
-                Contact us
-              </Link>
-              <Link
-                onClick={toggleMenu}
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                href="/liferaft-service-request"
-              >
-                Services request form
-              </Link>
-            </nav>
-          )}
-        </nav>
-      </div>
 
-      {/* Transparent click area to close menu (no dark overlay) */}
-      {menuOpen && (
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            {navLinks.map((item, index) => (
+              <div key={index} className="relative group">
+                <Link
+                  href={item.url}
+                  className="hover:text-gray-300 transition"
+                >
+                  {item.title}
+                </Link>
+                {item.subItems && (
+                  <div className="absolute left-0 top-full  min-w-[220px] bg-white text-neutral-900 rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
+                    {item.subItems.map((sub, subIdx) => (
+                      <Link
+                        key={subIdx}
+                        href={sub.url}
+                        className="block px-6 py-3 hover:bg-gray-100 border-b last:border-b-0 border-gray-200"
+                      >
+                        {sub.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Mobile Hamburger */}
+          {menuOpen ? null : (
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <Menu className="w-9 h-5" />
+            </button>
+          )}
+        </div>
+
+        {/* Side Mobile Menu */}
         <div
-          onClick={toggleMenu}
-          className="fixed inset-0 z-[2500] lg:hidden"
-        />
-      )}
-    </header>
+          className={`fixed top-0 pt-12 left-0 font-[lato] h-full w-[65%] bg-white text-neutral-900 z-[3000] overflow-y-scroll transform transition-transform duration-300 shadow-xl ${
+            menuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <nav className="text-sm font-semibold flex flex-col">
+            <Link
+              className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+              href="#"
+            >
+              About
+              {aboutOpen ? (
+                <ChevronDown
+                  onClick={toggleAbout}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+                />
+              ) : (
+                <ChevronRight
+                  onClick={toggleAbout}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+                />
+              )}
+            </Link>
+            {aboutOpen && (
+              <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/company-profile"
+                >
+                  Company Profile
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/vision-and-mission-statements"
+                >
+                  Vision and Mission
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/core-values"
+                >
+                  Core Values
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/health-safety-and-enviroment-policy"
+                >
+                  Health safety and enviroment (HSE) policy
+                </Link>
+              </nav>
+            )}
+            <Link
+              onClick={toggleMenu}
+              className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+              href="/products"
+            >
+              Products
+            </Link>
+            <Link
+              className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+              href="#"
+            >
+              Services
+              {serviceOpen ? (
+                <ChevronDown
+                  onClick={toggleService}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
+                />
+              ) : (
+                <ChevronRight
+                  onClick={toggleService}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+                />
+              )}
+            </Link>
+            {serviceOpen && (
+              <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3  hover:bg-neutral-100 transition-colors duration-200"
+                  href="/ffa-Inspection-and-recertification"
+                >
+                  LSA/FFA Inspection and Re-Certification
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/carbon-dioxide-refilling"
+                >
+                  Carbon Dioxide Refilling
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/marine-equipment-and-ship-maintenance"
+                >
+                  Marine Safety Equipment & Ship Maintenance Parts
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/fiberglass-repairs"
+                >
+                  Fiberglass Repairs
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/inflatable-liferaft-rental"
+                >
+                  Inflatable Liferaft Rental
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/liferaft-service-and-recertification"
+                >
+                  Liferaft Service & Recertification
+                </Link>
+              </nav>
+            )}
+            <Link
+              className="py-3 pl-8 uppercase border-b flex items-center justify-between border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
+              href="#"
+            >
+              Contact
+              {openContact ? (
+                <ChevronDown
+                  onClick={toggleContact}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200 border-neutral-200 "
+                />
+              ) : (
+                <ChevronRight
+                  onClick={toggleContact}
+                  size={24}
+                  className="mx-4 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
+                />
+              )}
+            </Link>
+            {openContact && (
+              <nav className="flex text-sm pl-10 flex-col bg-neutral-50">
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/contact-us"
+                >
+                  Contact us
+                </Link>
+                <Link
+                  onClick={toggleMenu}
+                  className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                  href="/liferaft-service-request"
+                >
+                  Services request form
+                </Link>
+              </nav>
+            )}
+          </nav>
+        </div>
+
+        {/* Transparent click area to close menu (no dark overlay) */}
+        {menuOpen && (
+          <div
+            onClick={toggleMenu}
+            className="fixed inset-0 z-[2500] lg:hidden"
+          />
+        )}
+      </header>
+    </>
   );
 }
