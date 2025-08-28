@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-white">
       <div className="relative">
         <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-4xl text-center lg:text-7xl">
+          <h1 className="text-3xl text-center lg:text-7xl">
             Marine Safety Equipment & Ship Maintenance Parts
           </h1>
         </div>

@@ -222,38 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative ">
-        <div
-          className="relative flex min-h-screen z-30 -mt-[89px] pt-[89px] pb-[88px]"
-          style={{
-            clipPath: "polygon(0 0%, 100% 10%, 100% 100%, 0% 100%)",
-            WebkitClipPath: "polygon(0 0%, 100% 10%, 100% 100%, 0% 100%)",
-          }}
-        >
-          {/* Map Container */}
-          <div className="absolute inset-0 w-full">
-            <div className="h-full w-full absolute inset-0 z-5" id="map"></div>
-          </div>
-
-          {/* Content */}
-          <div className="relative z-10 px-2 lg:px-0 container mx-auto py-12 lg:py-14 xl:py-20 flex items-center">
-            <div className="flex flex-row w-full md:flex-row-reverse">
-              <div className="relative z-10 w-full md:w-1/2 xl:w-2/5 flex flex-col gap-6 p-6 lg:p-10 shadow overflow-hidden rounded-sm md:rounded-md lg:rounded-lg">
-                <div className="absolute inset-0 z-10  pointer-events-none">
-                  <div className="absolute inset-0 z-10 bg-gray-100"></div>
-                </div>
-                <div className="relative z-10 flex flex-col gap-4">
-                  <h2 className="text-2xl  font-bold text-gray-900 font-inter-tight">
-                    Location
-                  </h2>
-                  <p className="text-gray-900 font-lato">Lagos, Nigeria</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="relative mb-10 bg-gray-900">
         {/* Background collage */}
         <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-30">
@@ -281,7 +249,7 @@ export default function Home() {
         </div>
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content */}
         <div className="relative container mx-auto px-6 py-20 lg:py-32 text-center">
@@ -294,10 +262,36 @@ export default function Home() {
           </p>
           <Link
             href="/our-gallery"
-            className="px-8 py-4 bg-[#5200f5] hover:bg-[#3d00b8] text-white font-semibold rounded-xl shadow-lg transition duration-300 animate-fade-up"
+            className="px-8 text-sm py-4 bg-[#5200f5] hover:bg-[#3d00b8] text-white font-semibold rounded-xl shadow-lg transition duration-300 animate-fade-up"
           >
             View Our Gallery
           </Link>
+        </div>
+      </section>
+
+      <section className="relative ">
+        <div className="relative flex h-[500px] lg:h-[600px] z-30 -mt-[89px] pt-[89px] pb-[88px]">
+          {/* Map Container */}
+          <div className="absolute inset-0 w-full">
+            <div className="h-full w-full absolute inset-0 z-5" id="map"></div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 px-2 lg:px-0 container mx-auto py-12 lg:py-14 xl:py-20 flex items-center">
+            <div className="flex flex-row w-full md:flex-row-reverse">
+              <div className="relative z-10 w-full md:w-1/2 xl:w-2/5 flex flex-col gap-6 p-6 lg:p-10 shadow overflow-hidden rounded-sm md:rounded-md lg:rounded-lg">
+                <div className="absolute inset-0 z-10  pointer-events-none">
+                  <div className="absolute inset-0 z-10 bg-gray-100"></div>
+                </div>
+                <div className="relative z-10 flex flex-col gap-4">
+                  <h2 className="text-2xl  font-bold text-gray-900 font-inter-tight">
+                    Location
+                  </h2>
+                  <p className="text-gray-900 font-lato">Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -317,7 +311,7 @@ export default function Home() {
 
             {/* Content */}
             <div
-              className="relative z-10 container mx-auto pt-16 lg:pt-32 pb-12 lg:pb-20"
+              className="relative z-10 container mx-auto pt-4 lg:pt-32 pb-12 lg:pb-20"
               style={{
                 clipPath:
                   "polygon(0 0, 100% 0, 100% 90%, 75% 100%, 50% 90%, 25% 100%, 0 90%)",
