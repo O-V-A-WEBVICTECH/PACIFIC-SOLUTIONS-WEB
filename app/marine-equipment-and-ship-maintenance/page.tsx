@@ -12,10 +12,10 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/marine-safety-equipment.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[130px] lg:h-[280px] object-cover"
+          className="brightness-50 w-full h-[140px] lg:h-[280px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
@@ -46,16 +46,6 @@ export default function Page() {
               vessel’s safety and performance? Contact us today to discuss
               your specific needs.
             </p>
-          </div>
-          <div className="order-[1] lg:order-none flex-1">
-            <Image
-              alt="raft"
-              width={1000}
-              height={1000}
-              src="/images/engine-parts.jpg"
-              quality={100}
-              className="rounded-md"
-            />
           </div>
         </div>
       </main>

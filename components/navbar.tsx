@@ -115,17 +115,17 @@ export default function NavBar() {
       <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4 flex justify-center items-center gap-6">
         <span>
           📞{" "}
-          <a href="tel:+1234567890" className="hover:underline">
-            +1 234 567 890
+          <a href="tel:+2348054094490" className="hover:underline">
+            +2348054094490
           </a>
         </span>
         <span>
           ✉️{" "}
           <a
-            href="mailto:info@pacificsolutions.com"
+            href="mailto:pacificsafety2020@yahoo.com"
             className="hover:underline"
           >
-            info@pacificsolutions.com
+            pacificsafety2020@yahoo.com
           </a>
         </span>
       </div>

@@ -12,10 +12,10 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/liferaft-3.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[120px] lg:h-[240px] object-cover"
+          className="brightness-50 w-full h-[140px] lg:h-[240px] object-cover"
         />
       </div>
       <main className="mx-auto px-3 lg:px-0 lg:w-[80%]">
@@ -42,7 +42,7 @@ export default function Page() {
               specified by the manufacturer.
             </p>
           </div>
-          <div className="order-[1] lg:order-none flex-1">
+          {/* <div className="order-[1] lg:order-none flex-1">
             <Image
               alt="raft"
               width={1000}
@@ -51,7 +51,7 @@ export default function Page() {
               quality={100}
               className="rounded-md"
             />
-          </div>
+          </div> */}
         </div>
       </main>
     </div>

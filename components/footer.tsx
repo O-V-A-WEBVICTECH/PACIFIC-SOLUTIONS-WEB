@@ -84,7 +84,7 @@ export default function Footer() {
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/carbon-dioxide-refilling"
               >
-                Carbon Dioxide Refilling
+                Refilling of C02 & medical oxygen cylinders.
               </Link>
             </li>
             <li>
@@ -92,7 +92,8 @@ export default function Footer() {
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/marine-equipment-and-ship-maintenance"
               >
-                Marine Safety Equipment & Ship Maintenance Parts
+                Supplies of all marine safety equipment & ship stores
+                maintenance parts.
               </Link>
             </li>
             <li>
@@ -108,7 +109,7 @@ export default function Footer() {
                 className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
                 href="/inflatable-liferaft-rental"
               >
-                Inflatable Liferaft Rental
+                Inflatable Liferaft on rental bases.
               </Link>
             </li>
             <li>

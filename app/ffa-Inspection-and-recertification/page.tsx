@@ -12,8 +12,8 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
-          alt="boat men"
+          src="/images/oxygen-tank.webp"
+          alt="oxygen tanks"
           priority
           className="brightness-50 w-full h-[120px] lg:h-[240px] object-cover"
         />

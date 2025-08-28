@@ -83,9 +83,9 @@ export default function Home() {
                 YOUR TRUSTED PARTNER IN MARINE SAFETY AND OTHER SHIP SUPPLIES.
               </h1>
               <p className="text-sm lg:text-base text-white lg:w-[70%]">
-                Ensure your safety with our top-grade safety equipment and
-                premier fiberglass solutions crafted for durability and
-                excellence.
+                Ensure your safety with our top-notch safety services and
+                premier LSA/FFA solutions crafted with professionalism and in
+                accordance with latest IMO and SOLAS convention.
               </p>
               <div className="flex flex-row items-center  gap-4 lg:mt-2">
                 <Link href="/products">
@@ -197,9 +197,9 @@ export default function Home() {
                     "Pacific Safety Solution Ltd exceeded our expectations with top-notch marine safety equipment’s and professional LSA/FFA services. Their team is incredibly knowledgeable and attentive to client needs. I highly recommend them to anyone seeking reliable safety solutions in west Africa.",
                 },
                 {
-                  name: "Zodiac Maritime UK",
+                  name: "AIS NAUTICAL SUPPLIES",
                   quote:
-                    "Pacific Safety Solution impressed me with their exceptional service and high-quality safety equipment. The team’s expertise in fiberglass services was evident, and they were always ready to assist. A trustworthy company for all safety needs in Lagos!",
+                    "Pacific Safety Solution impressed us with their exceptional service and high-quality safety equipment. The team’s expertise in fiberglass services was evident, and they were always ready to assist. A trustworthy company for all safety needs in Lagos!",
                 },
                 {
                   name: "TMS Offshore Lome Sarl",
@@ -251,6 +251,53 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="relative mb-10 bg-gray-900">
+        {/* Background collage */}
+        <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-30">
+          <Image
+            src="/images/hero-image-1.jpg"
+            alt="Team at work"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
+          />
+          <Image
+            src="/images/hero-image-2.jpg"
+            alt="Office"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
+          />
+          <Image
+            src="/images/hero-image-1.jpg"
+            alt="Project site"
+            width={600}
+            height={400}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        {/* Content */}
+        <div className="relative container mx-auto px-6 py-20 lg:py-32 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white font-inter-tight mb-6 animate-fade-up">
+            A Glimpse Into Our Work
+          </h2>
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto font-lato mb-8 animate-fade-up">
+            Step inside our world — explore photos of our team, projects, and
+            facilities that bring our safety solutions to life.
+          </p>
+          <Link
+            href="/our-gallery"
+            className="px-8 py-4 bg-[#5200f5] hover:bg-[#3d00b8] text-white font-semibold rounded-xl shadow-lg transition duration-300 animate-fade-up"
+          >
+            View Our Gallery
+          </Link>
         </div>
       </section>
 

@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className="bg-white text-neutral-950">
       <div className="relative">
-        <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
+        <div className="absolute top-[18%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl text-center lg:text-7xl">
             Inflatable Liferaft on Rental Basis
           </h1>
@@ -12,10 +12,10 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/Crewsaver_Liferaft.jpg"
           alt="boat men"
           priority
-          className="brightness-50 w-full h-[120px] lg:h-[240px] object-cover"
+          className="brightness-50 w-full h-[140px] lg:h-[240px] object-cover"
         />
       </div>
       <main className="mx-auto mt-3 mb-5 px-3 lg:px-0 lg:w-[80%]">
@@ -39,15 +39,6 @@ export default function Page() {
               order and fully compliant with all regulations. We provide the
               equipment, you get the peace of mind.
             </p>
-          </div>
-          <div className="flex-1 order-1 lg:order-none">
-            <Image
-              alt="raft"
-              width={1000}
-              height={1000}
-              src="/images/liferaft.webp"
-              className="rounded-md"
-            />
           </div>
         </div>
       </main>
