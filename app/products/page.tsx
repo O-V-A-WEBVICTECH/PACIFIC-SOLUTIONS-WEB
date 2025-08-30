@@ -23,7 +23,7 @@ export default function Page() {
               title: "Life Jackets & Work Vests",
               description:
                 "High-quality, durable life jackets and work vests designed for safety and comfort in marine environments.",
-              image: "/images/vest.jpg",
+              image: "/images/life-vest.jpg",
             },
             {
               title: "Immersion Suits",
@@ -35,7 +35,7 @@ export default function Page() {
               title: "Emergency Food Rations & Water",
               description:
                 "Long-shelf-life rations and potable water for emergency preparedness at sea.",
-              image: "/images/ration.jpg",
+              image: "/images/emergency-ration.jpg",
             },
             {
               title: "Marine Distress Signals",
@@ -47,7 +47,7 @@ export default function Page() {
               title: "Safety Lights",
               description:
                 "Durable, high-intensity lights for enhanced visibility and safety on vessels.",
-              image: "/images/flash.jpg",
+              image: "/images/flashlight.jpg",
             },
             {
               title: "Inflatable Life Rafts",
@@ -77,7 +77,7 @@ export default function Page() {
               title: "Lube Oil",
               description:
                 "High-performance lubricants to ensure smooth operation of marine engines.",
-              image: "/images/marine-oil.jpg",
+              image: "/images/marine-oil-1.jpg",
             },
             {
               title: "Wire Ropes & Lifting Gears",
@@ -102,7 +102,7 @@ export default function Page() {
                   height={500}
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-[140px]  object-conver"
+                  className="w-full rounded-md h-[140px] lg:h-[200px]  object-contain"
                 />
               </div>
               <h3 className="text-base lg:text-lg leading-tight font-bold mb-1 text-gray-900">

@@ -6,32 +6,141 @@ export default function GalleryPage() {
       title: "Inflatable Life Rafts",
       description:
         "High-quality inflatable life rafts for emergency evacuation and survival at sea.",
-      image: "/images/liferaft.webp",
+      image: "/images/marine-1.jpg",
     },
 
     {
       title: "Liferaft Rental Service",
       description:
         "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/boat-rentals.jpg",
+      image: "/images/marine-2.jpg",
     },
     {
       title: "Liferaft Rental Service",
       description:
         "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/hero-image-1.webp",
+      image: "/images/marine-3.jpg",
     },
     {
       title: "Liferaft Rental Service",
       description:
         "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/boat-2.webp",
+      image: "/images/marine-4.jpg",
     },
     {
       title: "Liferaft Rental Service",
       description:
         "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/liferaft-3.jpg",
+      image: "/images/marine-10.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-6.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-11.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-14.jpg",
+    },
+
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-1.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-2.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-3.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-4.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-5.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-6.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-device-7.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-distress-signal-1.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/marine-distress-signal-2.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/emergency-ration.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/emergency-drink.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/life-vest.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/line-thrower.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/fiberglass.jpg",
+    },
+    {
+      title: "Liferaft Rental Service",
+      description:
+        "Flexible liferaft rental options for short- or long-term maritime operations.",
+      image: "/images/life-jacket.jpg",
     },
   ];
 
@@ -39,7 +148,7 @@ export default function GalleryPage() {
     <div className="bg-white">
       {/* Hero */}
       <div className="relative">
-        <div className="absolute top-[30%] lg:top-[60%] z-20 w-full flex items-center justify-center text-white">
+        <div className="absolute top-[30%] lg:top-[40%] z-20 w-full flex items-center justify-center text-white">
           <h1 className="text-4xl lg:text-7xl font-bold">Our Gallery</h1>
         </div>
         <Image

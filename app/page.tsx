@@ -77,7 +77,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-32 pb-10 lg:pb-48 flex  h-full">
+          <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-20 pb-10 lg:pb-48 flex  h-full">
             <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
               <h1 className="text-3xl lg:text-6xl font-bold leading-tight text-white">
                 YOUR TRUSTED PARTNER IN MARINE SAFETY AND OTHER SHIP SUPPLIES.
@@ -94,7 +94,7 @@ export default function Home() {
                   </button>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 mt-4 lg:mt-12">
+              <div className="flex items-center gap-2 mt-2 lg:mt-6">
                 {slides.map((_, index) => (
                   <div
                     key={index}
@@ -105,14 +105,17 @@ export default function Home() {
                   />
                 ))}
               </div>
+              <p className="font-[lato] text-white text-sm lg:text-base">
+                LSA/FFA our specialty. Preventing the worst. Ensuring the best.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="#about" className="py-5 mb-8 bg-white text-[#121212]">
-        <div className="container mx-auto px-3  lg:px-0 flex items-center lg:items-start flex-col lg:flex-row  gap-10">
+      <section id="#about" className="py-5 lg:mb-8 bg-white text-[#121212]">
+        <div className="container mx-auto px-3  lg:px-0 flex items-center lg:items-start flex-col lg:flex-row gap-4 lg:gap-10">
           {/* Text content */}
           <div className="flex-1">
             <h1 className="text-4xl md:text-6xl font-bold font-[lato]  mb-2">
@@ -324,10 +327,10 @@ export default function Home() {
                   Ensure Your Safety Today
                 </h2>
                 <p className="text-sm lg:text-base md:text-lg text-gray-900 font-lato">
-                  Choose Pacific Safety Solution in Lagos for expert maintenance
-                  of safety equipment and fiberglass services. Secure your
-                  life-saving appliances with our reliable and professional
-                  care.
+                  Choose Pacific Safety Solution Ltd in Lagos Nigeria and other
+                  Africa countries for expert LSA/FFA maintenance and other ship
+                  stores supplies. Secure your Vessels, Facilities, and offices
+                  with our reliable and professional services.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <button
