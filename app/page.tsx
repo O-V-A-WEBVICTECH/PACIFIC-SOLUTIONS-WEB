@@ -229,21 +229,21 @@ export default function Home() {
         {/* Background collage */}
         <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-30">
           <Image
-            src="/images/hero-image-1.jpg"
+            src="/images/marine-1.jpg"
             alt="Team at work"
             width={600}
             height={400}
             className="object-cover w-full h-full"
           />
           <Image
-            src="/images/hero-image-2.jpg"
+            src="/images/marine-2.jpg"
             alt="Office"
             width={600}
             height={400}
             className="object-cover w-full h-full"
           />
           <Image
-            src="/images/hero-image-1.jpg"
+            src="/images/marine-3.jpg"
             alt="Project site"
             width={600}
             height={400}

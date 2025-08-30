@@ -70,10 +70,10 @@ export default function Footer() {
           <h4 className="text-lg font-medium mb-4 border-b-2 border-white inline-block">
             Services
           </h4>
-          <ul className="space-y-3 text-sm">
+          <ul className="list-disc list-outside space-y-3 text-sm">
             <li>
               <Link
-                className="py-3 pl-3 hover:bg-neutral-100 transition-colors duration-200"
+                className=" hover:font-semibold transition-colors duration-200"
                 href="/ffa-Inspection-and-recertification"
               >
                 LSA/FFA Inspection and Re-Certification
@@ -81,7 +81,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/carbon-dioxide-refilling"
               >
                 Refilling of C02 & medical oxygen cylinders.
@@ -89,7 +89,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/marine-equipment-and-ship-maintenance"
               >
                 Supplies of all marine safety equipment & ship stores
@@ -98,7 +98,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/fiberglass-repairs"
               >
                 Fiberglass Repairs
@@ -106,7 +106,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/inflatable-liferaft-rental"
               >
                 Inflatable Liferaft on rental bases.
@@ -114,7 +114,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
+                className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/liferaft-service-and-recertification"
               >
                 Liferaft Service & Recertification
