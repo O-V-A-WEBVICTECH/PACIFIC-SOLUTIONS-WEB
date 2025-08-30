@@ -6,6 +6,7 @@ import {
   FaLinkedin,
   FaMapMarkedAlt,
   FaPhoneAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -152,6 +153,14 @@ export default function Footer() {
               className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
             >
               <FaLinkedin />
+            </a>
+            <a
+              href="https://wa.me/message/TZVHNBSFMPKUM1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-[#005a9c] p-2 rounded-full hover:bg-gray-200"
+            >
+              <FaWhatsapp />
             </a>
           </div>
         </div>
