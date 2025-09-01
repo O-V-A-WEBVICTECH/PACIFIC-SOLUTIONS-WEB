@@ -116,9 +116,9 @@ export default function Footer() {
             <li>
               <Link
                 className=" capitalize hover:font-semibold transition-colors duration-200"
-                href="/liferaft-service-and-recertification"
+                href="/calibration-of-equipment"
               >
-                Liferaft Service & Recertification
+                calibration of equipment
               </Link>
             </li>
           </ul>

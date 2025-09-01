@@ -50,8 +50,8 @@ const navLinks: NavLinks[] = [
         url: "/inflatable-liferaft-rental",
       },
       {
-        title: "Liferaft Service & Recertification",
-        url: "/liferaft-service-and-recertification",
+        title: "Calibration of equipment",
+        url: "/calibration-of-equipment",
       },
       {
         title: " Marine Safety Equipment & Ship Maintenance Parts",
@@ -320,9 +320,9 @@ export default function NavBar() {
                 <Link
                   onClick={toggleMenu}
                   className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                  href="/liferaft-service-and-recertification"
+                  href="/calibration-of-equipment"
                 >
-                  Liferaft Service & Recertification
+                  Calibration of equipment
                 </Link>
               </nav>
             )}
