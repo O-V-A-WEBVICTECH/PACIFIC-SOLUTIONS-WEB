@@ -136,7 +136,7 @@ export default function NavBar() {
             rel="noopener noreferrer"
             className="text-green-500 flex items-center gap-1  rounded-full"
           >
-            <FaWhatsapp />
+            <FaWhatsapp className="hidden md:block" />
             <p className="hidden md:block font-medium">Chat</p>
           </Link>
         </span>

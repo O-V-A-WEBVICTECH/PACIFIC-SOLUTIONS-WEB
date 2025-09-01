@@ -50,10 +50,10 @@ export default function Page() {
               image: "/images/flashlight.jpg",
             },
             {
-              title: "Inflatable Life Rafts",
+              title: "lifeboat",
               description:
-                "High-quality inflatable life rafts for emergency evacuation and survival at sea.",
-              image: "/images/liferaft.webp",
+                "High-quality life boat for emergency evacuation and survival at sea.",
+              image: "/images/lifeboat.jpg",
             },
             {
               title: "MOB, HRU & Line Thrower",
@@ -89,7 +89,7 @@ export default function Page() {
               title: "Liferaft Rental Service",
               description:
                 "Flexible liferaft rental options for short- or long-term maritime operations.",
-              image: "/images/boat-rentals.jpg",
+              image: "/images/raft-3.webp",
             },
           ].map((product, index) => (
             <div
