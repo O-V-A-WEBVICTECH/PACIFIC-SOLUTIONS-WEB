@@ -137,7 +137,7 @@ export default function NavBar() {
             className="text-green-500 flex items-center gap-1  rounded-full"
           >
             <FaWhatsapp />
-            <p className="font-medium">Chat</p>
+            <p className="hidden lg:block font-medium">Chat</p>
           </Link>
         </span>
       </div>
