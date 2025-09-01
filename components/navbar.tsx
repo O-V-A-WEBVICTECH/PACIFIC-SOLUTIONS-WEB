@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, ChevronRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface NavLinks {
   title: string;
@@ -112,14 +113,14 @@ export default function NavBar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4 flex justify-center items-center gap-6">
-        <span>
+      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-between items-center gap-6">
+        <span className="flex items-center gap-1">
           📞{" "}
           <a href="tel:+2348054094490" className="hover:underline">
             +2348054094490
           </a>
         </span>
-        <span>
+        <span className="flex items-center gap-1">
           ✉️{" "}
           <a
             href="mailto:pacificsafety2020@yahoo.com"
@@ -127,6 +128,17 @@ export default function NavBar() {
           >
             pacificsafety2020@yahoo.com
           </a>
+        </span>
+        <span>
+          <Link
+            href="https://wa.me/message/TZVHNBSFMPKUM1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-500 flex items-center gap-1  rounded-full"
+          >
+            <FaWhatsapp />
+            <p className="font-medium">Chat</p>
+          </Link>
         </span>
       </div>
 
