@@ -10,7 +10,7 @@ export default function Page() {
         <Image
           width={1000}
           height={600}
-          src="/images/boat-men.jpg"
+          src="/images/workers.jpg"
           alt="boat men"
           priority
           className="brightness-50 w-full h-[100px] lg:h-[300px] object-cover"
