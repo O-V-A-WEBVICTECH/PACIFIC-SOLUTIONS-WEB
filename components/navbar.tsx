@@ -113,7 +113,7 @@ export default function NavBar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-center items-center gap-4 md:gap-8">
+      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-between  items-center gap-4 md:gap-8">
         <span className="flex items-center gap-1">
           📞{" "}
           <a href="tel:+2348054094450" className="hover:underline">
