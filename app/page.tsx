@@ -126,7 +126,7 @@ export default function Home() {
               <p className="text-sm lg:text-base">
                 At Pacific Safety Solution limited, based in the vibrant city of
                 Lagos, Nigeria, we specialize in providing top-tier safety
-                equipment and fiberglass services. Our dedication to quality and
+                equipment services. Our dedication to quality and
                 innovation ensures that each product meets stringent safety
                 standards and client needs. We are committed to safeguarding
                 your work environment with reliable solutions that offer peace
