@@ -85,7 +85,7 @@ export default function Footer() {
                 className=" capitalize hover:font-semibold transition-colors duration-200"
                 href="/carbon-dioxide-refilling"
               >
-                Refilling of C02 & medical oxygen cylinders.
+                Foam analysis and air quality test
               </Link>
             </li>
             <li>
