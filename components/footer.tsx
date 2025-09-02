@@ -83,7 +83,7 @@ export default function Footer() {
             <li>
               <Link
                 className=" capitalize hover:font-semibold transition-colors duration-200"
-                href="/carbon-dioxide-refilling"
+                href="/analysis"
               >
                 Foam analysis and air quality test
               </Link>
@@ -168,8 +168,8 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="bg-[#7533f7] text-center py-4 text-xs">
-        <strong>Pacific Safety Solution Limited</strong> &copy; 2025 | Site By <a></a>
-        .
+        <strong>Pacific Safety Solution Limited</strong> &copy; 2025 | Site By{" "}
+        <a></a>.
       </div>
     </footer>
   );

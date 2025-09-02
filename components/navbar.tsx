@@ -45,7 +45,7 @@ const navLinks: NavLinks[] = [
         title: "LSA/FFA Inspection and Re-Certification",
         url: "/ffa-Inspection-and-recertification",
       },
-      { title: "Foam Analysis and Air quality test", url: "/carbon-dioxide-refilling" },
+      { title: "Foam Analysis and Air quality test", url: "/analysis" },
       {
         title: "Inflatable Liferaft Rental",
         url: "/inflatable-liferaft-rental",
@@ -113,7 +113,7 @@ export default function NavBar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-between items-center gap-6">
+      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-center items-center gap-4 md:gap-8">
         <span className="flex items-center gap-1">
           📞{" "}
           <a href="tel:+2348054094450" className="hover:underline">
@@ -136,7 +136,7 @@ export default function NavBar() {
             rel="noopener noreferrer"
             className="text-green-500 flex items-center gap-1  rounded-full"
           >
-            <FaWhatsapp className="hidden md:block" />
+            <FaWhatsapp />
             <p className="hidden md:block font-medium">Chat</p>
           </Link>
         </span>
@@ -304,9 +304,9 @@ export default function NavBar() {
                 <Link
                   onClick={toggleMenu}
                   className="py-3 pl-3 capitalize hover:bg-neutral-100 transition-colors duration-200"
-                  href="/carbon-dioxide-refilling"
+                  href="/analysis"
                 >
-                  Carbon Dioxide Refilling
+                  Foam Analysis and Air quality test
                 </Link>
                 <Link
                   onClick={toggleMenu}
