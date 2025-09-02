@@ -184,11 +184,11 @@ export default function Home() {
               <h2 className="text-3xl lg:text-5xl  font-bold">
                 Proven Safety Solutions: Client Success Stories
               </h2>
-              <pre className="text-sm lg:text-base  lg:w-[45%] font-[lato]">
-                &quot;Excellent service and top-quality safety equipment. Their
-                expertise in fiberglass solutions is unmatched in Lagos. Highly
-                recommended!&quot; - Ada N.
-              </pre>
+              <p className="text-sm lg:text-base  lg:w-[45%] font-[lato]">
+                &quot;Excellent LSA/FFA top quality services. Their expertise in
+                marine safety solutions is unmatched in Lagos and other Africa
+                countries. Highly recommended.!&quot;
+              </p>
             </div>
 
             {/* Testimonials Grid */}

@@ -24,6 +24,7 @@ export default function Page() {
     const day = formData.get("day");
     const year = formData.get("year");
     const comments = formData.get("comments");
+    const service = formData.get("service");
 
     const formDetails = {
       name,
@@ -37,6 +38,7 @@ export default function Page() {
       month,
       day,
       year,
+      service,
       comments,
     };
 
@@ -527,15 +529,31 @@ export default function Page() {
                 htmlFor="brandOfLiferaft"
                 className="block text-sm font-medium text-neutral-900"
               >
-                Brand of Liferaft <span className="text-red-600">*</span>
+                Type of service <span className="text-red-600">*</span>
               </label>
-              <input
-                id="brandOfLiferaft"
-                name="brandOfLiferaft"
-                type="text"
+              <select
+                className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
+                name="service"
+              >
+                <option value="">Select service</option>
+                <option value="Fiberglass Repairs">Fiberglass Repairs</option>
+                <option value="Marine Safety Equipment & Ship Maintenance Parts">
+                  Marine Safety Equipment & Ship Maintenance Parts
+                </option>
+                <option value="Calibration of equipment">
+                  Calibration of equipment
+                </option>
+                <option value="Inflatable Liferaft Rental">
+                  Inflatable Liferaft Rental
+                </option>
+                <option value="Foam Analysis and Air quality test">
+                  Foam Analysis and Air quality test
+                </option>
+                <option value="LSA/FFA Inspection and Re-Certification">
+                  LSA/FFA Inspection and Re-Certification
+                </option>
+              </select>
             </div>
 
             {/* Date Service Required (required 3-part) */}
