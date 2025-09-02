@@ -34,7 +34,7 @@ const navLinks: NavLinks[] = [
     ],
   },
   {
-    title: "Products",
+    title: "Approvals/Products",
     url: "/products",
   },
   {
@@ -113,7 +113,7 @@ export default function NavBar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-center items-center gap-4 md:gap-8">
+      <div className="w-full bg-neutral-900 text-white text-xs lg:text-sm py-2 px-4  flex justify-between  items-center gap-4 md:gap-8">
         <span className="flex items-center gap-1">
           📞{" "}
           <a href="tel:+2348054094450" className="hover:underline">
@@ -153,7 +153,7 @@ export default function NavBar() {
             <Image
               width={200}
               height={200}
-              className="w-6 lg:w-6 h-auto"
+              className="w-8 lg:w-8 h-auto"
               src="/images/logo.png"
               alt="logo"
             />
@@ -271,7 +271,7 @@ export default function NavBar() {
               className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
               href="/products"
             >
-              Products
+              Approvals / Products
             </Link>
             <Link
               className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
