@@ -39,7 +39,7 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> <span>Tel: +2348054094490</span>
+              <FaPhoneAlt /> <span>Tel: +2348054094450</span>
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope /> <span>pacificsafety2020@yahoo.com</span>
