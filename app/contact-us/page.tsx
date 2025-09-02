@@ -108,7 +108,7 @@ export default function Page() {
                 <span className="text-blue-600 mr-3">
                   <i className="fas fa-mobile-alt"></i>
                 </span>
-                <span>+2348054094490</span>
+                <span>+2348054094450</span>
               </li>
 
               <li className="flex items-center">
