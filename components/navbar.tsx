@@ -34,7 +34,7 @@ const navLinks: NavLinks[] = [
     ],
   },
   {
-    title: "Products",
+    title: "Approvals/Products",
     url: "/products",
   },
   {
