@@ -6,7 +6,7 @@ export default function Page() {
       <div className="relative">
         <div className="absolute top-[25%] z-[100] w-full flex items-center justify-center text-white">
           <h1 className="text-4xl text-center lg:text-7xl">
-            Carbon Dioxide Refilling & Medical Oxygen
+            FOAM ANALYSIS AND AIR QUALITY TEST
           </h1>
         </div>
         <Image
@@ -20,23 +20,9 @@ export default function Page() {
       </div>
       <main className="mx-auto px-3 lg:px-0  lg:w-[80%]">
         <p className="text-sm font-[lato] lg:text-base text-neutral-950 text-justify leading-relaxed mt-2 mb-4 lg:mt-10">
-          The integrity of your vessel&apos;s onboard firefighting and emergency
-          medical systems is paramount. We provide professional refilling
-          services for Carbon Dioxide (CO2) cylinders used in fixed firefighting
-          systems and portable extinguishers. A properly charged CO2 system is a
-          critical first line of defense against onboard fires. Our process
-          involves a thorough inspection of each cylinder before refilling to
-          ensure it is safe and free of damage, followed by a precise refill to
-          the correct weight and pressure. This guarantees your fire suppression
-          system is ready to activate instantly and effectively when it matters
-          most. Beyond fire safety, we also supply and refill Medical Oxygen
-          cylinders. Having a reliable supply of medical oxygen is crucial for
-          treating a variety of medical emergencies at sea, from respiratory
-          distress to trauma. We ensure that our medical oxygen is of the
-          highest purity and that all cylinders are handled and stored according
-          to strict medical-grade protocols. By offering both services, we serve
-          as your single partner for maintaining two of the most critical
-          emergency systems on your vessel.
+At Pacific Safety Solution Ltd we engage our professional team and latest equipment to carryout the foam concentrate/solution test to ensure they meet quality standards, using techniques like dynamic foam analysis to measures properties such as the foam height, drainage time, and other key parameters like pH value, viscosity, sediment content, expansion ratio and in accordance with the latest MSC regulations viz-a-viz msc.1/Cir.1312 for low expansion foam whilst msc.1/Cir.670 for high expansion foam.
+Air Compressor quality test.
+However, Regular testing of the air compressor compartment is very crucial for optimizing system efficiency while protecting future harmful breathing air onboard vessels. We follow duly diligent rules for the usage of equipment and ensuring compliance with safety and quality standards for various breathing air compartments. The purpose is to test for the presence of water, oil, solid particles in accordance with ISO 8573-1.
         </p>
       </main>
     </div>
