@@ -271,7 +271,7 @@ export default function NavBar() {
               className="py-3 pl-8 uppercase border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
               href="/products"
             >
-              Products
+              Approvals / Products
             </Link>
             <Link
               className="py-3 pl-8 uppercase flex items-center justify-between border-b border-neutral-200 hover:bg-neutral-50 transition-colors duration-200"
