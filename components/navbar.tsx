@@ -45,7 +45,7 @@ const navLinks: NavLinks[] = [
         title: "LSA/FFA Inspection and Re-Certification",
         url: "/ffa-Inspection-and-recertification",
       },
-      { title: "Foam analysis and air quality test", url: "/carbon-dioxide-refilling" },
+      { title: "Foam Analysis and Air quality test", url: "/carbon-dioxide-refilling" },
       {
         title: "Inflatable Liferaft Rental",
         url: "/inflatable-liferaft-rental",
