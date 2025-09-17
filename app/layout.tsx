@@ -18,7 +18,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Pacific Safety Solution",
+  title: "Pacific Safety Solution limited",
   description:
     "PACIFIC SAFETY SOLUTION LIMITED  is a duly registered Limited Liability Company with CAC in the federal republic of Nigeria with registration number RC1928296, we supply ship maintainace part and other marine supplies such as ship Life Jackets and Work Vests, Immersion Suits, Emergency Food Rations and Water Marine Distress Signals (Pyrotechnics) Safety Lights, New Inflatable Life rafts, MOB, HRU & Line thrower Navigational aids Engines etc ",
   other: {

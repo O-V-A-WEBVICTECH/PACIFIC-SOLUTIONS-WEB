@@ -119,8 +119,8 @@ export default function Home() {
         <div className="container mx-auto px-3  lg:px-0 flex items-center lg:items-start flex-col lg:flex-row gap-4 lg:gap-10">
           {/* Text content */}
           <div className="flex-1">
-            <h1 className="text-4xl md:text-6xl font-bold font-[lato]  mb-2">
-              Your Trusted Partner in Safety Solutions
+            <h1 className="text-4xl  md:text-6xl font-bold font-[lato]  mb-2">
+              Your trusted partner in safety solutions
             </h1>
 
             <div className="text-justify text-base font-[lato]">
@@ -146,14 +146,15 @@ export default function Home() {
           </div>
 
           {/* Image */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <div className="relative w-full lg:h-full shadow-lg">
               <Image
                 src="/images/raft-3.webp"
                 alt="Technician adjusting safety glasses"
-                width={500}
-                height={500}
-                className="object-cover lg:h-[380px] rounded-md  w-full min-h-[100%]"
+                width={1000}
+                height={1000}
+                quality={100}
+                className="object-cover h-[300px] lg:h-[380px] rounded-md  w-full min-h-[100%]"
               />
             </div>
           </div>
