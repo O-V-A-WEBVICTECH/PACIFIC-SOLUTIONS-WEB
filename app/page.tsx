@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { Compass } from "lucide-react";
-import Head from "next/head";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";

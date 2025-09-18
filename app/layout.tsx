@@ -19,11 +19,13 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Pacific Safety Solution limited",
+  title: "Pacific Safety Solution Limited",
   description:
-    "PACIFIC SAFETY SOLUTION LIMITED  is a duly registered Limited Liability Company with CAC in the federal republic of Nigeria with registration number RC1928296, we supply ship maintainace part and other marine supplies such as ship Life Jackets and Work Vests, Immersion Suits, Emergency Food Rations and Water Marine Distress Signals (Pyrotechnics) Safety Lights, New Inflatable Life rafts, MOB, HRU & Line thrower Navigational aids Engines etc ",
+    "PACIFIC SAFETY SOLUTION LIMITED is a duly registered Limited Liability Company with CAC in the federal republic of Nigeria with registration number RC1928296. We supply ship maintenance parts and other marine supplies such as Life Jackets, Work Vests, Immersion Suits, Emergency Food Rations and Water, Marine Distress Signals (Pyrotechnics), Safety Lights, Inflatable Life Rafts, MOB, HRU & Line Throwers, Navigational Aids, Engines, and more.",
   icons: {
     icon: "/images/logo.ico",
+    shortcut: "/images/logo-32x32.png",
+    apple: "/images/apple-touch-icon.png",
   },
   other: {
     "google-site-verification": "dVdoPIU1AD1peVcptgjN0nu_zxE6WElWXIrzYzcratA",
@@ -38,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Organization Logo Schema */}
         <Script
           id="organization-logo"
           type="application/ld+json"
@@ -47,7 +50,13 @@ export default function RootLayout({
               "@type": "Organization",
               url: "https://pacificsafetysolutionltd.com",
               logo: "https://pacificsafetysolutionltd.com/images/logo.png",
-              name: "Pacific Safety Solution limited",
+              name: "Pacific Safety Solution Limited",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+234XXXXXXXXXX", // replace with real number
+                contactType: "Customer Service",
+                areaServed: "NG",
+              },
             }),
           }}
         />
