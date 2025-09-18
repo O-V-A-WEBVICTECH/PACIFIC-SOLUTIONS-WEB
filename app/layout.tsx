@@ -53,7 +53,7 @@ export default function RootLayout({
               name: "Pacific Safety Solution Limited",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+234XXXXXXXXXX", // replace with real number
+                telephone: "+2348054094450",
                 contactType: "Customer Service",
                 areaServed: "NG",
               },
