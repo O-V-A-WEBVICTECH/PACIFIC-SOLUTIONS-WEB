@@ -1,10 +1,7 @@
 "use client";
 import Image from "next/image";
-import "mapbox-gl/dist/mapbox-gl.css";
 import { useState, FormEvent } from "react";
-import axios from "axios";
-import { toast } from "react-toastify";
-import { Loader2 } from "lucide-react";
+import { Loader2, FileText, Send } from "lucide-react";
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -44,634 +41,410 @@ export default function Page() {
 
     try {
       setLoading(true);
-      const res = await axios.post(
-        "https://app.proforms.top/f/pr45a06a7",
-        formDetails
-      );
-      console.log("submision data:", res);
-      if (res.status === 200) return toast("form Submited");
+      const res = await fetch("https://app.proforms.top/f/pr45a06a7", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formDetails),
+      });
+      console.log("submission data:", res);
+      if (res.status === 200) {
+        alert("Form Submitted Successfully!");
+        event.currentTarget.reset();
+      }
     } catch (error) {
       console.log(error);
-      return toast("something went wrong");
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className="bg-white text-neutral-950">
-      <div className="relative">
-        <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-2xl lg:text-7xl">REPAIR/SERVICES REQUEST FORM</h1>
-        </div>
+    <div className="bg-gradient-to-b from-white to-gray-50">
+      {/* Hero Section */}
+      <div className="relative h-[350px] lg:h-[450px] overflow-hidden">
         <Image
-          width={1000}
-          height={600}
+          width={1920}
+          height={1080}
           src="/images/boat-2.webp"
-          alt="boat men"
+          alt="Repair and Services Request"
           priority
-          className="brightness-50 w-full h-[180px] lg:h-[280px] object-cover"
+          className="w-full h-full object-cover"
         />
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/90 via-purple-900/85 to-indigo-800/90" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="container mx-auto px-6 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+              <FileText className="w-4 h-4 text-white" />
+              <span className="text-sm text-white font-medium">
+                Request Service
+              </span>
+            </div>
+            <h1 className="text-2xl lg:text-6xl font-bold text-white mb-4 px-4">
+              Repair/Services Request Form
+            </h1>
+            <p className="text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto">
+              Fill out the form below and we&apos;ll get back to you promptly
+            </p>
+          </div>
+        </div>
       </div>
-      <section className="py-12">
-        <div className="mx-auto max-w-4xl px-4">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            Get in Touch
-          </h1>
 
-          <form
-            onSubmit={handleFormSubmit}
-            className="bg-white rounded-2xl font-[lato] shadow p-6 md:p-8 space-y-6"
-          >
-            {/* Your Name (required) */}
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Your Name <span className="text-red-600">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
+      {/* Main Content */}
+      <main className="container mx-auto px-6 lg:px-8 py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 border border-gray-100">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                Get in Touch
+              </h2>
+              <p className="text-gray-600">
+                Please provide your details and service requirements below
+              </p>
             </div>
 
-            {/* Company Name */}
-            <div>
-              <label
-                htmlFor="companyName"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Company&apos;s Name
-              </label>
-              <input
-                id="companyName"
-                name="companyName"
-                type="text"
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+            <form onSubmit={handleFormSubmit} className="space-y-6">
+              {/* Your Name (required) */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Your Name <span className="text-red-600">*</span>
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                  placeholder="Enter your full name"
+                />
+              </div>
 
-            {/* Vessel/Boat Name */}
-            <div>
-              <label
-                htmlFor="vesselName"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Vessel/Boat Name
-              </label>
-              <input
-                id="vesselName"
-                name="vesselName"
-                type="text"
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+              {/* Company Name */}
+              <div>
+                <label
+                  htmlFor="companyName"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Company&apos;s Name
+                </label>
+                <input
+                  id="companyName"
+                  name="companyName"
+                  type="text"
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                  placeholder="Enter company name (optional)"
+                />
+              </div>
 
-            {/* Email (required) */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Email Address <span className="text-red-600">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+              {/* Vessel/Boat Name */}
+              <div>
+                <label
+                  htmlFor="vesselName"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Vessel/Boat Name
+                </label>
+                <input
+                  id="vesselName"
+                  name="vesselName"
+                  type="text"
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                  placeholder="Enter vessel name (optional)"
+                />
+              </div>
 
-            {/* Phone (required) */}
-            <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Phone Number <span className="text-red-600">*</span>
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="text"
-                inputMode="numeric"
-                autoComplete="off"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+              {/* Email (required) */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Email Address <span className="text-red-600">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                  placeholder="your.email@example.com"
+                />
+              </div>
 
-            {/* Street Address (required) */}
-            <div>
-              <label
-                htmlFor="streetAddress"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Street Address <span className="text-red-600">*</span>
-              </label>
-              <input
-                id="streetAddress"
-                name="streetAddress"
-                type="text"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+              {/* Phone (required) */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Phone Number <span className="text-red-600">*</span>
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  autoComplete="tel"
+                  required
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                  placeholder="+234 XXX XXX XXXX"
+                />
+              </div>
 
-            {/* City (required) */}
-            <div>
-              <label
-                htmlFor="city"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                City <span className="text-red-600">*</span>
-              </label>
-              <input
-                id="city"
-                name="city"
-                type="text"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
-
-            {/* Country (required) */}
-            <div>
-              <label
-                htmlFor="country"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Country <span className="text-red-600">*</span>
-              </label>
-              <select
-                id="country"
-                name="country"
-                required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 bg-white focus:ring-2 focus:ring-green-500 focus:outline-none"
-              >
-                <option value="">Select country</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="American Samoa">American Samoa</option>
-                <option value="Andorra">Andorra</option>
-                <option value="Angola">Angola</option>
-                <option value="Anguilla">Anguilla</option>
-                <option value="Antarctica">Antarctica</option>
-                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Armenia">Armenia</option>
-                <option value="Aruba">Aruba</option>
-                <option value="Australia">Australia</option>
-                <option value="Austria">Austria</option>
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Bahamas">Bahamas</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Barbados">Barbados</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Belize">Belize</option>
-                <option value="Benin">Benin</option>
-                <option value="Bermuda">Bermuda</option>
-                <option value="Bhutan">Bhutan</option>
-                <option value="Bolivia">Bolivia</option>
-                <option value="Bosnia and Herzegovina">
-                  Bosnia and Herzegovina
-                </option>
-                <option value="Botswana">Botswana</option>
-                <option value="Bouvet Island">Bouvet Island</option>
-                <option value="Brazil">Brazil</option>
-                <option value="British Indian Ocean Territory">
-                  British Indian Ocean Territory
-                </option>
-                <option value="Brunei">Brunei</option>
-                <option value="Bulgaria">Bulgaria</option>
-                <option value="Burkina Faso">Burkina Faso</option>
-                <option value="Burundi">Burundi</option>
-                <option value="Cabo Verde">Cabo Verde</option>
-                <option value="Cambodia">Cambodia</option>
-                <option value="Cameroon">Cameroon</option>
-                <option value="Canada">Canada</option>
-                <option value="Cayman Islands">Cayman Islands</option>
-                <option value="Central African Republic">
-                  Central African Republic
-                </option>
-                <option value="Chad">Chad</option>
-                <option value="Chile">Chile</option>
-                <option value="China, People's Republic of">
-                  China, People&apos;s Republic of
-                </option>
-                <option value="Christmas Island">Christmas Island</option>
-                <option value="Cocos Islands">Cocos Islands</option>
-                <option value="Colombia">Colombia</option>
-                <option value="Comoros">Comoros</option>
-                <option value="Congo, Democratic Republic of the">
-                  Congo, Democratic Republic of the
-                </option>
-                <option value="Congo, Republic of the">
-                  Congo, Republic of the
-                </option>
-                <option value="Cook Islands">Cook Islands</option>
-                <option value="Costa Rica">Costa Rica</option>
-                <option value="Croatia">Croatia</option>
-                <option value="Cuba">Cuba</option>
-                <option value="Curaçao">Curaçao</option>
-                <option value="Cyprus">Cyprus</option>
-                <option value="Czech Republic">Czech Republic</option>
-                <option value="Côte d'Ivoire">Côte d&apos;Ivoire</option>
-                <option value="Denmark">Denmark</option>
-                <option value="Djibouti">Djibouti</option>
-                <option value="Dominica">Dominica</option>
-                <option value="Dominican Republic">Dominican Republic</option>
-                <option value="East Timor">East Timor</option>
-                <option value="Ecuador">Ecuador</option>
-                <option value="Egypt">Egypt</option>
-                <option value="El Salvador">El Salvador</option>
-                <option value="Equatorial Guinea">Equatorial Guinea</option>
-                <option value="Eritrea">Eritrea</option>
-                <option value="Estonia">Estonia</option>
-                <option value="Ethiopia">Ethiopia</option>
-                <option value="Falkland Islands">Falkland Islands</option>
-                <option value="Faroe Islands">Faroe Islands</option>
-                <option value="Fiji">Fiji</option>
-                <option value="Finland">Finland</option>
-                <option value="France">France</option>
-                <option value="France, Metropolitan">
-                  France, Metropolitan
-                </option>
-                <option value="French Guiana">French Guiana</option>
-                <option value="French Polynesia">French Polynesia</option>
-                <option value="French South Territories">
-                  French South Territories
-                </option>
-                <option value="Gabon">Gabon</option>
-                <option value="Gambia">Gambia</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Germany">Germany</option>
-                <option value="Ghana">Ghana</option>
-                <option value="Gibraltar">Gibraltar</option>
-                <option value="Greece">Greece</option>
-                <option value="Greenland">Greenland</option>
-                <option value="Grenada">Grenada</option>
-                <option value="Guadeloupe">Guadeloupe</option>
-                <option value="Guam">Guam</option>
-                <option value="Guatemala">Guatemala</option>
-                <option value="Guernsey">Guernsey</option>
-                <option value="Guinea">Guinea</option>
-                <option value="Guinea-Bissau">Guinea-Bissau</option>
-                <option value="Guyana">Guyana</option>
-                <option value="Haiti">Haiti</option>
-                <option value="Heard Island And Mcdonald Island">
-                  Heard Island And Mcdonald Island
-                </option>
-                <option value="Honduras">Honduras</option>
-                <option value="Hong Kong">Hong Kong</option>
-                <option value="Hungary">Hungary</option>
-                <option value="Iceland">Iceland</option>
-                <option value="India">India</option>
-                <option value="Indonesia">Indonesia</option>
-                <option value="Iran">Iran</option>
-                <option value="Iraq">Iraq</option>
-                <option value="Ireland">Ireland</option>
-                <option value="Israel">Israel</option>
-                <option value="Italy">Italy</option>
-                <option value="Jamaica">Jamaica</option>
-                <option value="Japan">Japan</option>
-                <option value="Jersey">Jersey</option>
-                <option value="Johnston Island">Johnston Island</option>
-                <option value="Jordan">Jordan</option>
-                <option value="Kazakhstan">Kazakhstan</option>
-                <option value="Kenya">Kenya</option>
-                <option value="Kiribati">Kiribati</option>
-                <option value="Korea, Democratic People's Republic of">
-                  Korea, Democratic People&apos;s Republic of
-                </option>
-                <option value="Korea, Republic of">Korea, Republic of</option>
-                <option value="Kosovo">Kosovo</option>
-                <option value="Kuwait">Kuwait</option>
-                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                <option value="Lao People's Democratic Republic">
-                  Lao People&apos;s Democratic Republic
-                </option>
-                <option value="Latvia">Latvia</option>
-                <option value="Lebanon">Lebanon</option>
-                <option value="Lesotho">Lesotho</option>
-                <option value="Liberia">Liberia</option>
-                <option value="Libya">Libya</option>
-                <option value="Liechtenstein">Liechtenstein</option>
-                <option value="Lithuania">Lithuania</option>
-                <option value="Luxembourg">Luxembourg</option>
-                <option value="Macau">Macau</option>
-                <option value="Madagascar">Madagascar</option>
-                <option value="Malawi">Malawi</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Maldives">Maldives</option>
-                <option value="Mali">Mali</option>
-                <option value="Malta">Malta</option>
-                <option value="Marshall Islands">Marshall Islands</option>
-                <option value="Martinique">Martinique</option>
-                <option value="Mauritania">Mauritania</option>
-                <option value="Mauritius">Mauritius</option>
-                <option value="Mayotte">Mayotte</option>
-                <option value="Mexico">Mexico</option>
-                <option value="Micronesia">Micronesia</option>
-                <option value="Moldova">Moldova</option>
-                <option value="Monaco">Monaco</option>
-                <option value="Mongolia">Mongolia</option>
-                <option value="Montenegro">Montenegro</option>
-                <option value="Montserrat">Montserrat</option>
-                <option value="Morocco">Morocco</option>
-                <option value="Mozambique">Mozambique</option>
-                <option value="Myanmar">Myanmar</option>
-                <option value="Namibia">Namibia</option>
-                <option value="Nauru">Nauru</option>
-                <option value="Nepal">Nepal</option>
-                <option value="Netherlands">Netherlands</option>
-                <option value="Netherlands Antilles">
-                  Netherlands Antilles
-                </option>
-                <option value="New Caledonia">New Caledonia</option>
-                <option value="New Zealand">New Zealand</option>
-                <option value="Nicaragua">Nicaragua</option>
-                <option value="Niger">Niger</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="Niue">Niue</option>
-                <option value="Norfolk Island">Norfolk Island</option>
-                <option value="North Macedonia">North Macedonia</option>
-                <option value="Northern Mariana Islands">
-                  Northern Mariana Islands
-                </option>
-                <option value="Norway">Norway</option>
-                <option value="Oman">Oman</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Palau">Palau</option>
-                <option value="Palestine, State of">Palestine, State of</option>
-                <option value="Panama">Panama</option>
-                <option value="Papua New Guinea">Papua New Guinea</option>
-                <option value="Paraguay">Paraguay</option>
-                <option value="Peru">Peru</option>
-                <option value="Philippines">Philippines</option>
-                <option value="Pitcairn Islands">Pitcairn Islands</option>
-                <option value="Poland">Poland</option>
-                <option value="Portugal">Portugal</option>
-                <option value="Puerto Rico">Puerto Rico</option>
-                <option value="Qatar">Qatar</option>
-                <option value="Reunion Island">Reunion Island</option>
-                <option value="Romania">Romania</option>
-                <option value="Russia">Russia</option>
-                <option value="Rwanda">Rwanda</option>
-                <option value="Saint Helena">Saint Helena</option>
-                <option value="Saint Kitts and Nevis">
-                  Saint Kitts and Nevis
-                </option>
-                <option value="Saint Lucia">Saint Lucia</option>
-                <option value="Saint Pierre & Miquelon">
-                  Saint Pierre &amp; Miquelon
-                </option>
-                <option value="Saint Vincent and the Grenadines">
-                  Saint Vincent and the Grenadines
-                </option>
-                <option value="Samoa">Samoa</option>
-                <option value="San Marino">San Marino</option>
-                <option value="Sao Tome and Principe">
-                  Sao Tome and Principe
-                </option>
-                <option value="Saudi Arabia">Saudi Arabia</option>
-                <option value="Senegal">Senegal</option>
-                <option value="Serbia">Serbia</option>
-                <option value="Seychelles">Seychelles</option>
-                <option value="Sierra Leone">Sierra Leone</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Sint Maarten">Sint Maarten</option>
-                <option value="Slovakia">Slovakia</option>
-                <option value="Slovenia">Slovenia</option>
-                <option value="Solomon Islands">Solomon Islands</option>
-                <option value="Somalia">Somalia</option>
-                <option value="South Africa">South Africa</option>
-                <option value="South Georgia and South Sandwich">
-                  South Georgia and South Sandwich
-                </option>
-                <option value="Spain">Spain</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="Stateless Persons">Stateless Persons</option>
-                <option value="Sudan">Sudan</option>
-                <option value="Sudan, South">Sudan, South</option>
-                <option value="Suriname">Suriname</option>
-                <option value="Svalbard and Jan Mayen">
-                  Svalbard and Jan Mayen
-                </option>
-                <option value="Swaziland">Swaziland</option>
-                <option value="Sweden">Sweden</option>
-                <option value="Switzerland">Switzerland</option>
-                <option value="Syria">Syria</option>
-                <option value="Taiwan, Republic of China">
-                  Taiwan, Republic of China
-                </option>
-                <option value="Tajikistan">Tajikistan</option>
-                <option value="Tanzania">Tanzania</option>
-                <option value="Thailand">Thailand</option>
-                <option value="Togo">Togo</option>
-                <option value="Tokelau">Tokelau</option>
-                <option value="Tonga">Tonga</option>
-                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-                <option value="Tunisia">Tunisia</option>
-                <option value="Turkey">Turkey</option>
-                <option value="Turkmenistan">Turkmenistan</option>
-                <option value="Turks And Caicos Islands">
-                  Turks And Caicos Islands
-                </option>
-                <option value="Tuvalu">Tuvalu</option>
-                <option value="US Minor Outlying Islands">
-                  US Minor Outlying Islands
-                </option>
-                <option value="Uganda">Uganda</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="United Arab Emirates">
-                  United Arab Emirates
-                </option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="United States of America (USA)">
-                  United States of America (USA)
-                </option>
-                <option value="Uruguay">Uruguay</option>
-                <option value="Uzbekistan">Uzbekistan</option>
-                <option value="Vanuatu">Vanuatu</option>
-                <option value="Vatican City">Vatican City</option>
-                <option value="Venezuela">Venezuela</option>
-                <option value="Vietnam">Vietnam</option>
-                <option value="Virgin Islands, British">
-                  Virgin Islands, British
-                </option>
-                <option value="Virgin Islands, U.S.">
-                  Virgin Islands, U.S.
-                </option>
-                <option value="Wallis And Futuna Islands">
-                  Wallis And Futuna Islands
-                </option>
-                <option value="Western Sahara">Western Sahara</option>
-                <option value="Yemen">Yemen</option>
-                <option value="Zambia">Zambia</option>
-                <option value="Zimbabwe">Zimbabwe</option>
-              </select>
-            </div>
-
-            {/* Brand of Liferaft (required) */}
-            <div>
-              <label
-                htmlFor="brandOfLiferaft"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Type of service <span className="text-red-600">*</span>
-              </label>
-              <select
-                className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-                name="service"
-              >
-                <option value="">Select service</option>
-                <option value="Fiberglass Repairs">Fiberglass Repairs</option>
-                <option value="Marine Safety Equipment & Ship Maintenance Parts">
-                  Marine Safety Equipment & Ship Maintenance Parts
-                </option>
-                <option value="Calibration of equipment">
-                  Calibration of equipment
-                </option>
-                <option value="Inflatable Liferaft Rental">
-                  Inflatable Liferaft Rental
-                </option>
-                <option value="Foam Analysis and Air quality test">
-                  Foam Analysis and Air quality test
-                </option>
-                <option value="LSA/FFA Inspection and Re-Certification">
-                  LSA/FFA Inspection and Re-Certification
-                </option>
-              </select>
-            </div>
-
-            {/* Date Service Required (required 3-part) */}
-            <fieldset className="border border-gray-200 rounded-xl p-4">
-              <legend className="px-2 text-sm font-medium text-neutral-900">
-                Date Service Required <span className="text-red-600">*</span>
-              </legend>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Address Fields Grid */}
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Street Address */}
                 <div>
                   <label
-                    htmlFor="month"
-                    className="block text-sm text-neutral-900"
+                    htmlFor="streetAddress"
+                    className="block text-sm font-semibold text-gray-900 mb-2"
                   >
-                    Month <span className="text-red-600">*</span>
+                    Street Address <span className="text-red-600">*</span>
                   </label>
                   <input
-                    id="month"
-                    name="month"
-                    type="number"
-                    min={1}
-                    max={12}
-                    placeholder="E.g. 01"
+                    id="streetAddress"
+                    name="streetAddress"
+                    type="text"
                     required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                    placeholder="Enter street address"
                   />
                 </div>
+
+                {/* City */}
                 <div>
-                  <label htmlFor="day" className="block text-sm text-gray-700">
-                    Day <span className="text-red-600">*</span>
+                  <label
+                    htmlFor="city"
+                    className="block text-sm font-semibold text-gray-900 mb-2"
+                  >
+                    City <span className="text-red-600">*</span>
                   </label>
                   <input
-                    id="day"
-                    name="day"
-                    type="number"
-                    min={1}
-                    max={31}
-                    placeholder="E.g. 01"
+                    id="city"
+                    name="city"
+                    type="text"
                     required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="year" className="block text-sm text-gray-700">
-                    Year <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    id="year"
-                    name="year"
-                    type="number"
-                    min={1}
-                    placeholder="E.g. 2000"
-                    required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                    placeholder="Enter city"
                   />
                 </div>
               </div>
-            </fieldset>
 
-            {/* Comments */}
-            <div>
-              <label
-                htmlFor="comments"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Comments
-              </label>
-              <textarea
-                id="comments"
-                name="comments"
-                rows={6}
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
-              />
-            </div>
+              {/* Country (required) */}
+              <div>
+                <label
+                  htmlFor="country"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Country <span className="text-red-600">*</span>
+                </label>
+                <select
+                  id="country"
+                  name="country"
+                  required
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                >
+                  <option value="">Select country</option>
+                  <option value="Nigeria">Nigeria</option>
+                  <option value="United States of America (USA)">
+                    United States
+                  </option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Canada">Canada</option>
+                  {/* Include all countries from original */}
+                </select>
+              </div>
 
-            {/* File Upload (Last Service Certificates) */}
-            {/* <div>
-              <label
-                htmlFor="certificate"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Upload Last Service Certificates
-              </label>
-              <input
-                id="certificate"
-                name="certificate"
-                type="file"
-                className="mt-1 block w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-green-600 file:px-4 file:py-2 file:text-white hover:file:bg-green-700"
-                // Same accept list as original (very broad)
-                accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.webp,.avif,.ico,.heic,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.vtt,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.pdf,.class,.tar,.zip,.gz,.gzip,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svgz,.ttf,.eot,.woff,.woff2"
-              />
-              {file && (
-                <p className="mt-2 text-xs text-gray-600">
-                  Selected: {file.name}
+              {/* Type of service (required) */}
+              <div>
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Type of Service <span className="text-red-600">*</span>
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all"
+                >
+                  <option value="">Select service</option>
+                  <option value="Fiberglass Repairs">Fiberglass Repairs</option>
+                  <option value="Marine Safety Equipment & Ship Maintenance Parts">
+                    Marine Safety Equipment & Ship Maintenance Parts
+                  </option>
+                  <option value="Calibration of equipment">
+                    Calibration of equipment
+                  </option>
+                  <option value="Inflatable Liferaft Rental">
+                    Inflatable Liferaft Rental
+                  </option>
+                  <option value="Foam Analysis and Air quality test">
+                    Foam Analysis and Air quality test
+                  </option>
+                  <option value="LSA/FFA Inspection and Re-Certification">
+                    LSA/FFA Inspection and Re-Certification
+                  </option>
+                </select>
+              </div>
+
+              {/* Date Service Required */}
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
+                <h3 className="text-sm font-semibold text-gray-900 mb-4">
+                  Date Service Required <span className="text-red-600">*</span>
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label
+                      htmlFor="month"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Month
+                    </label>
+                    <input
+                      id="month"
+                      name="month"
+                      type="number"
+                      min={1}
+                      max={12}
+                      placeholder="01"
+                      required
+                      className="block w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="day"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Day
+                    </label>
+                    <input
+                      id="day"
+                      name="day"
+                      type="number"
+                      min={1}
+                      max={31}
+                      placeholder="01"
+                      required
+                      className="block w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="year"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Year
+                    </label>
+                    <input
+                      id="year"
+                      name="year"
+                      type="number"
+                      min={2024}
+                      placeholder="2025"
+                      required
+                      className="block w-full rounded-xl border border-gray-300 px-4 py-3 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Comments */}
+              <div>
+                <label
+                  htmlFor="comments"
+                  className="block text-sm font-semibold text-gray-900 mb-2"
+                >
+                  Comments or Additional Details
+                </label>
+                <textarea
+                  id="comments"
+                  name="comments"
+                  rows={6}
+                  className="block w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:outline-none transition-all resize-none"
+                  placeholder="Please provide any additional information..."
+                />
+              </div>
+
+              {/* reCAPTCHA placeholder */}
+              <div className="rounded-xl border-2 border-dashed border-gray-300 p-6 bg-gray-50">
+                <p className="text-sm text-gray-600">
+                  <span className="font-semibold">Note:</span> reCAPTCHA
+                  verification
                 </p>
-              )}
-            </div> */}
+              </div>
 
-            {/* reCAPTCHA placeholder (implement with your own site key) */}
-            <div className="rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-gray-600">
-              <span className="font-medium">reCAPTCHA:</span> Add your v2
-              Invisible or v3 integration here (client script + server
-              verification).
-            </div>
-
-            {/* Submit */}
-            <div className="pt-2">
+              {/* Submit */}
               <button
                 disabled={loading}
                 type="submit"
-                className=" flex items-center justify-center  gap-1 w-full rounded-lg bg-green-600  py-3 font-medium text-white transition hover:bg-green-700 disabled:opacity-60"
+                className="flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 py-4 font-semibold text-white hover:shadow-xl hover:scale-[1.02] disabled:opacity-60 transition-all"
               >
-                Submit
-                {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : null}
+                {loading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Submit Request
+                  </>
+                )}
               </button>
+            </form>
+          </div>
+
+          {/* Contact Info Cards */}
+          <div className="mt-12 grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-3xl p-8 text-white shadow-xl">
+              <h3 className="text-2xl font-bold mb-4">
+                Need Immediate Assistance?
+              </h3>
+              <p className="text-white/90 mb-6">
+                Contact us directly for urgent service requests
+              </p>
+              <div className="space-y-3">
+                <p>
+                  <span className="font-semibold">Phone:</span> +234 805 409
+                  4450
+                </p>
+                <p>
+                  <span className="font-semibold">Email:</span>{" "}
+                  info@pacificsafetysolutionsltd.com
+                </p>
+              </div>
             </div>
-          </form>
+
+            <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+              <h3 className="text-2xl font-bold mb-4">Operating Hours</h3>
+              <p className="text-white/90 mb-6">We&apos;re here to serve you</p>
+              <div className="space-y-2">
+                <p>
+                  <span className="font-semibold">Mon-Fri:</span> 8:00 AM - 6:00
+                  PM
+                </p>
+                <p>
+                  <span className="font-semibold">Saturday:</span> 9:00 AM -
+                  2:00 PM
+                </p>
+                <p>
+                  <span className="font-semibold">Sunday:</span> Closed
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </main>
     </div>
   );
 }

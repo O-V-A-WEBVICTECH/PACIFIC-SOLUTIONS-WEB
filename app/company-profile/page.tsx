@@ -72,7 +72,7 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Stats Section */}
+      {/* Stats Section
       <div className="relative -mt-20 z-10">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
@@ -92,7 +92,7 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <main className="container mx-auto px-6 lg:px-8 py-16 lg:py-24">
