@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import { Compass } from "lucide-react";
+import { Compass, ArrowRight, CheckCircle, Quote } from "lucide-react";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -46,16 +46,18 @@ export default function Home() {
   }, [slides.length]);
 
   return (
-    <div className="min-h-screen  overflow-x-hidden bg-white text-black">
-      {/* Hero Section */}
-      <section className="relative lg:h-[560px] w-full">
+    <div className="min-h-screen overflow-x-hidden bg-gradient-to-b from-white to-gray-50 text-black">
+      {/* Hero Section - Enhanced with gradient overlay and better typography */}
+      <section className="relative lg:h-[85vh] min-h-[600px] w-full overflow-hidden">
         <div className="relative w-full h-full">
           <div>
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-all duration-700 ${
-                  index === currentSlide ? "opacity-100" : "opacity-0"
+                className={`absolute inset-0 transition-all duration-1000 ${
+                  index === currentSlide
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-105"
                 }`}
               >
                 <Image
@@ -70,165 +72,199 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="absolute inset-0 z-10 pointer-events-none">
-            <div
-              className="absolute inset-0"
-              style={{ backgroundColor: "rgb(82, 0, 245)", opacity: "0.75" }}
-            />
-          </div>
+          {/* Modern gradient overlay */}
+          <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-indigo-900/90 via-purple-900/80 to-indigo-800/70" />
 
-          <div className="relative z-20 container mx-auto px-5 md:px-6  lg:px-0 pt-10 lg:pt-20 pb-10 lg:pb-48 flex  h-full">
-            <div className="flex flex-col gap-4 w-full md:max-w-4xl items-start">
-              <h1 className="text-3xl lg:text-6xl font-bold leading-tight text-white">
-                YOUR TRUSTED PARTNER IN MARINE SAFETY AND OTHER SHIP SUPPLIES.
+          <div className="relative z-20 container mx-auto px-5 md:px-6 lg:px-8 h-full flex items-center">
+            <div className="flex flex-col gap-6 w-full md:max-w-4xl items-start animate-fade-in">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span className="text-sm text-white font-medium">
+                  IMO & SOLAS Certified
+                </span>
+              </div>
+
+              <h1 className="text-4xl lg:text-7xl font-bold leading-tight text-white tracking-tight">
+                Your Trusted Partner in{" "}
+                <span className="bg-gradient-to-r from-orange-400 to-pink-400 bg-clip-text text-transparent">
+                  Marine Safety
+                </span>
               </h1>
-              <p className="text-sm lg:text-base text-white lg:w-[70%]">
-                Ensure your safety with our top-notch safety services and
-                premier LSA/FFA solutions crafted with professionalism and in
-                accordance with latest IMO and SOLAS convention.
+
+              <p className="text-lg lg:text-xl text-gray-200 lg:w-[70%] leading-relaxed">
+                Premier LSA/FFA solutions crafted with professionalism and in
+                accordance with the latest IMO and SOLAS conventions.
               </p>
-              <div className="flex flex-row items-center  gap-4 lg:mt-2">
+
+              <div className="flex flex-row items-center gap-4 mt-4">
                 <Link href="/products">
-                  <button className="bg-white uppercase text-black text-sm px-6  py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition">
-                    Explore Our Products
+                  <button className="group bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 flex items-center gap-2">
+                    Explore Products
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
+                <Link href="/#contact">
+                  <button className="px-8 py-4 rounded-full font-semibold text-white border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                    Get Quote
                   </button>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 mt-2 lg:mt-6">
+
+              {/* Slide indicators */}
+              <div className="flex items-center gap-3 mt-6">
                 {slides.map((_, index) => (
-                  <div
+                  <button
                     key={index}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentSlide ? "w-6" : "w-2 opacity-20"
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      index === currentSlide
+                        ? "w-12 bg-white"
+                        : "w-8 bg-white/40"
                     }`}
-                    style={{ backgroundColor: "white" }}
                   />
                 ))}
               </div>
-              <p className="font-[lato] text-white text-sm lg:text-base">
-                LSA/FFA our specialty. Preventing the worst. Ensuring the best.
+
+              <p className="text-white/80 text-sm lg:text-base mt-2 italic">
+                LSA/FFA our specialty. Preventing the worst. Ensuring the best.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="#about" className="py-5 lg:mb-8 bg-white text-[#121212]">
-        <div className="container mx-auto px-3  lg:px-0 flex items-center lg:items-start flex-col lg:flex-row gap-4 lg:gap-10">
-          {/* Text content */}
-          <div className="flex-1">
-            <h1 className="text-4xl  md:text-6xl font-bold font-[lato]  mb-2">
-              Your trusted partner in safety solutions
-            </h1>
+      {/* About Section - Enhanced with cards and modern layout */}
+      <section id="#about" className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text content */}
+            <div className="space-y-6">
+              <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold">
+                About Us
+              </div>
 
-            <div className="text-justify text-base font-[lato]">
-              <p className="text-sm lg:text-base">
-                At Pacific Safety Solution limited, based in the vibrant city of
-                Lagos, Nigeria, we specialize in providing top-tier safety
-                equipment services. Our dedication to quality and innovation
-                ensures that each product meets stringent safety standards and
-                client needs. We are committed to safeguarding your work
-                environment with reliable solutions that offer peace of mind.
-                Trust us to deliver excellence, as we continue our mission to
-                enhance workplace safety across diverse industries.
+              <h2 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+                Your Trusted Partner in Safety Solutions
+              </h2>
+
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Based in Lagos, Nigeria, Pacific Safety Solution Limited
+                specializes in providing top-tier safety equipment services. Our
+                dedication to quality and innovation ensures that each product
+                meets stringent safety standards and client needs.
               </p>
-            </div>
-            <div className="mt-4">
+
+              {/* Feature points */}
+              <div className="grid gap-4 mt-8">
+                {[
+                  "IMO & SOLAS Compliant Solutions",
+                  "Expert LSA/FFA Maintenance",
+                  "24/7 Emergency Response",
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors duration-300"
+                  >
+                    <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0" />
+                    <span className="font-medium text-gray-800">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
               <Link href="/company-profile">
-                <button className="text-sm lg:text-base text-white flex items-center flex-row gap-1 uppercase font-medium font-[lato] w-fit px-6 py-2 bg-orange-600">
-                  <Compass size={17} />
-                  our Company profile
+                <button className="group mt-8 flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300">
+                  <Compass className="w-5 h-5" />
+                  View Company Profile
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
-          </div>
 
-          {/* Image */}
-          <div className="flex-1 w-full">
-            <div className="relative w-full lg:h-full shadow-lg">
-              <Image
-                src="/images/raft-3.webp"
-                alt="Technician adjusting safety glasses"
-                width={1000}
-                height={1000}
-                quality={100}
-                className="object-cover h-[300px] lg:h-[380px] rounded-md  w-full min-h-[100%]"
-              />
+            {/* Image with decorative elements */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-indigo-200 to-purple-200 rounded-3xl opacity-20 blur-2xl" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/raft-3.webp"
+                  alt="Safety equipment"
+                  width={1000}
+                  height={1000}
+                  quality={100}
+                  className="object-cover w-full h-[400px] lg:h-[500px]"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="relative">
-        <div
-          className="relative flex items-center fix-safari-flickering"
-          style={{
-            minHeight: "0px",
-            zIndex: 35,
-            paddingTop: "20px",
-            paddingBottom: "40px",
-          }}
-        >
-          {/* Background */}
-          <div className="absolute  inset-0 z-10 pointer-events-none">
-            <div className="absolute inset-0 bg-[#5200f5] z-10" />
+      {/* Testimonials - Modern card design */}
+      <section
+        id="testimonials"
+        className="py-16 lg:py-24 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 relative overflow-hidden"
+      >
+        {/* Background decorations */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+
+        <div className="relative container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-4">
+              Client Success Stories
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Don&apos;t just take our word for it - hear what our clients have
+              to say about our services
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="relative px-4 lg:px-0 z-10 container mx-auto  pt-10 lg:pt-32 pb-8 lg:pb-10">
-            <div className="flex flex-col gap-4 max-w-5xl mb-12 text-left text-white">
-              <p className="text-sm font-[lato] font-semibold">
-                Trusted Feedback
-              </p>
-              <h2 className="text-3xl lg:text-5xl  font-bold">
-                Proven Safety Solutions: Client Success Stories
-              </h2>
-              <p className="text-sm lg:text-base  lg:w-[45%] font-[lato]">
-                &quot;Excellent LSA/FFA top quality services. Their expertise in
-                marine safety solutions is unmatched in Lagos and other Africa
-                countries. Highly recommended.!&quot;
-              </p>
-            </div>
-
-            {/* Testimonials Grid */}
-            <div className="flex flex-col lg:flex-row gap-4">
-              {[
-                {
-                  name: " Kab Agencies Ltd.",
-                  quote:
-                    "Pacific Safety Solution Ltd exceeded our expectations with top-notch marine safety equipment’s and professional LSA/FFA services. Their team is incredibly knowledgeable and attentive to client needs. I highly recommend them to anyone seeking reliable safety solutions in west Africa.",
-                },
-                {
-                  name: "AIS NAUTICAL SUPPLIES",
-                  quote:
-                    "Pacific Safety Solution impressed us with their exceptional service and high-quality safety equipment. The team’s expertise in fiberglass services was evident, and they were always ready to assist. A trustworthy company for all safety needs in Lagos!",
-                },
-                {
-                  name: "TMS Offshore Lome Sarl",
-                  quote:
-                    "We are thoroughly impressed by Pacific Safety Solution's dedication to providing top-tier safety equipment services-LSA/FFA. And Their expertise and customer-focused approach set them apart in the maritime environment. It's always a pleasure working with such a reliable and professional team.",
-                },
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col gap-6 p-4  bg-[#7533f7] bg-opacity-20 rounded-lg font-[lato] text-[#fafafa] max-w-2xl"
-                >
-                  <h3 className="text-base lg:text-lg font-medium">
-                    {testimonial.quote}
-                  </h3>
-                  <p className="text-base">- {testimonial.name}</p>
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Kab Agencies Ltd.",
+                quote:
+                  "Pacific Safety Solution exceeded our expectations with top-notch marine safety equipment and professional LSA/FFA services. Their team is incredibly knowledgeable and attentive to client needs.",
+              },
+              {
+                name: "AIS Nautical Supplies",
+                quote:
+                  "Impressed with their exceptional service and high-quality safety equipment. The team's expertise in fiberglass services was evident, and they were always ready to assist.",
+              },
+              {
+                name: "TMS Offshore Lome Sarl",
+                quote:
+                  "We are thoroughly impressed by their dedication to providing top-tier LSA/FFA services. Their expertise and customer-focused approach set them apart in the maritime environment.",
+              },
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="group p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+              >
+                <Quote className="w-10 h-10 text-orange-400 mb-4" />
+                <p className="text-white text-base leading-relaxed mb-6">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <p className="font-semibold text-white">{testimonial.name}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="relative mb-10 bg-gray-900">
-        {/* Background collage */}
-        <div className="absolute inset-0 grid grid-cols-3 gap-1 opacity-30">
+      {/* Gallery CTA - Modern design */}
+      <section className="relative py-24 bg-gray-900 overflow-hidden">
+        {/* Background collage with better overlay */}
+        <div className="absolute inset-0 grid grid-cols-3 gap-1">
           <Image
             src="/images/marine-1.jpg"
             alt="Team at work"
@@ -252,286 +288,178 @@ export default function Home() {
           />
         </div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
 
-        {/* Content */}
-        <div className="relative container mx-auto px-6 py-20 lg:py-32 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white font-inter-tight mb-6 animate-fade-up">
+        <div className="relative container mx-auto px-6 text-center">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             A Glimpse Into Our Work
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto font-lato mb-8 animate-fade-up">
-            Step inside our world — explore photos of our team, projects, and
-            facilities that bring our safety solutions to life.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+            Explore photos of our team, projects, and facilities that bring our
+            safety solutions to life
           </p>
           <Link
             href="/our-gallery"
-            className="px-8 text-sm py-4 bg-[#5200f5] hover:bg-[#3d00b8] text-white font-semibold rounded-xl shadow-lg transition duration-300 animate-fade-up"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             View Our Gallery
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
 
-      <section className="relative ">
-        <div className="relative flex h-[500px] lg:h-[600px] z-30 -mt-[89px] pt-[89px] pb-[88px]">
-          {/* Map Container */}
-          <div className="absolute inset-0 w-full">
-            <div className="h-full w-full absolute inset-0 z-5" id="map"></div>
-          </div>
+      {/* Map Section - Enhanced */}
+      <section className="relative h-[600px]">
+        <div className="absolute inset-0 w-full h-full" id="map" />
 
-          {/* Content */}
-          <div className="relative z-10 px-2 lg:px-0 container mx-auto py-12 lg:py-14 xl:py-20 flex items-center">
-            <div className="flex flex-row w-full md:flex-row-reverse">
-              <div className="relative z-10 w-full md:w-1/2 xl:w-2/5 flex flex-col gap-6 p-6 lg:p-10 shadow overflow-hidden rounded-sm md:rounded-md lg:rounded-lg">
-                <div className="absolute inset-0 z-10  pointer-events-none">
-                  <div className="absolute inset-0 z-10 bg-gray-100"></div>
-                </div>
-                <div className="relative z-10 flex flex-col gap-4">
-                  <h2 className="text-2xl  font-bold text-gray-900 font-inter-tight">
-                    Location
-                  </h2>
-                  <p className="text-gray-900 font-lato">Lagos, Nigeria</p>
-                </div>
+        <div className="absolute inset-0 flex items-center justify-center p-6">
+          <div className="bg-white/95 backdrop-blur-xl p-8 rounded-3xl shadow-2xl max-w-md border border-gray-200">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center">
+                <Compass className="w-6 h-6 text-white" />
               </div>
+              <h3 className="text-2xl font-bold text-gray-900">Visit Us</h3>
             </div>
+            <p className="text-gray-700 text-lg">Lagos, Nigeria</p>
+            <p className="text-gray-600 mt-2">Serving West Africa and beyond</p>
           </div>
         </div>
       </section>
 
-      <section className="relative">
-        <div
-          className="flex relative items-center break-words z-30 -mt-[89px] pt-[89px] pb-0"
-          style={{
-            scrollMarginTop: "5rem",
-            minHeight: "0px",
-          }}
-        >
-          <div className="flex  px-6 justify-center w-full items-center break-words">
-            {/* Background Overlay */}
-            <div className="absolute inset-0 z-10 pointer-events-none">
-              <div className="absolute inset-0 z-10 sm:w-fit bg-[#e0dde4]"></div>
-            </div>
-
-            {/* Content */}
-            <div
-              className="relative z-10 container mx-auto pt-4 lg:pt-32 pb-12 lg:pb-20"
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% 90%, 75% 100%, 50% 90%, 25% 100%, 0 90%)",
-                WebkitClipPath:
-                  "polygon(0 0, 100% 0, 100% 90%, 75% 100%, 50% 90%, 25% 100%, 0 90%)",
-              }}
-            >
-              <div className="transition-all ease-in-out duration-500 opacity-100 translate-y-0 flex flex-col gap-4 max-w-3xl items-start ml-0 mr-auto text-left">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-inter-tight">
-                  Ensure Your Safety Today
-                </h2>
-                <p className="text-sm lg:text-base md:text-lg text-gray-900 font-lato">
-                  Choose Pacific Safety Solution Ltd in Lagos Nigeria and other
-                  Africa countries for expert LSA/FFA maintenance and other ship
-                  stores supplies. Secure your Vessels, Facilities, and offices
-                  with our reliable and professional services.
-                </p>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <button
-                    type="button"
-                    className="px-6 py-3 border-2 shadow-none font-medium bg-[#5200f5] text-white rounded-lg border-[#5200f5]"
-                  >
-                    <Link href="/#contact"> Contact Us</Link>
-                  </button>
-                </div>
-              </div>
-            </div>
+      {/* CTA Section - Modern curved design */}
+      <section className="relative py-24 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Ensure Your Safety Today
+            </h2>
+            <p className="text-xl text-gray-700 mb-10">
+              Choose Pacific Safety Solution for expert LSA/FFA maintenance and
+              ship supplies. Secure your vessels, facilities, and offices with
+              our reliable services.
+            </p>
+            <Link href="/#contact">
+              <button className="px-12 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Contact Us Today
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="relative">
-        <div
-          id="688e5691fa86f3be4852316b"
-          className="flex flex-none relative items-center fix-safari-flickering"
-          style={{
-            minHeight: "0px",
-            zIndex: 31,
-            scrollMarginTop: "5rem",
-            paddingTop: "0px",
-            paddingBottom: "88px",
-            clipPath: "url(#688e5691fa86f3be4852316b-curveDown)",
-          }}
-        >
-          {/* Purple Background Overlay */}
-          <div className="absolute inset-0 z-10 pointer-events-none">
-            <div
-              className="absolute inset-0 z-10"
-              style={{ backgroundColor: "rgb(82, 0, 245)" }}
-            ></div>
+      {/* Featured Image Section */}
+      <section className="py-24 bg-gradient-to-b from-indigo-600 to-purple-700">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <Image
+              alt="Industrial coating and repair"
+              src="/images/drilling.jpg"
+              width={1400}
+              height={800}
+              className="w-full h-[500px] object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form - Modern design */}
+      <section
+        id="contact"
+        className="py-24 bg-gradient-to-b from-white to-gray-50"
+      >
+        <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold mb-4">
+              Get In Touch
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Reach Out to Our Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              Contact us for all your safety equipment needs
+            </p>
           </div>
 
-          {/* Image Content */}
-          <div className="relative z-10 px-4 container pt-12 lg:pt-20 pb-12 lg:pb-20 mx-auto">
-            <div className="transition-all ease-in-out duration-500 opacity-100 translate-y-0 relative z-10  mx-auto overflow-hidden flex justify-center items-center">
-              <div className="relative overflow-hidden w-full aspect-[3/2] rounded-sm md:rounded-md lg:rounded-lg">
-                <Image
-                  alt="Lining process of coating tank and repair by resin and fiberglass"
-                  title="Lining process of coating tank and repair by resin and fiberglass"
-                  src="/images/drilling.jpg"
-                  fill
-                  className="w-full h-[500px] object-cover object-center"
-                  priority
+          <form
+            className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 border border-gray-100"
+            action="https://app.proforms.top/f/pr3861a45"
+            method="POST"
+          >
+            <div className="grid lg:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label className="block mb-2 text-sm font-semibold text-gray-900">
+                  Name *
+                </label>
+                <input
+                  type="text"
+                  autoComplete="name"
+                  name="Name"
+                  required
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-all"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div>
+                <label className="block mb-2 text-sm font-semibold text-gray-900">
+                  Email *
+                </label>
+                <input
+                  type="email"
+                  autoComplete="email"
+                  name="Email"
+                  required
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-all"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <div className="lg:col-span-2">
+                <label className="block mb-2 text-sm font-semibold text-gray-900">
+                  Message *
+                </label>
+                <textarea
+                  rows={5}
+                  required
+                  name="message"
+                  className="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition-all resize-none"
+                  placeholder="Tell us about your safety equipment needs..."
                 />
               </div>
             </div>
-          </div>
 
-          {/* Clip Path SVG Definition (hidden) */}
-          <svg
-            className="absolute bottom-0 left-0"
-            width="1449"
-            height="1069"
-            viewBox="0 0 1449 1069"
-          >
-            <clipPath id="688e5691fa86f3be4852316b-curveDown">
-              <rect width="1449" height="981" fill="transparent" />
-              <path
-                d="M0 88 C724.5 0 724.5 0 1449 88 L1449 0 L0 0"
-                transform="translate(0, 981)"
-                fill="transparent"
-              />
-            </clipPath>
-          </svg>
-        </div>
-
-        {/* White stroke curve */}
-        <svg
-          className="absolute bottom-0 left-0 z-50 overflow-visible"
-          fill="transparent"
-          width="1449"
-          height="88"
-          viewBox="0 0 1449 88"
-        >
-          <path
-            d="M0 88 C724.5 0 724.5 0 1449 88"
-            stroke="#FFFFFF"
-            strokeWidth="2"
-          />
-        </svg>
-      </section>
-
-      {/* Contact Form */}
-      <section id="contact" className="relative">
-        <div
-          id="688e5691fa86f3be4852316c"
-          className="flex flex-none flex-shrink-0 relative items-center -mt-[89px] pt-[89px] pb-0 z-[30]"
-        >
-          {/* Background overlay */}
-          <div className="absolute inset-0 z-10 pointer-events-none">
-            <div className="absolute inset-0 z-10 bg-[#f5f4f6]"></div>
-          </div>
-
-          <div className="relative z-10 px-6 lg:px-0 container mx-auto pt-16 lg:pt-32 pb-16 lg:pb-32">
-            <div className="transition-all duration-500 ease-in-out opacity-100 translate-y-0 flex flex-col w-full gap-10 max-w-3xl mx-auto">
-              {/* Heading */}
-              <div className="w-full text-center text-gray-900">
-                <h3 className="text-2xl font-bold">Reach Out to Our Team</h3>
-                <p className="mt-2">
-                  Contact us at Pacific Safety Solution for all safety equipment
-                  services
-                </p>
-              </div>
-
-              {/* Form */}
-              <form
-                className="w-full block"
-                action="https://app.proforms.top/f/pr3861a45"
-                method="POST"
+            <div className="text-center">
+              <button
+                type="submit"
+                className="px-12 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 w-full mb-4">
-                  {/* Name */}
-                  <div>
-                    <label className="mb-1 text-sm text-gray-900 block">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      autoComplete="name"
-                      name="Name"
-                      required
-                      className="w-full px-4 py-2 rounded-full bg-black/10 text-gray-900 placeholder-current outline-none"
-                    />
-                  </div>
+                Send Message
+              </button>
 
-                  {/* Email */}
-                  <div>
-                    <label className="mb-1 text-sm text-gray-900 block">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      autoComplete="email"
-                      name="Email"
-                      required
-                      className="w-full px-4 py-2 rounded-full bg-black/10 text-gray-900 placeholder-current outline-none"
-                    />
-                  </div>
-
-                  {/* Message */}
-                  <div className="col-span-2">
-                    <label className="mb-1 text-sm text-gray-900 block">
-                      Message *
-                    </label>
-                    <textarea
-                      rows={5}
-                      required
-                      name="message"
-                      className="w-full px-4 py-2 rounded-lg bg-black/10 text-gray-900 placeholder-current outline-none resize-none"
-                    ></textarea>
-                  </div>
-                </div>
-
-                {/* Submit */}
-                <div className="flex flex-col justify-between gap-4 items-center text-center md:pt-4">
-                  <button
-                    type="submit"
-                    className="min-w-[9rem] mt-2 md:mt-0 border-2 border-gray-900 text-gray-900 rounded-full px-6 py-2"
-                  >
-                    Send Message
-                  </button>
-
-                  <div className="text-xs max-w-sm text-gray-500">
-                    This site is protected by reCAPTCHA and the Google{" "}
-                    <a
-                      href="https://policies.google.com/privacy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-gray-900"
-                    >
-                      Privacy Policy
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      href="https://policies.google.com/terms"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-gray-900"
-                    >
-                      Terms of Service
-                    </a>{" "}
-                    apply.
-                  </div>
-                </div>
-
-                {/* Invisible reCAPTCHA (can be moved to next.js middleware/backend) */}
-                <div className="hidden">
-                  <div>
-                    <div className="grecaptcha-badge">
-                      {/* Add reCAPTCHA script separately if needed */}
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <p className="text-xs text-gray-500 mt-6 max-w-md mx-auto">
+                This site is protected by reCAPTCHA and the Google{" "}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-indigo-600 hover:underline"
+                >
+                  Privacy Policy
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://policies.google.com/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-indigo-600 hover:underline"
+                >
+                  Terms of Service
+                </a>{" "}
+                apply.
+              </p>
             </div>
-          </div>
+          </form>
         </div>
       </section>
     </div>
