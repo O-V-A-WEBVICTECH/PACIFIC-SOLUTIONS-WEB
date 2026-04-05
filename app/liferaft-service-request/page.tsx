@@ -5,6 +5,10 @@ import { useState, FormEvent } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Loader2 } from "lucide-react";
+import { Metadata } from "next";
+
+// Note: Metadata export must be in a separate file for client components
+// This metadata should be in a server component wrapper or route segment config
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -46,7 +50,7 @@ export default function Page() {
       setLoading(true);
       const res = await axios.post(
         "https://app.proforms.top/f/pr45a06a7",
-        formDetails
+        formDetails,
       );
       console.log("submision data:", res);
       if (res.status === 200) return toast("form Submited");

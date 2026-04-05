@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Marine Safety Equipment & Ship Maintenance | Pacific Safety Solution",
+  description:
+    "Comprehensive marine safety equipment and ship maintenance parts. Quality suppliers of life-saving appliances, protective gear, and maintenance solutions for vessels.",
+  keywords:
+    "marine equipment, ship maintenance, safety equipment, life-saving appliances, vessel maintenance, marine supplies, maritime safety",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/marine-equipment-and-ship-maintenance",
+    title: "Marine Safety Equipment & Ship Maintenance",
+    description:
+      "Quality marine safety equipment and comprehensive ship maintenance solutions.",
+  },
+};
 
 export default function Page() {
   return (

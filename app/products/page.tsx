@@ -3,9 +3,25 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Pacific Safety Solution limited || Products",
+  title: "Marine Products & Safety Equipment | Pacific Safety Solution Limited",
   description:
-    "PACIFIC SAFETY SOLUTION LIMITED we deal and supply ship maintainace part and other marine supplies such as ship Life Jackets and Work Vests, Immersion Suits, Emergency Food Rations and Water Marine Distress Signals (Pyrotechnics) Safety Lights, New Inflatable Life rafts, MOB, HRU & Line thrower Navigational aids Engines etc ",
+    "Browse our comprehensive range of marine products including life jackets, work vests, immersion suits, inflatable life rafts, marine distress signals, navigational aids, and ship maintenance parts. Quality equipment for maritime safety.",
+  keywords:
+    "marine products, life jackets, inflatable life rafts, work vests, immersion suits, marine equipment, ship maintenance, safety equipment, pyrotechnics, navigational aids",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/products",
+    title:
+      "Marine Products & Safety Equipment | Pacific Safety Solution Limited",
+    description:
+      "Browse our comprehensive range of marine products including life jackets, work vests, inflatable life rafts, and more.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Marine Products & Safety Equipment",
+    description:
+      "Quality marine products for maritime safety and ship maintenance",
+  },
   other: {
     "google-site-verification": "dVdoPIU1AD1peVcptgjN0nu_zxE6WElWXIrzYzcratA",
   },

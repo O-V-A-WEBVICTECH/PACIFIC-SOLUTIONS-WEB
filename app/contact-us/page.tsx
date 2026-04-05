@@ -48,7 +48,7 @@ export default function Page() {
       setLoading(true);
       const res = await axios.post(
         "https://app.proforms.top/f/pr45a06a7",
-        formDetails
+        formDetails,
       );
       if (res.status === 200)
         return toast("✅Form Submited", {

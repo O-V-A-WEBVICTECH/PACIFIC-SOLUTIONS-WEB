@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Company Profile | Pacific Safety Solution Limited",
+  description:
+    "Learn about Pacific Safety Solution Limited - CAC Registration RC1928296. A leading marine safety company providing services across West Africa including Nigeria, Ghana, Cameroon, Senegal, and more.",
+  keywords:
+    "company profile, about us, Pacific Safety Solution, marine company, Nigeria, West Africa, ship services",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/company-profile",
+    title: "Company Profile | Pacific Safety Solution Limited",
+    description:
+      "Learn about Pacific Safety Solution Limited and our services across West Africa.",
+  },
+};
 
 export default function Page() {
   return (

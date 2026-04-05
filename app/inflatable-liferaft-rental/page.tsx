@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Inflatable Liferaft Rental | Cost-Effective Marine Safety",
+  description:
+    "Rent inflatable liferafts from 4-person to 25-person capacity. Hassle-free rental program with full maintenance and inspection. Flexible, cost-effective alternative to liferaft ownership.",
+  keywords:
+    "liferaft rental, inflatable liferaft, marine safety, vessel safety equipment, lifeboat rental, maritime equipment",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/inflatable-liferaft-rental",
+    title: "Inflatable Liferaft Rental | Cost-Effective Marine Safety",
+    description:
+      "Rent inflatable liferafts from 4-person to 25-person capacity with full maintenance included.",
+  },
+};
 
 export default function Page() {
   return (

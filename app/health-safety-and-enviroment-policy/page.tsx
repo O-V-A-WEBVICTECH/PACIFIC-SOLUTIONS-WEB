@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Health, Safety & Environment Policy | Pacific Safety Solution",
+  description:
+    "Our comprehensive Health, Safety, and Environment (HSE) policy ensures safe operations and environmental responsibility in all maritime services and operations.",
+  keywords:
+    "HSE policy, health and safety, environmental policy, maritime safety, occupational health, environmental responsibility",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/health-safety-and-enviroment-policy",
+    title: "Health, Safety & Environment Policy",
+    description:
+      "Our comprehensive HSE policy for safe and responsible maritime operations.",
+  },
+};
 
 export default function Page() {
   return (

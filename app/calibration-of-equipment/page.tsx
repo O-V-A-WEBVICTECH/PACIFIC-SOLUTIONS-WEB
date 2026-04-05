@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Equipment Calibration Services | Pacific Safety Solution",
+  description:
+    "Professional calibration of marine and safety equipment. Ensures accuracy and compliance with maritime regulations and safety standards.",
+  keywords:
+    "equipment calibration, marine equipment, safety standards, calibration services, maritime compliance, quality assurance",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/calibration-of-equipment",
+    title: "Equipment Calibration Services",
+    description:
+      "Professional calibration of marine and safety equipment for regulatory compliance.",
+  },
+};
 
 export default function Page() {
   return (

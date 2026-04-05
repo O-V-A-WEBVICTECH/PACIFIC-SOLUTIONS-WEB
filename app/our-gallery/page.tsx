@@ -1,4 +1,21 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Gallery | Pacific Safety Solution Limited - Marine Equipment & Services",
+  description:
+    "View our gallery showcasing inflatable life rafts, marine safety equipment, ship maintenance services, and professional maritime solutions in action.",
+  keywords:
+    "marine gallery, inflatable life rafts, safety equipment gallery, ship maintenance, maritime services, product gallery",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/our-gallery",
+    title: "Gallery | Pacific Safety Solution Limited",
+    description:
+      "View our portfolio of marine safety equipment and professional maritime services.",
+  },
+};
 
 export default function GalleryPage() {
   const products = [

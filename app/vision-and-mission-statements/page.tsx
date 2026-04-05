@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Vision & Mission Statement | Pacific Safety Solution Limited",
+  description:
+    "Our vision is to be the leading provider of marine safety solutions in West Africa. Our mission focuses on delivering excellence, safety, and reliability in all maritime services.",
+  keywords:
+    "vision, mission, company vision, mission statement, maritime goals, business vision, strategic direction",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/vision-and-mission-statements",
+    title: "Vision & Mission Statement | Pacific Safety Solution Limited",
+    description:
+      "Learn about our vision and mission to be the leading provider of marine safety solutions.",
+  },
+};
 
 export default function Page() {
   return (

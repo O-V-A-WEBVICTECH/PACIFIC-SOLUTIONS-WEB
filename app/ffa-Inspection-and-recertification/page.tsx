@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "LSA/FFA Inspection & Re-Certification | Pacific Safety Solution",
+  description:
+    "Professional Life-Saving Appliances (LSA) and Fixed Fire-Fighting Appliances (FFA) inspection and re-certification services. Compliance with SOLAS regulations and maritime safety standards.",
+  keywords:
+    "FFA inspection, LSA inspection, re-certification, maritime safety, SOLAS compliance, fire-fighting equipment, life-saving appliances",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/ffa-Inspection-and-recertification",
+    title: "LSA/FFA Inspection & Re-Certification",
+    description:
+      "Professional inspection and re-certification of life-saving and fire-fighting appliances in compliance with maritime regulations.",
+  },
+};
 
 export default function Page() {
   return (

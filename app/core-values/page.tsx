@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Core Values | Pacific Safety Solution Limited",
+  description:
+    "Learn about the core values that guide Pacific Safety Solution Limited - integrity, safety, excellence, and customer commitment in maritime services.",
+  keywords:
+    "core values, company values, safety commitment, maritime industry, corporate responsibility, integrity",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/core-values",
+    title: "Core Values | Pacific Safety Solution Limited",
+    description:
+      "Learn about the core values and commitment to safety and excellence.",
+  },
+};
 
 export default function Page() {
   return (

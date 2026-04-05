@@ -1,4 +1,21 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Fiberglass Repairs | Ship Hull & Deck Repair | Pacific Safety Solution",
+  description:
+    "Professional fiberglass repair services for ships and vessels. Expert hull and deck repairs, gelcoat restoration, and structural reinforcement. Serving maritime industry across West Africa.",
+  keywords:
+    "fiberglass repairs, ship repair, hull repair, deck repair, vessel maintenance, structural reinforcement, marine repair services",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/fiberglass-repairs",
+    title: "Fiberglass Repairs | Ship Hull & Deck Repair",
+    description:
+      "Professional fiberglass repair services for ships and vessels including hull and deck repairs.",
+  },
+};
 
 export default function Page() {
   return (

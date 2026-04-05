@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Foam Analysis & Air Quality Testing | Pacific Safety Solution",
+  description:
+    "Professional foam analysis and air quality testing services for marine equipment. Ensures compliance with maritime safety standards and equipment performance verification.",
+  keywords:
+    "foam analysis, air quality testing, marine equipment testing, safety testing, equipment verification, maritime compliance",
+  openGraph: {
+    type: "website",
+    url: "https://pacificsafetysolutionltd.com/analysis",
+    title: "Foam Analysis & Air Quality Testing",
+    description:
+      "Professional foam analysis and air quality testing for marine equipment compliance.",
+  },
+};
 
 export default function Page() {
   return (
