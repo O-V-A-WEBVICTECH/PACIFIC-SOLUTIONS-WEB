@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     "PACIFIC SAFETY SOLUTION LIMITED - CAC Registration RC1928296. Leading supplier of marine safety equipment, life jackets, lifeboats, inflatable life rafts, ship maintenance parts, and marine supplies in Nigeria. Professional FFA inspection and recertification services.",
   keywords:
     "marine safety, life jackets, lifeboats, inflatable life rafts, ship maintenance, marine supplies, FFA inspection, life raft rental, marine equipment, safety equipment, Nigeria, fiberglass repairs, calibration services",
+  metadataBase: new URL("https://pacificsafetysolutionltd.com"),
+  alternates: {
+    canonical: "https://pacificsafetysolutionltd.com",
+  },
   icons: {
     icon: "/images/logo.ico",
     shortcut: "/images/logo-32x32.png",
@@ -33,6 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NG",
     url: "https://pacificsafetysolutionltd.com",
+    siteName: "Pacific Safety Solution Limited",
     title: "Pacific Safety Solution Limited | Marine Safety & Ship Maintenance",
     description:
       "Leading supplier of marine safety equipment, life jackets, lifeboats, and ship maintenance services in Nigeria.",
@@ -65,22 +70,59 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Organization Logo Schema */}
+        {/* Organization Schema */}
         <Script
-          id="organization-logo"
+          id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://pacificsafetysolutionltd.com/#organization",
               url: "https://pacificsafetysolutionltd.com",
               logo: "https://pacificsafetysolutionltd.com/images/logo.png",
               name: "Pacific Safety Solution Limited",
+              legalName: "Pacific Safety Solution Limited",
+              description:
+                "Leading supplier of marine safety equipment, life jackets, lifeboats, inflatable life rafts, ship maintenance parts, and marine supplies in Nigeria.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Lagos",
+                addressCountry: "NG",
+              },
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+2348054094450",
+                email: "pacificsafety2020@yahoo.com",
                 contactType: "Customer Service",
                 areaServed: "NG",
+              },
+              sameAs: [],
+            }),
+          }}
+        />
+        {/* WebSite Schema — enables Google Sitelinks and signals home page */}
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://pacificsafetysolutionltd.com/#website",
+              url: "https://pacificsafetysolutionltd.com",
+              name: "Pacific Safety Solution Limited",
+              publisher: {
+                "@id": "https://pacificsafetysolutionltd.com/#organization",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate:
+                    "https://pacificsafetysolutionltd.com/?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
               },
             }),
           }}

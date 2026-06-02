@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { Compass } from "lucide-react";
+import Script from "next/script";
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -47,6 +48,39 @@ export default function Home() {
 
   return (
     <div className="min-h-screen  overflow-x-hidden bg-white text-black">
+      {/* Home Page Structured Data */}
+      <Script
+        id="homepage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://pacificsafetysolutionltd.com/#webpage",
+            url: "https://pacificsafetysolutionltd.com",
+            name: "Pacific Safety Solution Limited | Marine Safety & Ship Maintenance",
+            description:
+              "Leading supplier of marine safety equipment, life jackets, lifeboats, inflatable life rafts, ship maintenance parts, and marine supplies in Nigeria.",
+            isPartOf: {
+              "@id": "https://pacificsafetysolutionltd.com/#website",
+            },
+            about: {
+              "@id": "https://pacificsafetysolutionltd.com/#organization",
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://pacificsafetysolutionltd.com",
+                },
+              ],
+            },
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="relative lg:h-[560px] w-full">
         <div className="relative w-full h-full">
