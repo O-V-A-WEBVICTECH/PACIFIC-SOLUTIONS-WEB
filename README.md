@@ -75,10 +75,10 @@ No specific license information has been provided for this project.
 ## Author
 Connect with me:
 
--   **Name**: [Your Full Name]
--   **LinkedIn**: [Your LinkedIn Profile URL]
--   **Twitter/X**: [@YourTwitterHandle]
--   **Portfolio**: [Your Portfolio Website URL]
+-   **Name**: [O.V.A Webvic Tech Int'l Services]
+-   **LinkedIn**: [https://www.linkedin.com/in/victor-olaiya-45a782255?utm_source=share_via&utm_content=profile&utm_medium=member_ios](https://www.linkedin.com/in/victor-olaiya-45a782255?utm_source=share_via&utm_content=profile&utm_medium=member_ios)]
+-   **Whatsapp**: [+2349136600887]
+-   **Portfolio**: [webvictech.com]
 
 ---
 
