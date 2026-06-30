@@ -77,8 +77,8 @@ Connect with me:
 
 -   **Name**: [O.V.A Webvic Tech Int'l Services]
 -   **LinkedIn**: [https://www.linkedin.com/in/victor-olaiya-45a782255?utm_source=share_via&utm_content=profile&utm_medium=member_ios](https://www.linkedin.com/in/victor-olaiya-45a782255?utm_source=share_via&utm_content=profile&utm_medium=member_ios)]
--   **Whatsapp**: [+2349136600887]
--   **Portfolio**: [webvictech.com]
+-   **Whatsapp**: [+wa.me/2349136600887]
+-   **Portfolio**: [https://www.webvictech.com/#portfolio]
 
 ---
 
