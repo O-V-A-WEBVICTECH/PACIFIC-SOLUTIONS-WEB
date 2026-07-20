@@ -39,10 +39,22 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> <span>Tel: +2348054094450</span>
+              <FaPhoneAlt />
+              <a href="tel:+2348054094450" className="hover:underline">
+                Tel: +2348054094450
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> <span>pacificsafety2020@yahoo.com</span>
+              <FaEnvelope />
+              <a href="mailto:pacificsafety2020@yahoo.com" className="hover:underline">
+                pacificsafety2020@yahoo.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <FaEnvelope />
+              <a href="mailto:info@pacificsafetysolutionltd.com" className="hover:underline">
+                info@pacificsafetysolutionltd.com
+              </a>
             </li>
           </ul>
         </div>
@@ -168,8 +180,8 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="bg-[#7533f7] text-center py-4 text-xs">
-        <strong>Pacific Safety Solution Limited</strong> &copy; 2025 | Site By{" "}
-        <a></a>.
+        <strong>Pacific Safety Solution Limited</strong> &copy; 2026 | Site By{" "}
+        <a href="https://www.webvictech.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-200">Webvictech</a>.
       </div>
     </footer>
   );
