@@ -44,18 +44,19 @@ export default function Footer() {
                 Tel: +2348054094450
               </a>
             </li>
+<li className="flex items-center gap-2">
+              <FaEnvelope />
+              <a href="mailto:info@pacificsafetysolutionltd.com" className="hover:underline">
+                info@pacificsafetysolutionltd.com
+              </a>
+            </li>
             <li className="flex items-center gap-2">
               <FaEnvelope />
               <a href="mailto:pacificsafety2020@yahoo.com" className="hover:underline">
                 pacificsafety2020@yahoo.com
               </a>
             </li>
-            <li className="flex items-center gap-2">
-              <FaEnvelope />
-              <a href="mailto:info@pacificsafetysolutionltd.com" className="hover:underline">
-                info@pacificsafetysolutionltd.com
-              </a>
-            </li>
+            
           </ul>
         </div>
 
