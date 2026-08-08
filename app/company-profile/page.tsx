@@ -16,63 +16,81 @@ export const metadata: Metadata = {
   },
 };
 
+const supplies = [
+  "Life Jackets and Work Vests",
+  "Immersion Suits",
+  "Emergency Food Rations and Water",
+  "Marine Distress Signals (Pyrotechnics)",
+  "Safety Lights",
+  "New Inflatable Life Rafts",
+  "MOB, HRU & Line Thrower",
+  "Navigational Aids",
+  "Engines and Electrical Parts",
+  "Lube Oil",
+  "Wire Ropes, Lifting Gears, Anchor Chains, Mooring Rope",
+];
+
 export default function Page() {
   return (
-    <div className="bg-white text-neutral-950">
-      <div className="relative">
-        <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-4xl font-bold lg:text-7xl">Company Profile</h1>
-        </div>
+    <div className="bg-white">
+      {/* Page Hero */}
+      <div className="relative h-[200px] lg:h-[360px] overflow-hidden">
         <Image
-          width={1000}
+          width={1600}
           height={600}
           src="/images/liferaft.webp"
-          alt="boat men"
+          alt="Liferaft"
           priority
-          className="brightness-50 w-full h-[160px] lg:h-[360px] object-cover"
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/60 to-slate-900/30" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-16">
+          <p className="text-[#c4b5fd] text-xs font-semibold tracking-widest uppercase mb-2">About Us</p>
+          <h1 className="text-2xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
+            Company Profile
+          </h1>
+        </div>
       </div>
-      <main className="mx-auto px-3 lg:px-0  font-[lato] lg:w-[80%]">
-        <p className="text-sm text-neutral-950 text-justify leading-relaxed mt-2 mb-1 lg:mt-10">
+
+      {/* Content */}
+      <main className="container mx-auto px-6 lg:px-16 py-12 lg:py-20 max-w-4xl">
+        <p className="text-slate-600 text-sm lg:text-base leading-relaxed text-justify mb-4">
           PACIFIC SAFETY SOLUTION LIMITED is a duly registered, Limited
-          Liability Company with CAC in the federal republic of Nigeria with
-          registration number RC1928296. The company’s service station is
-          situated in Lagos Nigeria and the company covers/render services to
-          vessels trading within other Africa countries which includes
-          Cotonou-Benin Republic, Lome-Togo, Tema and Takoradi-Ghana,
-          Dakar-Senegal, Douala-Cameroon, Freetown-Sierra Leone, Abidjan-Ivory
-          Coast, Guinea-Conakry, Republic of Liberia, Angola, Tanzania, Gabon,
-          Mauritania.
+          Liability Company with CAC in the Federal Republic of Nigeria with
+          registration number RC1928296. The company&apos;s service station is
+          situated in Lagos, Nigeria and renders services to vessels trading
+          within other African countries including Cotonou-Benin Republic,
+          Lome-Togo, Tema and Takoradi-Ghana, Dakar-Senegal, Douala-Cameroon,
+          Freetown-Sierra Leone, Abidjan-Ivory Coast, Guinea-Conakry, Republic
+          of Liberia, Angola, Tanzania, Gabon, and Mauritania.
         </p>
-        <p className="pt-1 text-sm">
+        <p className="text-slate-600 text-sm lg:text-base leading-relaxed text-justify mb-6">
           Her major customers include oil/gas companies with offshore
-          installations, vessel owners/managers, ship agencies and other foreign
-          registered commercial vessels through their local agents as well as
-          foreign and locally registered yachts. The company was founded in 2022
-          primarily as an LSA/FFA Service provider and later grown into supplies
-          of other marine and ship maintenance parts such as:
+          installations, vessel owners/managers, ship agencies, foreign
+          registered commercial vessels through their local agents, and foreign
+          and locally registered yachts. The company was founded in 2022
+          primarily as an LSA/FFA service provider and later grew into supplies
+          of other marine and ship maintenance parts including:
         </p>
-        <ul className="font-[lato]  text-sm list-inside mt-2 list-disc text-neutral-900 ">
-          <li className="py-1 ">Life Jackets and Work Vests</li>
-          <li className="py-1 ">Immersion Suits</li>
-          <li className="py-1">Emergency Food Rations and Water</li>
-          <li className="py-1">Marine Distress Signals (Pyrotechnics)</li>
-          <li className="py-1">Safety Lights</li>
-          <li className="py-1">New Inflatable Life Rafts</li>
-          <li className="py-1">MOB, HRU & Line Thrower</li>
-          <li className="py-1">Navigational Aids</li>
-          <li className="py-1">Engines and Electrical Parts</li>
-          <li className="py-1">Lube Oil</li>
-          <li className="py-1">
-            Wire Ropes, Lifting Gears, Anchor Chains, Mooring Rope
-          </li>
-        </ul>
-        <p className="my-3 text-sm font-[lato] text-justify leading-relaxed">
-          We also offer a Liferaft rental service for operators who find it
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          {supplies.map((item) => (
+            <div
+              key={item}
+              className="flex items-center gap-3 px-4 py-3 bg-slate-50 rounded-lg border border-slate-100"
+            >
+              <span className="w-2 h-2 rounded-full bg-[#5200f5] shrink-0" />
+              <span className="text-sm text-slate-700">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-slate-600 text-sm lg:text-base leading-relaxed text-justify">
+          We also offer a liferaft rental service for operators who find it
           beneficial to rent liferafts for either short or extended periods. Our
-          Service Engineers receive a refresher training courses at the
-          respective factories frequently and our Service facility is fully
-          equipped and approved in accordance with international standards
+          service engineers receive refresher training courses at the respective
+          factories frequently, and our service facility is fully equipped and
+          approved in accordance with international standards.
         </p>
       </main>
     </div>

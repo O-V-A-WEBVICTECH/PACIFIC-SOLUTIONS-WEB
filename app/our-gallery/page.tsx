@@ -2,8 +2,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Gallery | Pacific Safety Solution Limited - Marine Equipment & Services",
+  title: "Gallery | Pacific Safety Solution Limited - Marine Equipment & Services",
   description:
     "View our gallery showcasing inflatable life rafts, marine safety equipment, ship maintenance services, and professional maritime solutions in action.",
   keywords:
@@ -17,188 +16,78 @@ export const metadata: Metadata = {
   },
 };
 
+const images = [
+  { src: "/images/marine-1.jpg", alt: "Marine operations" },
+  { src: "/images/marine-2.jpg", alt: "Liferaft service" },
+  { src: "/images/marine-3.jpg", alt: "Marine equipment" },
+  { src: "/images/marine-4.jpg", alt: "Safety inspection" },
+  { src: "/images/marine-10.jpg", alt: "Marine safety equipment" },
+  { src: "/images/marine-6.jpg", alt: "Vessel maintenance" },
+  { src: "/images/marine-11.jpg", alt: "Equipment service" },
+  { src: "/images/marine-14.jpg", alt: "Safety operations" },
+  { src: "/images/marine-device-1.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-2.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-3.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-4.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-5.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-6.jpg", alt: "Marine device" },
+  { src: "/images/marine-device-7.jpg", alt: "Marine device" },
+  { src: "/images/marine-distress-signal-1.jpg", alt: "Distress signal" },
+  { src: "/images/marine-distress-signal-2.jpg", alt: "Distress signal" },
+  { src: "/images/emergency-ration.jpg", alt: "Emergency rations" },
+  { src: "/images/emergency-drink.jpg", alt: "Emergency drinking water" },
+  { src: "/images/life-vest.jpg", alt: "Life vest" },
+  { src: "/images/line-thrower.jpg", alt: "Line thrower" },
+  { src: "/images/fiberglass.jpg", alt: "Fiberglass repair" },
+  { src: "/images/life-jacket.jpg", alt: "Life jacket" },
+];
+
 export default function GalleryPage() {
-  const products = [
-    {
-      title: "Inflatable Life Rafts",
-      description:
-        "High-quality inflatable life rafts for emergency evacuation and survival at sea.",
-      image: "/images/marine-1.jpg",
-    },
-
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-2.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-3.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-4.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-10.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-6.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-11.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-14.jpg",
-    },
-
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-1.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-2.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-3.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-4.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-5.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-6.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-device-7.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-distress-signal-1.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/marine-distress-signal-2.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/emergency-ration.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/emergency-drink.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/life-vest.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/line-thrower.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/fiberglass.jpg",
-    },
-    {
-      title: "Liferaft Rental Service",
-      description:
-        "Flexible liferaft rental options for short- or long-term maritime operations.",
-      image: "/images/life-jacket.jpg",
-    },
-  ];
-
   return (
     <div className="bg-white">
       {/* Hero */}
-      <div className="relative">
-        <div className="absolute top-[30%] lg:top-[40%] z-20 w-full flex items-center justify-center text-white">
-          <h1 className="text-4xl lg:text-7xl font-bold">Our Gallery</h1>
-        </div>
+      <div className="relative h-[220px] lg:h-[360px] overflow-hidden">
         <Image
           width={1600}
           height={600}
           src="/images/hero-image-1.webp"
-          alt="ship"
+          alt="Marine safety operations"
           priority
-          className="brightness-50 w-full h-[140px] lg:h-[350px] object-cover"
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/65 to-slate-900/30" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-16">
+          <p className="text-[#c4b5fd] text-xs font-semibold tracking-widest uppercase mb-2">
+            Portfolio
+          </p>
+          <h1 className="text-2xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
+            Our Gallery
+          </h1>
+        </div>
       </div>
 
-      {/* Gallery */}
-      <main className="mx-auto px-3 lg:px-0 lg:w-[85%] py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product, index) => (
+      {/* Gallery grid */}
+      <main className="container mx-auto px-6 lg:px-12 py-12 lg:py-20">
+        <p className="text-slate-500 text-sm text-center mb-10 max-w-xl mx-auto">
+          A look at our equipment, services, and team in action across Nigeria and West Africa.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 lg:gap-4">
+          {images.map((img, index) => (
             <div
               key={index}
-              className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
+              className="relative group rounded-xl overflow-hidden aspect-square bg-slate-100"
             >
               <Image
-                width={500}
-                height={400}
-                src={product.image}
-                alt={product.title}
-                className="w-full h-[220px] object-cover transition-transform duration-300 group-hover:scale-110"
+                fill
+                src={img.src}
+                alt={img.alt}
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-4">
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {product.title}
-                </h3>
-                <p className="text-sm text-gray-200">{product.description}</p>
+              <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-end p-3">
+                <p className="text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-1 group-hover:translate-y-0">
+                  {img.alt}
+                </p>
               </div>
             </div>
           ))}

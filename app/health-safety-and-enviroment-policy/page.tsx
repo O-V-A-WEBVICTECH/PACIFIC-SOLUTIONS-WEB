@@ -16,46 +16,63 @@ export const metadata: Metadata = {
   },
 };
 
+const principles = [
+  { icon: "🛡️", label: "Commitment to Safety" },
+  { icon: "⚠️", label: "Risk Management" },
+  { icon: "🌱", label: "Environmental Protection" },
+  { icon: "📋", label: "Legal Compliance" },
+  { icon: "📈", label: "Continuous Improvement" },
+  { icon: "🎓", label: "Training and Awareness" },
+  { icon: "📣", label: "Incident Reporting" },
+];
+
 export default function Page() {
   return (
     <div className="bg-white">
-      <div className="relative">
-        <div className="absolute top-[18%] lg:top-[25%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-4xl text-center lg:text-7xl">
-            Health safety and enviroment (HSE) policy
-          </h1>
-        </div>
+      {/* Hero */}
+      <div className="relative h-[220px] lg:h-[360px] overflow-hidden">
         <Image
-          width={1000}
+          width={1600}
           height={600}
           src="/images/boat-men.jpg"
-          alt="boat men"
-          className="brightness-50 w-full h-[110px] lg:h-[280px] object-cover"
+          alt="Marine safety operations"
+          priority
+          className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/65 to-slate-900/30" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-16">
+          <p className="text-[#c4b5fd] text-xs font-semibold tracking-widest uppercase mb-2">
+            About Us
+          </p>
+          <h1 className="text-2xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
+            Health, Safety &amp; Environment Policy
+          </h1>
+        </div>
       </div>
-      <main className="mx-auto px-3 text-neutral-950 lg:px-0  lg:w-[80%]">
-        <div className="flex flex-col mt-3 mb-2 lg:flex-row gap-1 lg:gap-10">
-          <div className="order-[5] lg:order-none flex-1">
-            <p className="text-sm font-[lato] lg:text-base text-justify leading-relaxed">
-              Pacific Safety solution limited is committed to providing a safe
-              and healthy working enviroment for all employees, visitors,
-              clients and vendors operating within and outside the marine
-              enviroment and also ensure to minimize the risk and enviromental
-              impact while carrying out our operations.
-            </p>
-            <p className="font-[lato] text-sm lg:text-base my-1">
-              Our HSE core principles are:
-            </p>
-            <ul className="text-sm font-[lato] list-disc list-inside lg:text-base">
-              <li>Commitment to Safety</li>
-              <li>Risk management</li>
-              <li>Enviromental protection</li>
-              <li>Legal compliance</li>
-              <li>Continous improvements</li>
-              <li>Traning and awareness</li>
-              <li>Incident reporting</li>
-            </ul>
-          </div>
+
+      {/* Content */}
+      <main className="container mx-auto px-6 lg:px-16 py-12 lg:py-20 max-w-4xl">
+        <p className="text-slate-600 text-sm lg:text-base leading-relaxed text-justify mb-10">
+          Pacific Safety Solution Limited is committed to providing a safe and
+          healthy working environment for all employees, visitors, clients, and
+          vendors operating within and outside the marine environment. We also
+          ensure the minimization of risk and environmental impact while
+          carrying out our operations.
+        </p>
+
+        <h2 className="text-base font-bold text-slate-900 mb-5">
+          Our HSE Core Principles
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {principles.map((p) => (
+            <div
+              key={p.label}
+              className="flex items-center gap-3 px-4 py-4 bg-slate-50 rounded-xl border border-slate-100 hover:border-[#5200f5]/20 transition-colors"
+            >
+              <span className="text-2xl">{p.icon}</span>
+              <span className="text-sm font-medium text-slate-700">{p.label}</span>
+            </div>
+          ))}
         </div>
       </main>
     </div>

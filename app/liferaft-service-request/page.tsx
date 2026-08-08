@@ -5,10 +5,6 @@ import { useState, FormEvent } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Loader2 } from "lucide-react";
-import { Metadata } from "next";
-
-// Note: Metadata export must be in a separate file for client components
-// This metadata should be in a server component wrapper or route segment config
 
 export default function Page() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -52,114 +48,109 @@ export default function Page() {
         "https://app.proforms.top/f/pr45a06a7",
         formDetails,
       );
-      console.log("submision data:", res);
-      if (res.status === 200) return toast("form Submited");
+      if (res.status === 200) return toast("✅ Request submitted!");
     } catch (error) {
-      console.log(error);
-      return toast("something went wrong");
+      return toast("Something went wrong, please try again.");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className="bg-white text-neutral-950">
-      <div className="relative">
-        <div className="absolute top-[30%] z-[100] w-full flex items-center justify-center text-white">
-          <h1 className="text-2xl lg:text-7xl">REPAIR/SERVICES REQUEST FORM</h1>
-        </div>
+    <div className="bg-white">
+      {/* Hero */}
+      <div className="relative h-[220px] lg:h-[360px] overflow-hidden">
         <Image
-          width={1000}
+          width={1600}
           height={600}
           src="/images/boat-2.webp"
-          alt="boat men"
+          alt="Service request"
           priority
-          className="brightness-50 w-full h-[180px] lg:h-[280px] object-cover"
+          className="w-full h-full object-cover"
         />
-      </div>
-      <section className="py-12">
-        <div className="mx-auto max-w-4xl px-4">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
-            Get in Touch
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/65 to-slate-900/30" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6 lg:px-16">
+          <p className="text-[#c4b5fd] text-xs font-semibold tracking-widest uppercase mb-2">
+            Book a Service
+          </p>
+          <h1 className="text-2xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
+            Repair / Services Request Form
           </h1>
+        </div>
+      </div>
+
+      <section className="py-12 lg:py-20">
+        <div className="container mx-auto px-6 lg:px-12 max-w-3xl">
+          <p className="text-slate-500 text-sm mb-8">
+            Fill in the details below and our team will get back to you promptly.
+          </p>
 
           <form
             onSubmit={handleFormSubmit}
-            className="bg-white rounded-2xl font-[lato] shadow p-6 md:p-8 space-y-6"
+            className="bg-slate-50 rounded-2xl border border-slate-100 p-6 lg:p-10 flex flex-col gap-5"
           >
-            {/* Your Name (required) */}
+            {/* Your Name */}
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Your Name <span className="text-red-600">*</span>
+              <label htmlFor="name" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Your Name <span className="text-red-500">*</span>
               </label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Full name"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
             {/* Company Name */}
             <div>
-              <label
-                htmlFor="companyName"
-                className="block text-sm font-medium text-neutral-900"
-              >
+              <label htmlFor="companyName" className="block text-xs font-medium text-slate-600 mb-1.5">
                 Company&apos;s Name
               </label>
               <input
                 id="companyName"
                 name="companyName"
                 type="text"
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Company name"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* Vessel/Boat Name */}
+            {/* Vessel Name */}
             <div>
-              <label
-                htmlFor="vesselName"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Vessel/Boat Name
+              <label htmlFor="vesselName" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Vessel / Boat Name
               </label>
               <input
                 id="vesselName"
                 name="vesselName"
                 type="text"
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Vessel or boat name"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* Email (required) */}
+            {/* Email */}
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Email Address <span className="text-red-600">*</span>
+              <label htmlFor="email" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Email Address <span className="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="your@email.com"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* Phone (required) */}
+            {/* Phone */}
             <div>
-              <label
-                htmlFor="phone"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Phone Number <span className="text-red-600">*</span>
+              <label htmlFor="phone" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Phone Number <span className="text-red-500">*</span>
               </label>
               <input
                 id="phone"
@@ -168,57 +159,51 @@ export default function Page() {
                 inputMode="numeric"
                 autoComplete="off"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="+234..."
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* Street Address (required) */}
+            {/* Street Address */}
             <div>
-              <label
-                htmlFor="streetAddress"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Street Address <span className="text-red-600">*</span>
+              <label htmlFor="streetAddress" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Street Address <span className="text-red-500">*</span>
               </label>
               <input
                 id="streetAddress"
                 name="streetAddress"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="Street address"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* City (required) */}
+            {/* City */}
             <div>
-              <label
-                htmlFor="city"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                City <span className="text-red-600">*</span>
+              <label htmlFor="city" className="block text-xs font-medium text-slate-600 mb-1.5">
+                City <span className="text-red-500">*</span>
               </label>
               <input
                 id="city"
                 name="city"
                 type="text"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                placeholder="City"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               />
             </div>
 
-            {/* Country (required) */}
+            {/* Country */}
             <div>
-              <label
-                htmlFor="country"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Country <span className="text-red-600">*</span>
+              <label htmlFor="country" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Country <span className="text-red-500">*</span>
               </label>
               <select
                 id="country"
                 name="country"
                 required
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 bg-white focus:ring-2 focus:ring-green-500 focus:outline-none"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
               >
                 <option value="">Select country</option>
                 <option value="Afghanistan">Afghanistan</option>
@@ -527,16 +512,13 @@ export default function Page() {
               </select>
             </div>
 
-            {/* Brand of Liferaft (required) */}
+            {/* Service Type */}
             <div>
-              <label
-                htmlFor="brandOfLiferaft"
-                className="block text-sm font-medium text-neutral-900"
-              >
-                Type of service <span className="text-red-600">*</span>
+              <label htmlFor="brandOfLiferaft" className="block text-xs font-medium text-slate-600 mb-1.5">
+                Type of Service <span className="text-red-500">*</span>
               </label>
               <select
-                className="border border-neutral-800 rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
                 required
                 name="service"
               >
@@ -560,57 +542,48 @@ export default function Page() {
               </select>
             </div>
 
-            {/* Date Service Required (required 3-part) */}
-            <fieldset className="border border-gray-200 rounded-xl p-4">
-              <legend className="px-2 text-sm font-medium text-neutral-900">
-                Date Service Required <span className="text-red-600">*</span>
+            {/* Date Service Required */}
+            <fieldset className="border border-slate-200 rounded-xl p-4 bg-white">
+              <legend className="px-2 text-xs font-medium text-slate-600">
+                Date Service Required <span className="text-red-500">*</span>
               </legend>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-4 mt-2">
                 <div>
-                  <label
-                    htmlFor="month"
-                    className="block text-sm text-neutral-900"
-                  >
-                    Month <span className="text-red-600">*</span>
-                  </label>
+                  <label htmlFor="month" className="block text-xs text-slate-500 mb-1">Month <span className="text-red-500">*</span></label>
                   <input
                     id="month"
                     name="month"
                     type="number"
                     min={1}
                     max={12}
-                    placeholder="E.g. 01"
+                    placeholder="MM"
                     required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
                   />
                 </div>
                 <div>
-                  <label htmlFor="day" className="block text-sm text-gray-700">
-                    Day <span className="text-red-600">*</span>
-                  </label>
+                  <label htmlFor="day" className="block text-xs text-slate-500 mb-1">Day <span className="text-red-500">*</span></label>
                   <input
                     id="day"
                     name="day"
                     type="number"
                     min={1}
                     max={31}
-                    placeholder="E.g. 01"
+                    placeholder="DD"
                     required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
                   />
                 </div>
                 <div>
-                  <label htmlFor="year" className="block text-sm text-gray-700">
-                    Year <span className="text-red-600">*</span>
-                  </label>
+                  <label htmlFor="year" className="block text-xs text-slate-500 mb-1">Year <span className="text-red-500">*</span></label>
                   <input
                     id="year"
                     name="year"
                     type="number"
-                    min={1}
-                    placeholder="E.g. 2000"
+                    min={2024}
+                    placeholder="YYYY"
                     required
-                    className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition"
                   />
                 </div>
               </div>
@@ -618,48 +591,21 @@ export default function Page() {
 
             {/* Comments */}
             <div>
-              <label
-                htmlFor="comments"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="comments" className="block text-xs font-medium text-slate-600 mb-1.5">
                 Comments
               </label>
               <textarea
                 id="comments"
                 name="comments"
-                rows={6}
-                className="mt-1 block w-full rounded-lg border border-neutral-800 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                rows={5}
+                placeholder="Additional details about your service request..."
+                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-white text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#5200f5]/30 focus:border-[#5200f5] transition resize-none"
               />
             </div>
 
-            {/* File Upload (Last Service Certificates) */}
-            {/* <div>
-              <label
-                htmlFor="certificate"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Upload Last Service Certificates
-              </label>
-              <input
-                id="certificate"
-                name="certificate"
-                type="file"
-                className="mt-1 block w-full text-sm file:mr-4 file:rounded-lg file:border-0 file:bg-green-600 file:px-4 file:py-2 file:text-white hover:file:bg-green-700"
-                // Same accept list as original (very broad)
-                accept=".jpg,.jpeg,.jpe,.gif,.png,.bmp,.tiff,.tif,.webp,.avif,.ico,.heic,.asf,.asx,.wmv,.wmx,.wm,.avi,.divx,.flv,.mov,.qt,.mpeg,.mpg,.mpe,.mp4,.m4v,.ogv,.webm,.mkv,.3gp,.3gpp,.3g2,.3gp2,.txt,.asc,.c,.cc,.h,.srt,.csv,.tsv,.ics,.rtx,.vtt,.mp3,.m4a,.m4b,.aac,.ra,.ram,.wav,.ogg,.oga,.flac,.mid,.midi,.wma,.wax,.mka,.rtf,.pdf,.class,.tar,.zip,.gz,.gzip,.7z,.psd,.xcf,.doc,.pot,.pps,.ppt,.wri,.xla,.xls,.xlt,.xlw,.mdb,.mpp,.docx,.docm,.dotx,.dotm,.xlsx,.xlsm,.xlsb,.xltx,.xltm,.xlam,.pptx,.pptm,.ppsx,.ppsm,.potx,.potm,.ppam,.sldx,.sldm,.onetoc,.onetoc2,.onetmp,.onepkg,.oxps,.xps,.odt,.odp,.ods,.odg,.odc,.odb,.odf,.wp,.wpd,.key,.numbers,.pages,.svgz,.ttf,.eot,.woff,.woff2"
-              />
-              {file && (
-                <p className="mt-2 text-xs text-gray-600">
-                  Selected: {file.name}
-                </p>
-              )}
-            </div> */}
-
-            {/* reCAPTCHA placeholder (implement with your own site key) */}
-            <div className="rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-gray-600">
-              <span className="font-medium">reCAPTCHA:</span> Add your v2
-              Invisible or v3 integration here (client script + server
-              verification).
+            {/* reCAPTCHA notice */}
+            <div className="rounded-lg border border-dashed border-slate-200 p-4 text-xs text-slate-400">
+              <span className="font-medium text-slate-500">reCAPTCHA:</span> Add your v2 Invisible or v3 integration here.
             </div>
 
             {/* Submit */}
@@ -667,10 +613,10 @@ export default function Page() {
               <button
                 disabled={loading}
                 type="submit"
-                className=" flex items-center justify-center  gap-1 w-full rounded-lg bg-green-600  py-3 font-medium text-white transition hover:bg-green-700 disabled:opacity-60"
+                className="w-full flex items-center justify-center gap-2 py-3 bg-[#5200f5] hover:bg-[#4400cc] disabled:opacity-60 text-white font-semibold text-sm rounded-lg transition-colors shadow-lg shadow-[#5200f5]/25"
               >
-                Submit
-                {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : null}
+                Submit Request
+                {loading && <Loader2 className="w-4 h-4 animate-spin" />}
               </button>
             </div>
           </form>
