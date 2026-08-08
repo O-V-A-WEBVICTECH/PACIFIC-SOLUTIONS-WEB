@@ -244,7 +244,7 @@ export default function NavBar() {
               />
               <div className="leading-tight">
                 <p className="text-sm font-bold text-white">Pacific Safety</p>
-                <p className="text-[10px] text-violet-300">Solution Limited</p>
+                <p className="text-[10px] text-violet-300">Solution  Limited</p>
               </div>
             </Link>
             <button
